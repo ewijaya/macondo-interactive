@@ -1,0 +1,418 @@
+import type { Chapter } from './types';
+
+export const chapters: Chapter[] = [
+  {
+    number: 1,
+    title: 'The Ice',
+    openingWords:
+      'MANY YEARS LATER, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon',
+    summary: [
+      'Macondo is a village of twenty adobe houses so new that many things lack names. Every March a family of gypsies arrives with inventions — the magnet, the telescope, the magnifying glass — and their sage Melquíades befriends José Arcadio Buendía, the village founder, whose unbridled imagination seizes on each marvel as a tool for some impossible enterprise: extracting gold from the earth, solar warfare, proof that the earth is round like an orange. Úrsula fights to keep the household solvent while her husband ruins himself in the alchemical laboratory the gypsy leaves behind.',
+      'Obsessed with finding a route to civilization, José Arcadio Buendía leads an expedition north through the enchanted swamp and finds only a Spanish galleon stranded in the jungle, its hull covered with an armor of petrified barnacles. He declares Macondo surrounded by water and wants to move the town; Úrsula refuses, and he turns instead to raising his sons: the solitary, clairvoyant Aureliano and the massively built José Arcadio. When a new troupe of gypsies announces that Melquíades has died, the chapter closes on the father paying for his boys to touch the marvel the gypsies guard in a pirate chest — ice, "the great invention of our time."',
+    ],
+    characters: [
+      'jose-arcadio-buendia',
+      'ursula',
+      'melquiades',
+      'colonel-aureliano-buendia',
+      'jose-arcadio',
+    ],
+    events: ['the-gypsies-arrive', 'the-expedition-to-the-sea', 'the-discovery-of-ice'],
+  },
+  {
+    number: 2,
+    title: 'Before Macondo',
+    openingWords:
+      'WHEN THE PIRATE Sir Francis Drake attacked Riohacha in the sixteenth century',
+    summary: [
+      'The founding is explained by a crime. José Arcadio Buendía and Úrsula Iguarán are cousins, descended from families intermarried for three centuries; an aunt of Úrsula’s once bore a child with the cartilaginous tail of a pig, and Úrsula refuses to consummate the marriage for fear of repeating it. When Prudencio Aguilar mocks the founder’s manhood after a cockfight, José Arcadio Buendía kills him with a spear — then finds the dead man’s ghost washing his wound in the courtyard, night after night, until the guilt drives the couple and twenty-one companions across the mountains. After twenty-six months they found Macondo on the bank of a river of clear water, in a place reached through a dream of a city with walls of mirrors.',
+      'In the new village the first children grow. José Arcadio, the eldest, is initiated by Pilar Ternera, the card-reader who will thread her body and her prophecies through four generations of the family; when she tells him she is pregnant, he flees with a young gypsy girl and vanishes. Úrsula goes out after her son and returns five months later with something better than a son: settlers from the other side of the swamp, and the route that connects Macondo to the world.',
+    ],
+    characters: [
+      'jose-arcadio-buendia',
+      'ursula',
+      'prudencio-aguilar',
+      'jose-arcadio',
+      'pilar-ternera',
+      'colonel-aureliano-buendia',
+    ],
+    events: ['the-killing-of-prudencio', 'the-founding', 'ursula-finds-the-route'],
+  },
+  {
+    number: 3,
+    title: 'The Insomnia Plague',
+    openingWords:
+      'PILAR TERNERA’S son was brought to his grandparents’ house two weeks after he was born.',
+    summary: [
+      'The house fills with children not quite its own: Arcadio, Pilar Ternera’s son, raised without knowing his parentage, and Rebeca, an eleven-year-old orphan who arrives with a letter, a rocking chair, and a canvas sack containing her parents’ bones that makes a cloc-cloc sound. Rebeca brings the vice of eating earth — and something worse: the insomnia plague, recognized in terror by the Indian servant Visitación. The whole town stops sleeping, then begins to forget, until Macondo labels every object with its name and posts a sign on the main street reading GOD EXISTS.',
+      'Salvation arrives as a resurrection: Melquíades, back from death because he could not bear the solitude of it, cures the plague with a pale drink and settles in the house with his daguerreotype laboratory, where José Arcadio Buendía attempts to photograph God. Prosperity draws the outside world at last — Don Apolinar Moscote, a magistrate sent by the government, orders the houses painted blue; the founder marches him out of town by the lapels, then relents. Among Moscote’s daughters Aureliano sees Remedios, a nine-year-old child, and understands with terrible clarity that he loves her.',
+    ],
+    characters: [
+      'pilar-ternera',
+      'arcadio',
+      'rebeca',
+      'visitacion',
+      'cataure',
+      'melquiades',
+      'apolinar-moscote',
+      'remedios-moscote',
+      'colonel-aureliano-buendia',
+      'ursula',
+    ],
+    events: [
+      'rebeca-arrives',
+      'the-insomnia-plague',
+      'melquiades-returns',
+      'the-magistrate-arrives',
+    ],
+  },
+  {
+    number: 4,
+    title: 'The New House',
+    openingWords: 'THE NEW HOUSE, white, like a dove, was inaugurated with a dance.',
+    summary: [
+      'Úrsula’s money builds the house its famous rooms — and a pianola, delivered by the elegant Italian music master Pietro Crespi. Rebeca and Amaranta both fall in love with him, and when he chooses Rebeca, Amaranta promises a war her sister cannot imagine: she will stop the wedding if she has to poison her. Aureliano, drowning in his silent love for the child Remedios, seeks out Pilar Ternera, who takes him to her bed and later — as an act of pure grace — offers to arrange the impossible marriage. She also tells him she is carrying his son.',
+      'Melquíades dies for the second and final time, murmuring over indecipherable parchments he has been writing in the sun on the begonia porch, and is the first person buried in Macondo. José Arcadio Buendía, unhinged by grief for his friend Prudencio and by the discovery that the machine of time has broken — that it is always Monday — smashes the laboratory and has to be tied to the chestnut tree in the courtyard, where he will remain, speaking Latin to ghosts, for the rest of his life.',
+    ],
+    characters: [
+      'pietro-crespi',
+      'rebeca',
+      'amaranta',
+      'melquiades',
+      'jose-arcadio-buendia',
+      'colonel-aureliano-buendia',
+      'remedios-moscote',
+      'pilar-ternera',
+      'ursula',
+    ],
+    events: ['melquiades-first-death', 'jose-arcadio-buendia-tied-to-the-tree'],
+  },
+  {
+    number: 5,
+    title: 'The Wedding and the War',
+    openingWords:
+      'AURELIANO BUENDÍA and Remedios Moscote were married one Sunday in March',
+    summary: [
+      'Remedios, barely a woman, becomes the gentlest presence the house will ever hold — she even tends the old man tied to the tree — and dies within two years, poisoned by her own blood with twins crossed in her womb. Her death house postpones Rebeca’s wedding yet again, to Amaranta’s grim satisfaction. Then a colossal man covered in tattoos returns from sixty-five voyages around the world: José Arcadio, the lost firstborn. He and Rebeca marry within days in a scandal that gets them exiled from the house forever, and Pietro Crespi, jilted, transfers his courtship to Amaranta with a patience that will not save him.',
+      'The country’s politics arrive with the ballot boxes. Aureliano, watching his father-in-law the magistrate swap out votes, and watching Conservative soldiers beat the town under martial law, feels his cold blood settle into conviction. When the killing starts he leads twenty-one young men in a night raid on the garrison and marches off to join the Liberal revolution, leaving a sentence behind him that will organize the next twenty years of the book: he is Colonel Aureliano Buendía now, and Arcadio is left as civil and military leader of Macondo.',
+    ],
+    characters: [
+      'colonel-aureliano-buendia',
+      'remedios-moscote',
+      'father-nicanor',
+      'jose-arcadio',
+      'rebeca',
+      'pietro-crespi',
+      'amaranta',
+      'apolinar-moscote',
+      'ursula',
+    ],
+    events: [
+      'the-marriage-of-aureliano-and-remedios',
+      'the-death-of-remedios-moscote',
+      'the-war-begins',
+    ],
+  },
+  {
+    number: 6,
+    title: 'The Tyranny of Arcadio',
+    openingWords:
+      'COLONEL AURELIANO BUENDÍA organized thirty-two armed uprisings and he lost them all.',
+    summary: [
+      'The chapter opens with the whole ledger of the Colonel’s life — thirty-two lost wars, seventeen sons by seventeen women, survival of fourteen attempts on his life, seventy-three ambushes, a firing squad, and a stripe of solitude that separates him from everyone — then returns to Macondo, where Arcadio has become the cruelest ruler the town will ever suffer. Dressed in a marshal’s uniform of his own design, he executes prisoners by whim, decrees his own taxes, and tries to take Pilar Ternera to bed without knowing she is his mother; she buys her escape by sending him the virgin Santa Sofía de la Piedad, who bears him a daughter and will bear him twins.',
+      'Amaranta finally allows Pietro Crespi to hope, then refuses him flatly when he proposes; the Italian opens his veins over her name, and Amaranta burns her own hand in the coals and wears the black bandage of her mourning until death. When the Conservative regime retakes Macondo, Arcadio is executed against the cemetery wall, dying better than he lived — his last thought of Úrsula, his last words an unbowed shout.',
+    ],
+    characters: [
+      'arcadio',
+      'colonel-aureliano-buendia',
+      'pietro-crespi',
+      'amaranta',
+      'santa-sofia-de-la-piedad',
+      'pilar-ternera',
+      'ursula',
+    ],
+    events: ['the-execution-of-arcadio'],
+  },
+  {
+    number: 7,
+    title: 'The Firing Squad',
+    openingWords: 'THE WAR was over in May.',
+    summary: [
+      'Captured and condemned, Colonel Aureliano Buendía is brought back to Macondo to be shot — the government’s one mistake, since no other town would dare carry out the sentence. The famous scene of the first sentence finally arrives: facing the squad against the cemetery wall, he sees the ice of his childhood; and it is his brother José Arcadio, shotgun leveled, who breaks the execution. The Colonel goes back to war, survives a firing squad a second time in Riohacha by luckier means, refuses promotion on principle, and learns from the death sentence he himself must sign for General Moncada what the war is beginning to make of him.',
+      'The house pays in blood and yellow flowers. On a September afternoon a thread of blood leaves José Arcadio’s ear, crosses Macondo, avoiding the carpets, and finds Úrsula in her kitchen — the most elegant death notification in literature; whether murder or suicide is never solved, and the smell of powder from his corpse persists for years. Rebeca shuts herself into her house and is forgotten by the world. And when the broken patriarch José Arcadio Buendía dies at last under the chestnut tree, a soft rain of tiny yellow flowers falls all night over the town, carpeting the streets.',
+    ],
+    characters: [
+      'colonel-aureliano-buendia',
+      'jose-arcadio',
+      'rebeca',
+      'ursula',
+      'gerineldo-marquez',
+      'jose-arcadio-buendia',
+      'amaranta',
+      'aureliano-jose',
+    ],
+    events: ['the-firing-squad', 'the-death-of-jose-arcadio', 'the-death-of-the-patriarch'],
+  },
+  {
+    number: 8,
+    title: 'Aureliano José',
+    openingWords:
+      'SITTING IN THE WICKER ROCKING CHAIR with her interrupted work in her lap, Amaranta watched Aureliano José',
+    summary: [
+      'Aureliano José, the Colonel’s son by Pilar Ternera, grows up in Amaranta’s bed — first as the child she bathes, then as a young man consumed by a desire his aunt half-shares and finally refuses, terrified of the pig’s tail that shadows every Buendía love. He follows his father to the wars, deserts, and comes home believing he can marry her; Pilar’s cards promise it. Instead a Conservative captain’s bullet finds him in the crowd one night at the theater, fulfilling the cards’ other reading, and the man who shot him is torn apart by the crowd.',
+      'Around this ruin the wars grind on. General José Raquel Moncada, the humane Conservative who governs Macondo like a civilian, argues with his friend and enemy Colonel Aureliano Buendía that they are both fighting only for power; when the Colonel’s forces retake the town, a war council overrides every plea — including Úrsula’s — and Moncada is shot, leaving the Colonel his spectacles and a warning about the man he is becoming.',
+    ],
+    characters: [
+      'aureliano-jose',
+      'amaranta',
+      'pilar-ternera',
+      'colonel-aureliano-buendia',
+      'general-moncada',
+      'gerineldo-marquez',
+      'ursula',
+    ],
+    events: ['the-death-of-aureliano-jose'],
+  },
+  {
+    number: 9,
+    title: 'Neerlandia',
+    openingWords:
+      'COLONEL GERINELDO MÁRQUEZ was the first to perceive the emptiness of the war.',
+    summary: [
+      'The war has stopped meaning anything. Colonel Gerineldo Márquez, running Macondo and courting Amaranta through afternoons of chess and rejection, sees it first; the Liberal leadership trades away every principle the fighting was for; and Colonel Aureliano Buendía, now supreme commander, discovers he is fighting only for pride, sealed inside a chalk circle his aides draw around him wherever he stands. When Úrsula tells him he has rotted alive, he orders the war ended so he can at last fight for his own liberation.',
+      'Ending it nearly kills him twice. He signs the surrender at Neerlandia, refuses every honor, and shoots himself in the chest with a pistol aimed by his own doctor’s treachery-proof instruction — the bullet passes through without touching a vital organ. Having survived his own poetry, he retires to the workshop his father built and takes up the craft that will hold his sanity for the rest of his life: making little gold fishes, two fishes a day, selling them and melting the coins to make more.',
+    ],
+    characters: [
+      'gerineldo-marquez',
+      'amaranta',
+      'colonel-aureliano-buendia',
+      'ursula',
+    ],
+    events: ['the-treaty-of-neerlandia', 'the-little-gold-fishes'],
+  },
+  {
+    number: 10,
+    title: 'The Twins',
+    openingWords:
+      'YEARS LATER on his deathbed Aureliano Segundo would remember the rainy afternoon in June',
+    summary: [
+      'A new generation restarts the cycle. The twins José Arcadio Segundo and Aureliano Segundo are so identical they may have swapped identities in childhood — one drawn to Melquíades’ sealed room, where the dead gypsy himself appears and hints that the parchments can be read when they turn one hundred years old; the other drawn to riot and the flesh. Aureliano Segundo takes up with Petra Cotes, a mistress whose love has a supernatural side effect: while the two of them love, his animals breed without control, and he becomes rich giving away money and papering the house with banknotes.',
+      'Into this abundance grows Remedios the Beauty, Arcadio’s daughter, the most beautiful human being ever seen in Macondo — and the most innocently lethal, trailing dead suitors wherever she goes. Aureliano Segundo, against Úrsula’s campaign and Petra Cotes’ patience, sets out to marry the most beautiful woman he can import: at a carnival that ends in gunfire, he brings home the highland queen Fernanda del Carpio.',
+    ],
+    characters: [
+      'aureliano-segundo',
+      'jose-arcadio-segundo',
+      'petra-cotes',
+      'santa-sofia-de-la-piedad',
+      'remedios-the-beauty',
+      'ursula',
+      'colonel-aureliano-buendia',
+      'fernanda-del-carpio',
+    ],
+    events: [],
+  },
+  {
+    number: 11,
+    title: 'Fernanda',
+    openingWords: 'THE MARRIAGE was on the point of breaking up after two months',
+    summary: [
+      'Fernanda del Carpio was raised in a gloomy highland city to believe she would be a queen, in a house where flowers were funeral offerings and chamber pots were gold. Transplanted into the Buendía house she imposes her invented aristocracy on it — meals at the big table, forbidden words, love by calendar through a nightgown’s buttonhole — while Aureliano Segundo settles into the arrangement that scandalizes and sustains everyone: wife and concubine, with the livestock still breeding only for Petra Cotes. Fernanda bears him José Arcadio, destined by her for the papacy, and Renata Remedios, called Meme.',
+      'On the anniversary of Neerlandia the seventeen Aurelianos — the Colonel’s sons by seventeen women, each marked later with an indelible Ash Wednesday cross of ash on his forehead — descend on the house for a week of festival. One of them, Aureliano Triste, stays, builds an ice factory, and extends the founder’s old dream in the direction it was always pointing: he brings the railroad. The innocent yellow train arrives, and with it, though no one knows it yet, everything that will destroy Macondo.',
+    ],
+    characters: [
+      'fernanda-del-carpio',
+      'aureliano-segundo',
+      'petra-cotes',
+      'seventeen-aurelianos',
+      'meme',
+      'jose-arcadio-the-seminarian',
+      'colonel-aureliano-buendia',
+      'ursula',
+    ],
+    events: ['the-railroad-arrives'],
+  },
+  {
+    number: 12,
+    title: 'The Yellow Train',
+    openingWords:
+      'DAZZLED BY SO MANY and such marvelous inventions, the people of Macondo did not know where their amazement began.',
+    summary: [
+      'The train brings the cinema, the gramophone, the telephone — and one quiet, fateful guest: Mr. Herbert, who eats a banana at the Buendía table, examines it with the instruments of a diamond merchant, and summons the banana company. Macondo is remade overnight: engineers and overseers, a segregated American compound behind an electrified fence ruled by Mr. Brown, dictatorial foreign police, and a wage-fed frenzy the old town cannot recognize. Only Colonel Aureliano Buendía sees it whole, and his fury births the threat that costs him his sons: within one week sixteen of the seventeen Aurelianos are hunted down and shot through their ash crosses.',
+      'In the middle of the invasion, the book’s most serene miracle: Remedios the Beauty, folding sheets in the garden with the other women, rises into the air amid a trembling light and is gone forever, waving goodbye amid the sheets. Fernanda alone begrudges her the loss of the linen.',
+    ],
+    characters: [
+      'mr-herbert',
+      'mr-brown',
+      'remedios-the-beauty',
+      'seventeen-aurelianos',
+      'colonel-aureliano-buendia',
+      'aureliano-segundo',
+      'jose-arcadio-segundo',
+      'fernanda-del-carpio',
+    ],
+    events: [
+      'mr-herbert-eats-a-banana',
+      'the-banana-boom',
+      'the-ascension-of-remedios-the-beauty',
+      'the-extermination-of-the-aurelianos',
+    ],
+  },
+  {
+    number: 13,
+    title: 'The Death of the Colonel',
+    openingWords:
+      'IN THE BEWILDERMENT of her last years, Úrsula had had very little free time to attend to the papal education of José Arcadio',
+    summary: [
+      'Úrsula is going blind and lets no one discover it, navigating the house by memory and by the fixed habits of the family — whose repetitions she now sees more clearly than she ever saw with her eyes: the Aurelianos withdrawn but lucid, the José Arcadios impulsive but marked with tragedy. José Arcadio is shipped to Rome for the papacy that will never happen, and Meme comes home from school with her clavichord and her secret appetite for pleasure. Aureliano Segundo, exiled to Petra Cotes by Fernanda’s decree, wins an eating contest against the totemic Camila Sagastume and nearly dies of it.',
+      'And in the workshop, Colonel Aureliano Buendía completes his circle. He has renounced memory itself, making gold fishes only to melt them down and remake them; a traveling circus passes; and on his way back from watching it he stands against the chestnut tree where his father died — and dies standing, forehead against the trunk, the last image of his life the parade he had just seen. The vultures announce it.',
+    ],
+    characters: [
+      'ursula',
+      'jose-arcadio-the-seminarian',
+      'meme',
+      'aureliano-segundo',
+      'fernanda-del-carpio',
+      'petra-cotes',
+      'colonel-aureliano-buendia',
+    ],
+    events: ['the-death-of-the-colonel'],
+  },
+  {
+    number: 14,
+    title: 'Yellow Butterflies',
+    openingWords:
+      'MEME’S LAST VACATIONS coincided with the period of mourning for Colonel Aureliano Buendía.',
+    summary: [
+      'Meme inherits her father’s appetite for life and hides it perfectly from Fernanda — until she falls for Mauricio Babilonia, a mechanic’s apprentice from the banana company garages with the solemn eyes of a gypsy, an unembarrassed frankness, and a signature no lover in literature has matched: yellow butterflies that precede him everywhere, filling the cinema, the bathhouse, the house itself, so that Fernanda finds them impossible to exterminate.',
+      'Amaranta dies as she lived, virgin and at war with her own heart, having sewn her own shroud for four years after Death — a woman in blue with long hair — told her when to finish it; she leaves carrying a trunk of letters from the living to the dead. Fernanda, discovering Meme’s affair, posts an armed guard in the backyard, and a bullet meant for a chicken thief breaks Mauricio Babilonia’s spine as he climbs toward Meme’s bathroom. He dies years later, old and alone, without a single complaint or a single betrayal, and Meme never speaks another word.',
+    ],
+    characters: [
+      'meme',
+      'mauricio-babilonia',
+      'fernanda-del-carpio',
+      'amaranta',
+      'aureliano-segundo',
+      'ursula',
+      'pilar-ternera',
+    ],
+    events: ['meme-and-mauricio'],
+  },
+  {
+    number: 15,
+    title: 'The Massacre',
+    openingWords:
+      'THE EVENTS that would deal Macondo its fatal blow were just showing themselves when they brought Meme Buendía’s son home.',
+    summary: [
+      'Fernanda deposits the mute Meme in a convent in the highlands forever, and hides the son born there — Aureliano — in the Colonel’s old workshop, inventing a basket floating down the river. Meanwhile José Arcadio Segundo surfaces as a union organizer in the banana workers’ strike: the company answers every demand with lawyers who prove the workers do not exist, and the government answers with an army and martial law.',
+      'More than three thousand strikers and their families gather at the station to hear a decree read; the decree is five minutes to disperse, and then the machine guns open fire. José Arcadio Segundo wakes on a silent night train of corpses bound for the sea like rejected bananas, escapes, and walks home through the first of the rain to find that no one — not one person — remembers that anything happened: the official truth, repeated until it is the only truth, is that nobody died. He will carry the real number, three thousand, like a solitary sentence for the rest of his life, hidden in Melquíades’ room where soldiers who search it cannot see him. As Mr. Brown’s lawyers announce the strike’s end, the rain begins that will not stop.',
+    ],
+    characters: [
+      'jose-arcadio-segundo',
+      'fernanda-del-carpio',
+      'meme',
+      'aureliano-babilonia',
+      'mr-brown',
+      'aureliano-segundo',
+      'santa-sofia-de-la-piedad',
+    ],
+    events: ['the-strike', 'the-massacre'],
+  },
+  {
+    number: 16,
+    title: 'The Deluge',
+    openingWords: 'IT RAINED for four years, eleven months, and two days.',
+    summary: [
+      'The rain the banana company summoned to break the strike does not stop for almost five years. Macondo dissolves: the banana company’s machinery rusts, the animals Petra Cotes’ love once multiplied die in the mud, and Aureliano Segundo, stranded in his wife’s house, is slowly hollowed into an old man who entertains his half-hidden grandson Aureliano and digs for Úrsula’s buried gold with the obsessiveness of his ancestors. Fernanda’s magnificent slow-burning tirade against her husband runs for pages without a period; the invisible doctors she corresponds with schedule her telepathic surgery.',
+      'Úrsula, senile and rain-soaked, becomes a plaything for the children, announcing she is only waiting for the rain to stop to die. José Arcadio Segundo, unseen in Melquíades’ room, begins teaching little Aureliano to read, and passes to him both the alphabet and the forbidden memory of the massacre. When the rain finally stops, the survivors come out into a ruined, gutted town under a transparent sky.',
+    ],
+    characters: [
+      'aureliano-segundo',
+      'fernanda-del-carpio',
+      'petra-cotes',
+      'ursula',
+      'jose-arcadio-segundo',
+      'aureliano-babilonia',
+      'santa-sofia-de-la-piedad',
+    ],
+    events: ['the-rains-begin'],
+  },
+  {
+    number: 17,
+    title: 'The Death of Úrsula',
+    openingWords:
+      'ÚRSULA HAD to make a great effort to fulfill her promise to die when it cleared.',
+    summary: [
+      'Úrsula Iguarán dies on Good Friday, somewhere between one hundred fifteen and one hundred twenty-two years old, shrunken to the size of the newborn she is dressed like, after a last blazing return of lucidity in which she tries one final time to set the house right. Nature marks the year with a heat so unholy that birds break through window screens to die indoors; the ancient Rebeca dies alone in her locked house; and the town, ruined past ruin, is visited by the Wandering Jew.',
+      'Aureliano Segundo, warned by a growth in his throat, spends his last strength on one promise: raffling off Petra Cotes’ exhausted lottery animals to send Amaranta Úrsula to school in Brussels. He and his twin José Arcadio Segundo — one destroyed by revelry, the other by solitary vigil over a memory nobody shares — die at the same instant, and in the drunken confusion of the burial the coffins are switched, so each is buried in the other’s grave.',
+    ],
+    characters: [
+      'ursula',
+      'rebeca',
+      'aureliano-segundo',
+      'jose-arcadio-segundo',
+      'petra-cotes',
+      'fernanda-del-carpio',
+      'santa-sofia-de-la-piedad',
+      'amaranta-ursula',
+      'aureliano-babilonia',
+    ],
+    events: ['the-death-of-ursula'],
+  },
+  {
+    number: 18,
+    title: 'Melquíades’ Room',
+    openingWords: 'AURELIANO DID NOT leave Melquíades’ room for a long time.',
+    summary: [
+      'Aureliano Babilonia grows into the last sage of the line without ever leaving the house: he learns the parchments by heart, converses with the ghost of Melquíades — who tells him the manuscripts are written in Sanskrit and may be read when they turn one hundred years old — and acquires, from the gypsy’s books and from a memory that seems inherited, an impossible medieval erudition. Santa Sofía de la Piedad, who has served the house for sixty years without anyone quite noticing she exists, gives up its losing battle against decay and simply walks out with a bundle of clothing.',
+      'Fernanda dies in her queen’s gown, and four months later her son José Arcadio arrives from Rome — no priest, but a soft, spoiled fraud who has spent decades pretending at a seminary that never was. He drains the house of Fernanda’s theatrics, discovers Úrsula’s buried gold under the bedroom floor, and squanders it on debauched parties with adolescent boys — who return one night to drown him in his perfumed pool and leave with the three sacks of gold. Aureliano, the nephew he had finally begun to treat as kin, seals the house again.',
+    ],
+    characters: [
+      'aureliano-babilonia',
+      'melquiades',
+      'fernanda-del-carpio',
+      'jose-arcadio-the-seminarian',
+      'santa-sofia-de-la-piedad',
+    ],
+    events: ['the-death-of-fernanda', 'the-drowning-of-jose-arcadio'],
+  },
+  {
+    number: 19,
+    title: 'Amaranta Úrsula',
+    openingWords:
+      'AMARANTA ÚRSULA returned with the first angels of December, driven on a sailor’s breeze',
+    summary: [
+      'Amaranta Úrsula blows back into the dying house with Belgian energy, a birdcage full of canaries, and a husband, the aviator Gaston, led on a silk leash — determined to resurrect Macondo by force of will while the town itself has given up. She fails to notice what the reader cannot miss: her nephew Aureliano, who does not know he is her nephew, is being destroyed by love for her. He takes his misery to the black mistress Nigromanta and into the last living corner of Macondo — the bookstore of the wise Catalonian and the four friends, Álvaro, Germán, Alfonso, and Gabriel, with whom he shares literature, brothels, and the heretical true memory of the banana massacre.',
+      'While Gaston waits serenely for the airplane he has ordered from Brussels, Aureliano finally declares himself, and after a violent, wordless struggle Amaranta Úrsula’s resistance collapses into its opposite. The last love of the Buendía line begins — the happiest and most doomed the house has ever held.',
+    ],
+    characters: [
+      'amaranta-ursula',
+      'gaston',
+      'aureliano-babilonia',
+      'nigromanta',
+      'the-wise-catalonian',
+      'gabriel',
+    ],
+    events: ['amaranta-ursula-returns', 'the-incestuous-love'],
+  },
+  {
+    number: 20,
+    title: 'The Wind',
+    openingWords:
+      'PILAR TERNERA died in her wicker rocking chair during one night of festivities',
+    summary: [
+      'The witnesses leave one by one: Pilar Ternera, mother and memory of half the line, dies past one hundred forty-five in her rocking chair and is buried in it; the wise Catalonian returns to his Mediterranean village and writes back that the past is a lie; the four friends scatter, Gabriel to Paris with the complete works of Rabelais. Gaston, informed by letter of his wife’s betrayal, replies with serene good wishes about the airplane. Aureliano and Amaranta Úrsula, alone in a town the ants are eating, live out a savage, joyful, remorse-tinged idyll and conceive a child they finally suspect may be cousin and... something closer.',
+      'Amaranta Úrsula bleeds to death giving birth to a boy born with the tail of a pig — the child Úrsula feared for a hundred years, and the only Buendía in a century engendered in love. Aureliano, mad with grief, wanders the town all night, and when he remembers the child, the ants have already carried him to their holes: the first line of Melquíades’ epigraph opens to him at last. He reads the parchments — the history of the family, written one hundred years in advance, concentrated so that everything coexists in one instant — and understands he will never leave the room, as the biblical hurricane rises to wipe Macondo from the memory of men, because races condemned to one hundred years of solitude do not have a second opportunity on earth.',
+    ],
+    characters: [
+      'aureliano-babilonia',
+      'amaranta-ursula',
+      'the-last-aureliano',
+      'pilar-ternera',
+      'the-wise-catalonian',
+      'gabriel',
+      'gaston',
+      'nigromanta',
+    ],
+    events: ['the-birth-of-the-last-aureliano', 'the-deciphering', 'the-wind'],
+  },
+];

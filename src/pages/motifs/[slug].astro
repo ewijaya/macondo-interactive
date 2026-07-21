@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { motifs, motifBySlug, characterBySlug, eventBySlug } from '../../lib/lookups';
+
+export function getStaticPaths() {
+  return motifs.map((m) => ({ params: { slug: m.slug } }));
+}
+
+const { slug } = Astro.params;
+const m = motifBySlug.get(slug!)!;
+---
+
+<Layout title={m.name} description={m.tagline}>
+  <article>
+    <header class="page-head">
+      <p class="eyebrow">Motif · {m.glyph}</p>
+      <h1>{m.name}</h1>
+      <p class="lede">{m.tagline}</p>
+    </header>
+
+    <div class="prose">
+      {m.summary.map((para) => <p>{para}</p>)}
+    </div>
+
+    <section class="recurrences">
+      <h2>Where it surfaces</h2>
+      <ol>
+        {
+          m.occurrences.map((o) => (
+            <li>
+              <p>{o.text}</p>
+              <div class="chip-row">
+                {o.characters.map((cs) => {
+                  const c = characterBySlug.get(cs);
+                  return c ? (
+                    <a href={`/characters/${c.slug}`} class={`char-chip bl-${c.bloodline}`}>
+                      {c.name}
+                    </a>
+                  ) : null;
+                })}
+                {o.events.map((es) => {
+                  const e = eventBySlug.get(es);
+                  return e ? (
+                    <a href={`/timeline#${e.slug}`} class="char-chip">
+                      {e.title}
+                    </a>
+                  ) : null;
+                })}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .recurrences {
+    margin-top: 3rem;
+    max-width: var(--max-prose);
+  }
+
+  .recurrences h2 {
+    margin-bottom: 1.2rem;
+  }
+
+  .recurrences ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: rec;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .recurrences li {
+    counter-increment: rec;
+    padding-left: 2.6rem;
+    position: relative;
+  }
+
+  .recurrences li::before {
+    content: counter(rec);
+    position: absolute;
+    left: 0;
+    top: 0.05em;
+    font-family: var(--f-display);
+    font-size: 1.2rem;
+    font-weight: 620;
+    color: var(--butterfly);
+    -webkit-text-stroke: 0.5px var(--ink);
+  }
+
+  .recurrences .chip-row {
+    margin-top: 0.5rem;
+  }
+</style>

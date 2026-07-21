@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {
+  characters,
+  characterBySlug,
+  placeBySlug,
+  relationsOf,
+  relationPhrase,
+  eventsOf,
+  placesClaiming,
+  motifsOf,
+  chaptersOf,
+} from '../../lib/lookups';
+import { BLOODLINE_LABELS } from '../../data/types';
+
+export function getStaticPaths() {
+  return characters.map((c) => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const c = characterBySlug.get(slug!)!;
+
+const rels = relationsOf(c.slug);
+const charEvents = eventsOf(c.slug);
+const claimed = placesClaiming(c.slug);
+const charMotifs = motifsOf(c.slug);
+const charChapters = chaptersOf(c.slug);
+
+// merge dossier-declared places with reverse-index ones, dossier first
+const placeLinks = [
+  ...c.places,
+  ...claimed
+    .filter((p) => !c.places.some((d) => d.place === p.place.slug))
+    .map((p) => ({ place: p.place.slug, bond: p.bond })),
+];
+---
+
+<Layout title={c.name} description={c.tagline}>
+  <article class={`bl-${c.bloodline}`}>
+    <header class="page-head">
+      <p class="eyebrow" style="color: var(--bl)">
+        {BLOODLINE_LABELS[c.bloodline]}{c.generation ? ` · Generation ${c.generation}` : ''}
+      </p>
+      <h1>{c.name}</h1>
+      {c.aka?.length ? <p class="aka">Also: {c.aka.join(' · ')}</p> : null}
+      <p class="lede">{c.tagline}</p>
+    </header>
+
+    <div class="dossier">
+      <div class="prose">
+        {c.summary.map((para) => <p>{para}</p>)}
+
+        {
+          c.quote && (
+            <blockquote class="pull">
+              “{c.quote.text}”
+              <cite>{c.quote.context}</cite>
+            </blockquote>
+          )
+        }
+
+        <div class="fate">
+          <strong>How it ends</strong>
+          {c.fate}
+        </div>
+      </div>
+
+      <aside>
+        {
+          rels.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">Bonds</p>
+              <ul>
+                {rels.map(({ other, rel, outgoing }) => {
+                  const o = characterBySlug.get(other);
+                  return o ? (
+                    <li>
+                      <a href={`/characters/${o.slug}`} class={rel.transgressive ? 'transgressive' : ''}>
+                        <em>{relationPhrase(rel, outgoing)}</em> {o.name}
+                      </a>
+                      <span class="why">{rel.description}</span>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          placeLinks.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">Places</p>
+              <ul>
+                {placeLinks.map((p) => (
+                  <li>
+                    <a href={`/places/${p.place}`}>{placeBySlug.get(p.place)?.name ?? p.place}</a>
+                    <span class="why">{p.bond}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          charEvents.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">In the timeline</p>
+              <ul>
+                {charEvents.map((e) => (
+                  <li>
+                    <a href={`/timeline#${e.slug}`}>{e.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          charMotifs.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">Motifs</p>
+              <div class="chip-row">
+                {charMotifs.map((m) => (
+                  <a href={`/motifs/${m.slug}`} class="char-chip">
+                    {m.glyph} {m.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        {
+          charChapters.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">Appears in</p>
+              <div class="chip-row">
+                {charChapters.map((ch) => (
+                  <a href={`/chapters#ch-${ch.number}`} class="char-chip">
+                    Ch. {ch.number}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        }
+      </aside>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .aka {
+    margin-top: 0.7rem;
+    font-family: var(--f-label);
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+
+  .aside-block a.transgressive {
+    color: var(--c-jose-arcadio);
+  }
+
+  .aside-block li em {
+    color: var(--ink-faint);
+    font-style: normal;
+    font-size: 0.82rem;
+  }
+
+</style>

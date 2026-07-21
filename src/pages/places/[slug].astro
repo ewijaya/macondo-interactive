@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { places, placeBySlug, characterBySlug, eventBySlug } from '../../lib/lookups';
+
+export function getStaticPaths() {
+  return places.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const p = placeBySlug.get(slug!)!;
+
+const ZONE_LABEL = { house: 'The Buendía house', town: 'Macondo', beyond: 'Beyond the swamp' };
+---
+
+<Layout title={p.name} description={p.tagline}>
+  <article>
+    <header class="page-head">
+      <p class="eyebrow">{ZONE_LABEL[p.zone]}</p>
+      <h1>{p.name}</h1>
+      <p class="lede">{p.tagline}</p>
+    </header>
+
+    <div class="dossier">
+      <div class="prose">
+        {p.summary.map((para) => <p>{para}</p>)}
+      </div>
+
+      <aside>
+        {
+          p.residents.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">Bound to this place</p>
+              <ul>
+                {p.residents.map((r) => {
+                  const c = characterBySlug.get(r.character);
+                  return c ? (
+                    <li class={`bl-${c.bloodline}`}>
+                      <a href={`/characters/${c.slug}`}>{c.name}</a>
+                      <span class="why">{r.bond}</span>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          p.events.length > 0 && (
+            <div class="aside-block">
+              <p class="eyebrow">What happened here</p>
+              <ul>
+                {p.events.map((slug) => {
+                  const e = eventBySlug.get(slug);
+                  return e ? (
+                    <li>
+                      <a href={`/timeline#${e.slug}`}>{e.title}</a>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          p.map && (
+            <div class="aside-block">
+              <p class="eyebrow">On the map</p>
+              <ul>
+                <li>
+                  <a href="/map">See it in the town plan →</a>
+                </li>
+              </ul>
+            </div>
+          )
+        }
+      </aside>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .dossier aside {
+    border-top-color: var(--ink);
+  }
+
+  .aside-block li a {
+    color: var(--bl, var(--ink));
+  }
+</style>

@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { eventsInOrder, characterBySlug, placeBySlug } from '../lib/lookups';
+import { ERA_LABELS, type TimelineEvent } from '../data/types';
+
+const ERA_NOTES: Record<TimelineEvent['era'], string> = {
+  founding: 'A village of twenty adobe houses, so recent that many things lacked names.',
+  insomnia: 'The plague of forgetting, and the institutions that arrive to remember for you.',
+  wars: 'Colonel Aureliano Buendía organized thirty-two armed uprisings and lost them all.',
+  banana: 'The company came, the town swelled, and it ended at the train station.',
+  deluge: 'It rained for four years, eleven months, and two days.',
+  wind: 'The last Buendías, the deciphering, and the prophesied wind.',
+};
+
+const eras = (Object.keys(ERA_LABELS) as TimelineEvent['era'][]).map((era) => ({
+  era,
+  label: ERA_LABELS[era],
+  note: ERA_NOTES[era],
+  events: eventsInOrder.filter((e) => e.era === era),
+}));
+---
+
+<Layout
+  title="Timeline"
+  description="The hundred years in order — from the founding of Macondo to the wind that erased it."
+>
+  <header class="page-head">
+    <p class="eyebrow">The century, in order</p>
+    <h1>Timeline</h1>
+    <p class="lede">
+      The novel scorns dates; time in Macondo moves in spirals. So the atlas marks eras, not
+      years — six turns of the wheel from founding to wind.
+    </p>
+  </header>
+
+  <div class="timeline">
+    {
+      eras.map((era, i) => (
+        <section class="era" id={`era-${era.era}`}>
+          <header class="era-head">
+            <span class="era-index">{i + 1} / 6</span>
+            <h2>{era.label}</h2>
+            <p>{era.note}</p>
+          </header>
+          <ol class="era-events">
+            {era.events.map((e) => (
+              <li id={e.slug} class="event">
+                <h3>{e.title}</h3>
+                <div class="event-body prose">
+                  {e.summary.map((para) => (
+                    <p>{para}</p>
+                  ))}
+                </div>
+                <div class="event-refs">
+                  {e.characters.map((slug) => {
+                    const c = characterBySlug.get(slug);
+                    return c ? (
+                      <a href={`/characters/${c.slug}`} class={`char-chip bl-${c.bloodline}`}>
+                        {c.name}
+                      </a>
+                    ) : null;
+                  })}
+                  {e.places.map((slug) => {
+                    const p = placeBySlug.get(slug);
+                    return p ? (
+                      <a href={`/places/${p.slug}`} class="char-chip place-chip">
+                        {p.name}
+                      </a>
+                    ) : null;
+                  })}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .timeline {
+    max-width: var(--max-wide);
+  }
+
+  .era {
+    display: grid;
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    border-top: 2px solid var(--ink);
+  }
+
+  .era-head {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+
+  .era-index {
+    font-family: var(--f-label);
+    font-size: 0.72rem;
+    font-weight: 640;
+    letter-spacing: 0.14em;
+    color: var(--ink-faint);
+  }
+
+  .era-head h2 {
+    margin: 0.4rem 0 0.7rem;
+  }
+
+  .era-head p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .era-events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  .event {
+    padding-left: 1.6rem;
+    border-left: 1px solid var(--hairline);
+    position: relative;
+    scroll-margin-top: 2rem;
+  }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0.55em;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--butterfly);
+    border: 1.5px solid var(--ink);
+  }
+
+  .event:target {
+    background: var(--butterfly-soft);
+    border-left-color: var(--butterfly);
+  }
+
+  .event h3 {
+    margin-bottom: 0.6rem;
+  }
+
+  .event-body {
+    font-size: 0.99rem;
+  }
+
+  .event-refs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+  }
+
+  .place-chip::before {
+    border-radius: 1px;
+    background: var(--ink-faint);
+  }
+
+  @media (max-width: 900px) {
+    .era {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .era-head {
+      position: static;
+    }
+  }
+</style>

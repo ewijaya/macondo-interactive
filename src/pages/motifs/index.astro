@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { motifs } from '../../lib/lookups';
+---
+
+<Layout
+  title="Motifs"
+  description="The recurring signs of One Hundred Years of Solitude — yellow butterflies, little gold fishes, ice, parchments, and solitude itself."
+>
+  <header class="page-head">
+    <p class="eyebrow">The signs of the book</p>
+    <h1>Motifs</h1>
+    <p class="lede">
+      Macondo's story is told in recurring signs. Each motif below is a thread you can pull:
+      follow it and it crosses the whole century.
+    </p>
+  </header>
+
+  <div class="card-grid">
+    {
+      motifs.map((m) => (
+        <a href={`/motifs/${m.slug}`} class="card">
+          <span class="glyph" aria-hidden="true">
+            {m.glyph}
+          </span>
+          <span class="name">{m.name}</span>
+          <span class="tagline">{m.tagline}</span>
+          <span class="meta">{m.occurrences.length} recurrences</span>
+        </a>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .glyph {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .card .meta {
+    margin-top: auto;
+    padding-top: 0.6rem;
+  }
+</style>

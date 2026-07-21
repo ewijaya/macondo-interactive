@@ -1,0 +1,82 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/archivo';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const path = Astro.url.pathname;
+
+const NAV = [
+  { href: '/', label: 'The Family Tree' },
+  { href: '/characters', label: 'Characters' },
+  { href: '/map', label: 'Map of Macondo' },
+  { href: '/places', label: 'Places' },
+  { href: '/timeline', label: 'Timeline' },
+  { href: '/web', label: 'The Web' },
+  { href: '/motifs', label: 'Motifs' },
+  { href: '/chapters', label: 'Chapters' },
+  { href: '/about', label: 'About' },
+];
+
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Macondo Atlas</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={`${title} · Macondo Atlas`} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="rail">
+        <a href="/" class="rail-mark">
+          Macondo Atlas
+          <small>One Hundred Years of Solitude</small>
+        </a>
+        <nav aria-label="Atlas sections">
+          {
+            NAV.map((item) => (
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </header>
+      <main>
+        <slot />
+        <footer class="site-foot">
+          <p>
+            A reader's atlas of <em>One Hundred Years of Solitude</em> by Gabriel García
+            Márquez, translated by Gregory Rabassa. All summaries and analysis are original;
+            brief quotations appear under fair use with attribution.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .site-foot {
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--hairline);
+    max-width: var(--max-prose);
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+</style>

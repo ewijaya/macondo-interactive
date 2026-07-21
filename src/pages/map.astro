@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { places, characterBySlug } from '../lib/lookups';
+
+const mapped = places.filter((p) => p.map);
+const beyond = places.filter((p) => !p.map);
+---
+
+<Layout
+  title="Map of Macondo"
+  description="A stylized map of Macondo — the Buendía house, the town the gypsies found, and the banana company behind its electrified fence."
+>
+  <header class="page-head">
+    <p class="eyebrow">Cartography of a town that no longer exists</p>
+    <h1>Macondo</h1>
+    <p class="lede">
+      Twenty adobe houses on a riverbank became a banana boomtown and then a ruin the wind
+      carried off. Hover any site; click through for its full history.
+    </p>
+  </header>
+
+  <figure class="map-figure">
+    <svg viewBox="0 0 100 100" role="img" aria-label="Stylized map of Macondo" id="macondo-map">
+      <!-- the river of clear water, along the west -->
+      <path
+        d="M 4 -2 C 10 18, 2 38, 8 58 C 12 72, 4 88, 9 102"
+        class="river"
+        fill="none"
+      />
+      <text x="3.5" y="50" class="river-label" transform="rotate(-80 3.5 50)">the river</text>
+
+      <!-- the road of the gypsies, out to the swamp -->
+      <path d="M 12 30 C 30 26, 60 34, 96 28" class="road" fill="none" />
+
+      {
+        mapped.map((p) => (
+          <a href={`/places/${p.slug}`} class="site-link">
+            <g class={`site zone-${p.zone}`} transform={`translate(${p.map!.x} ${p.map!.y})`}>
+              <title>
+                {p.name} — {p.tagline}
+              </title>
+              <circle r={p.zone === 'house' ? 1.5 : 1.9} class="dot" />
+              <text y={p.zone === 'house' ? -2.4 : -3}>{p.name}</text>
+            </g>
+          </a>
+        ))
+      }
+    </svg>
+    <figcaption class="map-legend">
+      <span class="lg"><i class="dot-h"></i> The Buendía house</span>
+      <span class="lg"><i class="dot-t"></i> The town</span>
+    </figcaption>
+  </figure>
+
+  <section class="beyond">
+    <h2>Beyond the swamp</h2>
+    <p class="beyond-lede">
+      The places Macondo's hundred years reach toward — where Buendías go to fight, marry,
+      study, and disappear.
+    </p>
+    <div class="card-grid">
+      {
+        beyond.map((p) => (
+          <a href={`/places/${p.slug}`} class="card">
+            <span class="meta">Beyond</span>
+            <span class="name">{p.name}</span>
+            <span class="tagline">{p.tagline}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .map-figure {
+    margin: 0;
+    max-width: var(--max-wide);
+    border: 1px solid var(--hairline);
+    background: var(--paper-warm);
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .river {
+    stroke: #a8c5cf;
+    stroke-width: 2.6;
+    opacity: 0.85;
+  }
+
+  .river-label {
+    font-family: var(--f-label);
+    font-size: 1.7px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    fill: #7fa3b0;
+  }
+
+  .road {
+    stroke: var(--hairline);
+    stroke-width: 1.1;
+    stroke-dasharray: 1.6 1.2;
+  }
+
+  .site .dot {
+    fill: var(--ink);
+    transition: fill 120ms ease;
+  }
+
+  .site.zone-house .dot {
+    fill: var(--c-matriarch);
+  }
+
+  .site text {
+    font-family: var(--f-label);
+    font-size: 2.1px;
+    font-weight: 600;
+    fill: var(--ink-soft);
+    text-anchor: middle;
+    paint-order: stroke;
+    stroke: var(--paper-warm);
+    stroke-width: 0.6;
+  }
+
+  .site.zone-house text {
+    font-size: 1.8px;
+  }
+
+  .site-link:hover {
+    background: none;
+  }
+
+  .site-link:hover .dot {
+    fill: var(--butterfly);
+  }
+
+  .site-link:hover text {
+    fill: var(--ink);
+  }
+
+  .map-legend {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    border-top: 1px solid var(--hairline);
+    font-family: var(--f-label);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+  }
+
+  .dot-h,
+  .dot-t {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  .dot-h {
+    background: var(--c-matriarch);
+  }
+
+  .dot-t {
+    background: var(--ink);
+  }
+
+  .beyond {
+    margin-top: 3rem;
+  }
+
+  .beyond-lede {
+    color: var(--ink-soft);
+    margin: 0.6rem 0 1.2rem;
+    max-width: var(--max-prose);
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FamilyTree from '../components/FamilyTree.astro';
+import { characters, places, events, relations, motifs } from '../lib/lookups';
+---
+
+<Layout
+  title="The Buendía Family Tree"
+  description="An interactive atlas of One Hundred Years of Solitude — seven generations of Buendías, the town of Macondo, and the web that binds them."
+>
+  <header class="page-head">
+    <p class="eyebrow">An atlas of Macondo</p>
+    <h1>Seven generations, two names, one solitude</h1>
+    <p class="lede">
+      Every Buendía man is a José Arcadio or an Aureliano, and the names carry their fates:
+      the Aurelianos withdrawn and lucid, the José Arcadios impulsive and marked for
+      tragedy. This atlas untangles the century — hover a name to light up its bloodline,
+      click through to any life.
+    </p>
+  </header>
+
+  <FamilyTree />
+
+  <section class="counts" aria-label="What the atlas holds">
+    <a href="/characters"><strong>{characters.length}</strong> characters</a>
+    <a href="/places"><strong>{places.length}</strong> places</a>
+    <a href="/timeline"><strong>{events.length}</strong> events</a>
+    <a href="/web"><strong>{relations.length}</strong> bonds</a>
+    <a href="/motifs"><strong>{motifs.length}</strong> motifs</a>
+  </section>
+</Layout>
+
+<style>
+  .counts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    margin-top: 3.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--hairline);
+    max-width: var(--max-wide);
+  }
+
+  .counts a {
+    font-family: var(--f-label);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .counts a:hover {
+    background: var(--butterfly-soft);
+  }
+
+  .counts strong {
+    font-family: var(--f-display);
+    font-size: 1.6rem;
+    font-weight: 620;
+    color: var(--ink);
+    margin-right: 0.35em;
+  }
+</style>

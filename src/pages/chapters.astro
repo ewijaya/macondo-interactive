@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { chapters, characterBySlug, eventBySlug } from '../lib/lookups';
+---
+
+<Layout
+  title="Chapters"
+  description="A chapter-by-chapter companion to One Hundred Years of Solitude — twenty unnumbered chapters, summarized and cross-linked."
+>
+  <header class="page-head">
+    <p class="eyebrow">A reading companion</p>
+    <h1>The twenty chapters</h1>
+    <p class="lede">
+      The novel numbers nothing. We number the chapters for wayfinding only — each entry
+      opens with the chapter's actual first words, so you can find your place.
+    </p>
+  </header>
+
+  <ol class="chapter-list">
+    {
+      chapters.map((ch) => (
+        <li id={`ch-${ch.number}`} class="chapter">
+          <header>
+            <span class="ch-num">{String(ch.number).padStart(2, '0')}</span>
+            <div>
+              <h2>{ch.title}</h2>
+              <p class="opening">“{ch.openingWords}…”</p>
+            </div>
+          </header>
+          <div class="prose">
+            {ch.summary.map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+          <div class="chip-row">
+            {ch.characters.map((cs) => {
+              const c = characterBySlug.get(cs);
+              return c ? (
+                <a href={`/characters/${c.slug}`} class={`char-chip bl-${c.bloodline}`}>
+                  {c.name}
+                </a>
+              ) : null;
+            })}
+            {ch.events.map((es) => {
+              const e = eventBySlug.get(es);
+              return e ? (
+                <a href={`/timeline#${e.slug}`} class="char-chip">
+                  ⟶ {e.title}
+                </a>
+              ) : null;
+            })}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Layout>
+
+<style>
+  .chapter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: var(--max-prose);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .chapter {
+    scroll-margin-top: 2rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.6rem;
+  }
+
+  .chapter:target {
+    border-top: 3px solid var(--butterfly);
+  }
+
+  .chapter header {
+    display: flex;
+    gap: 1.1rem;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .ch-num {
+    font-family: var(--f-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .opening {
+    margin-top: 0.35rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+
+  .chapter .chip-row {
+    margin-top: 1rem;
+  }
+</style>

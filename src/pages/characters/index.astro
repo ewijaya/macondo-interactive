@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { characters } from '../../lib/lookups';
+import { BLOODLINE_LABELS, type Bloodline } from '../../data/types';
+
+const ORDER: Bloodline[] = ['aureliano', 'jose-arcadio', 'matriarch', 'remedios', 'outsider'];
+const groups = ORDER.map((bl) => ({
+  bl,
+  label: BLOODLINE_LABELS[bl],
+  members: characters.filter((c) => c.bloodline === bl),
+}));
+
+const BLURBS: Record<Bloodline, string> = {
+  aureliano:
+    'Withdrawn, lucid, marked for solitude. They make gold fishes, read parchments, and lose wars.',
+  'jose-arcadio':
+    'Impulsive, enterprising, enormous. They leave with gypsies, come back tattooed, and die strangely.',
+  matriarch: 'The women who hold the house together while the men chase wars and inventions.',
+  remedios: 'The name innocence enters the family with — a child bride, a beauty, a schoolgirl.',
+  outsider: 'Everyone who married in, wandered in, or blew in with the banana company.',
+};
+---
+
+<Layout
+  title="Characters"
+  description="Every character of One Hundred Years of Solitude, organized by bloodline and temperament."
+>
+  <header class="page-head">
+    <p class="eyebrow">Dramatis personae</p>
+    <h1>The people of the century</h1>
+    <p class="lede">
+      {characters.length} lives, organized the way the book organizes them: by the temperament
+      that travels with each name.
+    </p>
+  </header>
+
+  {
+    groups.map((g) => (
+      <section class={`group bl-${g.bl}`}>
+        <div class="group-head">
+          <h2>{g.label}</h2>
+        <p>{BLURBS[g.bl]}</p>
+        </div>
+        <div class="card-grid">
+          {g.members.map((c) => (
+            <a href={`/characters/${c.slug}`} class={`card bl-${c.bloodline}`}>
+              <span class="meta">
+                {c.generation ? `Generation ${c.generation}` : 'Macondo'}
+              </span>
+              <span class="name">{c.name}</span>
+              <span class="tagline">{c.tagline}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</Layout>
+
+<style>
+  .group {
+    margin-bottom: 3.2rem;
+  }
+
+  .group-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.1rem;
+    max-width: var(--max-wide);
+  }
+
+  .group-head h2::before {
+    content: '';
+    display: inline-block;
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 999px;
+    background: var(--bl);
+    margin-right: 0.5em;
+    vertical-align: baseline;
+  }
+
+  .group-head p {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+</style>

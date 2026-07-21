@@ -1,0 +1,381 @@
+---
+// The Buendía genealogy, hand-laid. Seven generations, the recycled names
+// color-coded, and the final incestuous loop drawn as what it is: the line
+// curving back into itself.
+import { characterBySlug } from '../lib/lookups';
+
+interface TreeNode {
+  slug: string;
+  label: string;
+  x: number;
+  y: number;
+  kind: 'family' | 'partner';
+}
+
+const NODES: TreeNode[] = [
+  // G1
+  { slug: 'jose-arcadio-buendia', label: 'José Arcadio Buendía', x: 380, y: 70, kind: 'family' },
+  { slug: 'ursula', label: 'Úrsula Iguarán', x: 620, y: 70, kind: 'family' },
+  // G2 + partners
+  { slug: 'jose-arcadio', label: 'José Arcadio', x: 150, y: 210, kind: 'family' },
+  { slug: 'rebeca', label: 'Rebeca', x: 300, y: 210, kind: 'family' },
+  { slug: 'colonel-aureliano-buendia', label: 'Col. Aureliano Buendía', x: 500, y: 210, kind: 'family' },
+  { slug: 'remedios-moscote', label: 'Remedios Moscote', x: 672, y: 210, kind: 'partner' },
+  { slug: 'amaranta', label: 'Amaranta', x: 830, y: 210, kind: 'family' },
+  { slug: 'pilar-ternera', label: 'Pilar Ternera', x: 318, y: 288, kind: 'partner' },
+  // G3 + partners
+  { slug: 'santa-sofia-de-la-piedad', label: 'Santa Sofía de la Piedad', x: 108, y: 390, kind: 'partner' },
+  { slug: 'arcadio', label: 'Arcadio', x: 268, y: 390, kind: 'family' },
+  { slug: 'aureliano-jose', label: 'Aureliano José', x: 430, y: 390, kind: 'family' },
+  { slug: 'seventeen-aurelianos', label: 'The 17 Aurelianos', x: 600, y: 390, kind: 'family' },
+  // G4 + partners
+  { slug: 'remedios-the-beauty', label: 'Remedios the Beauty', x: 120, y: 530, kind: 'family' },
+  { slug: 'jose-arcadio-segundo', label: 'José Arcadio Segundo', x: 300, y: 530, kind: 'family' },
+  { slug: 'aureliano-segundo', label: 'Aureliano Segundo', x: 470, y: 530, kind: 'family' },
+  { slug: 'fernanda-del-carpio', label: 'Fernanda del Carpio', x: 640, y: 530, kind: 'partner' },
+  { slug: 'petra-cotes', label: 'Petra Cotes', x: 505, y: 606, kind: 'partner' },
+  // G5 + partners
+  { slug: 'mauricio-babilonia', label: 'Mauricio Babilonia', x: 165, y: 680, kind: 'partner' },
+  { slug: 'meme', label: 'Meme', x: 330, y: 680, kind: 'family' },
+  { slug: 'jose-arcadio-the-seminarian', label: 'José Arcadio', x: 480, y: 680, kind: 'family' },
+  { slug: 'amaranta-ursula', label: 'Amaranta Úrsula', x: 655, y: 680, kind: 'family' },
+  { slug: 'gaston', label: 'Gastón', x: 820, y: 680, kind: 'partner' },
+  // G6
+  { slug: 'aureliano-babilonia', label: 'Aureliano Babilonia', x: 260, y: 810, kind: 'family' },
+  // G7
+  { slug: 'the-last-aureliano', label: 'Aureliano', x: 460, y: 920, kind: 'family' },
+];
+
+type EdgeKind = 'marriage' | 'lovers' | 'descent' | 'adopted';
+
+interface TreeEdge {
+  a: string;
+  b: string;
+  kind: EdgeKind;
+  transgressive?: boolean;
+  /** SVG path override for the curved or elbowed connectors */
+  d?: string;
+}
+
+// Node positions are referenced below; pill half-height is 17.
+const EDGES: TreeEdge[] = [
+  // couples
+  { a: 'jose-arcadio-buendia', b: 'ursula', kind: 'marriage' },
+  { a: 'jose-arcadio', b: 'rebeca', kind: 'marriage', transgressive: true },
+  { a: 'colonel-aureliano-buendia', b: 'remedios-moscote', kind: 'marriage' },
+  { a: 'jose-arcadio', b: 'pilar-ternera', kind: 'lovers', d: 'M 165 227 C 200 265, 250 285, 288 288' },
+  { a: 'colonel-aureliano-buendia', b: 'pilar-ternera', kind: 'lovers', d: 'M 485 227 C 440 268, 390 285, 350 288' },
+  { a: 'arcadio', b: 'santa-sofia-de-la-piedad', kind: 'marriage' },
+  { a: 'aureliano-segundo', b: 'fernanda-del-carpio', kind: 'marriage' },
+  { a: 'aureliano-segundo', b: 'petra-cotes', kind: 'lovers', d: 'M 478 547 C 488 570, 495 585, 502 592' },
+  { a: 'meme', b: 'mauricio-babilonia', kind: 'lovers' },
+  { a: 'amaranta-ursula', b: 'gaston', kind: 'marriage' },
+  { a: 'amaranta', b: 'aureliano-jose', kind: 'lovers', transgressive: true, d: 'M 815 227 C 720 320, 560 375, 468 385' },
+  { a: 'amaranta-ursula', b: 'aureliano-babilonia', kind: 'lovers', transgressive: true, d: 'M 648 697 C 560 790, 420 815, 322 812' },
+  // descent: G1 → G2
+  { a: 'jose-arcadio-buendia', b: 'jose-arcadio', kind: 'descent', d: 'M 500 70 V 140 H 150 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'colonel-aureliano-buendia', kind: 'descent', d: 'M 500 140 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'amaranta', kind: 'descent', d: 'M 500 140 H 830 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'rebeca', kind: 'adopted', d: 'M 560 87 C 480 130, 380 160, 316 194' },
+  // descent: G2 → G3
+  { a: 'jose-arcadio', b: 'arcadio', kind: 'descent', d: 'M 230 258 C 240 300, 255 340, 265 373' },
+  { a: 'colonel-aureliano-buendia', b: 'aureliano-jose', kind: 'descent', d: 'M 420 300 C 424 330, 428 350, 430 373' },
+  { a: 'colonel-aureliano-buendia', b: 'seventeen-aurelianos', kind: 'descent', d: 'M 520 227 C 560 280, 590 330, 600 373' },
+  // descent: G3 → G4
+  { a: 'arcadio', b: 'remedios-the-beauty', kind: 'descent', d: 'M 188 407 V 462 H 120 V 513' },
+  { a: 'arcadio', b: 'jose-arcadio-segundo', kind: 'descent', d: 'M 188 462 H 300 V 513' },
+  { a: 'arcadio', b: 'aureliano-segundo', kind: 'descent', d: 'M 188 462 H 470 V 513' },
+  // descent: G4 → G5
+  { a: 'aureliano-segundo', b: 'meme', kind: 'descent', d: 'M 555 547 V 612 H 330 V 663' },
+  { a: 'aureliano-segundo', b: 'jose-arcadio-the-seminarian', kind: 'descent', d: 'M 555 612 H 480 V 663' },
+  { a: 'aureliano-segundo', b: 'amaranta-ursula', kind: 'descent', d: 'M 555 612 H 655 V 663' },
+  // descent: G5 → G6
+  { a: 'meme', b: 'aureliano-babilonia', kind: 'descent', d: 'M 248 697 C 252 730, 256 765, 259 793' },
+  // descent: G6+G5 → G7
+  { a: 'aureliano-babilonia', b: 'the-last-aureliano', kind: 'descent', d: 'M 300 825 C 360 855, 410 880, 440 903' },
+  { a: 'amaranta-ursula', b: 'the-last-aureliano', kind: 'descent', d: 'M 660 697 C 620 790, 530 870, 482 906' },
+];
+
+const nodeBySlug = new Map(NODES.map((n) => [n.slug, n]));
+
+// midpoint helper for couple bars drawn as straight lines
+function straight(a: TreeNode, b: TreeNode): string {
+  const [l, r] = a.x < b.x ? [a, b] : [b, a];
+  return `M ${l.x + pillW(l) / 2} ${l.y} H ${r.x - pillW(r) / 2}`;
+}
+
+function pillW(n: TreeNode): number {
+  return Math.max(74, n.label.length * (n.kind === 'family' ? 8.1 : 7.2) + 26);
+}
+
+// Kinship sets for hover highlighting: node → itself + everyone connected
+// through any edge, transitively one step (partners, parents, children).
+const adjacency = new Map<string, Set<string>>();
+for (const n of NODES) adjacency.set(n.slug, new Set([n.slug]));
+for (const e of EDGES) {
+  adjacency.get(e.a)!.add(e.b);
+  adjacency.get(e.b)!.add(e.a);
+}
+
+const GEN_LABELS = [
+  { y: 70, n: 'I', note: 'the founders' },
+  { y: 210, n: 'II', note: 'the wars' },
+  { y: 390, n: 'III', note: 'the firing squads' },
+  { y: 530, n: 'IV', note: 'the banana company' },
+  { y: 680, n: 'V', note: 'the deluge' },
+  { y: 810, n: 'VI', note: 'the parchments' },
+  { y: 920, n: 'VII', note: 'the end' },
+];
+---
+
+<figure class="tree-figure">
+  <svg
+    viewBox="0 0 1000 985"
+    role="img"
+    aria-label="Interactive Buendía family tree across seven generations"
+    id="family-tree"
+  >
+    <!-- generation rules -->
+    {
+      GEN_LABELS.map((g) => (
+        <g class="gen">
+          <text x="14" y={g.y - 8} class="gen-num">
+            {g.n}
+          </text>
+          <text x="14" y={g.y + 8} class="gen-note">
+            {g.note}
+          </text>
+        </g>
+      ))
+    }
+
+    <!-- edges under nodes -->
+    {
+      EDGES.map((e) => {
+        const a = nodeBySlug.get(e.a)!;
+        const b = nodeBySlug.get(e.b)!;
+        const d = e.d ?? straight(a, b);
+        return (
+          <path
+            d={d}
+            class:list={['edge', `edge-${e.kind}`, { transgressive: e.transgressive }]}
+            data-a={e.a}
+            data-b={e.b}
+            fill="none"
+          />
+        );
+      })
+    }
+
+    <!-- nodes -->
+    {
+      NODES.map((n) => {
+        const c = characterBySlug.get(n.slug);
+        const w = pillW(n);
+        const h = n.kind === 'family' ? 34 : 29;
+        const kin = [...adjacency.get(n.slug)!].join(' ');
+        return (
+          <a href={`/characters/${n.slug}`} class="node-link">
+            <g
+              class:list={['node', `kind-${n.kind}`, `bl-${c?.bloodline ?? 'outsider'}`]}
+              data-slug={n.slug}
+              data-kin={kin}
+              tabindex="-1"
+            >
+              <title>{c ? `${n.label} — ${c.tagline}` : n.label}</title>
+              <rect x={n.x - w / 2} y={n.y - h / 2} width={w} height={h} rx={h / 2} />
+              <text x={n.x} y={n.y + (n.kind === 'family' ? 5 : 4)}>
+                {n.label}
+              </text>
+            </g>
+          </a>
+        );
+      })
+    }
+  </svg>
+  <figcaption class="tree-legend" aria-hidden="false">
+    <span class="lg"><i class="sw" style="background:var(--c-aureliano)"></i> Aurelianos — withdrawn, lucid</span>
+    <span class="lg"><i class="sw" style="background:var(--c-jose-arcadio)"></i> José Arcadios — impulsive</span>
+    <span class="lg"><i class="sw" style="background:var(--c-matriarch)"></i> Matriarchs</span>
+    <span class="lg"><i class="sw" style="background:var(--c-remedios)"></i> The Remedios line</span>
+    <span class="lg"><i class="sw sw-ring"></i> Married or loved in</span>
+    <span class="lg"><i class="ln"></i> Marriage & descent</span>
+    <span class="lg"><i class="ln ln-dash"></i> Unwed lovers</span>
+    <span class="lg"><i class="ln ln-red"></i> Transgressive — the line folding into itself</span>
+  </figcaption>
+</figure>
+
+<style>
+  .tree-figure {
+    margin: 0;
+    max-width: var(--max-wide);
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gen-num {
+    font-family: var(--f-display);
+    font-size: 22px;
+    font-weight: 600;
+    fill: var(--ink);
+  }
+
+  .gen-note {
+    font-family: var(--f-label);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    fill: var(--ink-faint);
+  }
+
+  .edge {
+    stroke: var(--ink-faint);
+    stroke-width: 1.5;
+    transition: opacity 150ms ease, stroke 150ms ease;
+  }
+
+  .edge-lovers,
+  .edge-adopted {
+    stroke-dasharray: 5 4;
+  }
+
+  .edge.transgressive {
+    stroke: var(--c-jose-arcadio);
+    stroke-width: 2;
+  }
+
+  .node rect {
+    fill: var(--bl);
+    transition: opacity 150ms ease;
+  }
+
+  .node.kind-partner rect {
+    fill: var(--paper);
+    stroke: var(--bl);
+    stroke-width: 1.5;
+  }
+
+  .node text {
+    font-family: var(--f-label);
+    font-size: 13.5px;
+    font-weight: 600;
+    fill: #fff;
+    text-anchor: middle;
+    pointer-events: none;
+  }
+
+  .node.kind-partner text {
+    fill: var(--bl);
+    font-size: 12px;
+  }
+
+  .node-link {
+    cursor: pointer;
+  }
+
+  .node-link:hover {
+    background: none;
+  }
+
+  .node-link:focus-visible {
+    outline: none;
+  }
+
+  .node-link:focus-visible rect {
+    stroke: var(--butterfly);
+    stroke-width: 3;
+  }
+
+  /* hover dimming, driven by the script below */
+  svg.focusing .node:not(.lit),
+  svg.focusing .edge:not(.lit) {
+    opacity: 0.16;
+  }
+
+  svg.focusing .edge.lit {
+    stroke: var(--ink);
+  }
+
+  svg.focusing .edge.lit.transgressive {
+    stroke: var(--c-jose-arcadio);
+  }
+
+  .tree-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.3rem;
+    margin-top: 1.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--hairline);
+    font-family: var(--f-label);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+  }
+
+  .sw {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  .sw-ring {
+    background: var(--paper);
+    border: 1.5px solid var(--c-outsider);
+  }
+
+  .ln {
+    width: 1.6em;
+    height: 0;
+    border-top: 2px solid var(--ink-faint);
+    display: inline-block;
+  }
+
+  .ln-dash {
+    border-top-style: dashed;
+  }
+
+  .ln-red {
+    border-top-color: var(--c-jose-arcadio);
+  }
+</style>
+
+<script>
+  const svg = document.getElementById('family-tree');
+  if (svg) {
+    const nodes = [...svg.querySelectorAll<SVGGElement>('.node')];
+    const edges = [...svg.querySelectorAll<SVGPathElement>('.edge')];
+
+    function focus(slug: string, kin: Set<string>) {
+      svg!.classList.add('focusing');
+      for (const n of nodes) n.classList.toggle('lit', kin.has(n.dataset.slug!));
+      for (const e of edges)
+        e.classList.toggle(
+          'lit',
+          (e.dataset.a === slug && kin.has(e.dataset.b!)) ||
+            (e.dataset.b === slug && kin.has(e.dataset.a!)),
+        );
+    }
+
+    function blur() {
+      svg!.classList.remove('focusing');
+      for (const el of [...nodes, ...edges]) el.classList.remove('lit');
+    }
+
+    for (const n of nodes) {
+      const kin = new Set((n.dataset.kin ?? '').split(' '));
+      n.addEventListener('mouseenter', () => focus(n.dataset.slug!, kin));
+      n.addEventListener('mouseleave', blur);
+    }
+  }
+</script>

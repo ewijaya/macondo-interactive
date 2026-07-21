@@ -100,6 +100,7 @@ export const EVENT_SLUGS = [
   'the-firing-squad',
   'the-execution-of-arcadio',
   'the-death-of-jose-arcadio', // the trickle of blood through the town
+  'the-death-of-the-patriarch', // yellow flowers rain all night on Macondo
   'the-death-of-aureliano-jose',
   'the-treaty-of-neerlandia',
   'the-little-gold-fishes',

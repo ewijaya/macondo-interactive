@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { places } from '../../lib/lookups';
+
+const ZONES = [
+  { key: 'house', label: 'The Buendía house', note: 'A house that grew with the family and decayed with it.' },
+  { key: 'town', label: 'The town', note: 'From twenty adobe houses to a boomtown to a ruin.' },
+  { key: 'beyond', label: 'Beyond the swamp', note: 'Where the century reaches when it leaves Macondo.' },
+] as const;
+---
+
+<Layout
+  title="Places"
+  description="Every place in One Hundred Years of Solitude — the rooms of the Buendía house, the town of Macondo, and the world beyond the swamp."
+>
+  <header class="page-head">
+    <p class="eyebrow">Gazetteer</p>
+    <h1>Places</h1>
+    <p class="lede">
+      In Macondo, geography is memory: rooms hold the dead, and the town's streets record
+      the century's every phase. See also the <a href="/map">map</a>.
+    </p>
+  </header>
+
+  {
+    ZONES.map((z) => (
+      <section class="zone-group">
+        <div class="group-head">
+          <h2>{z.label}</h2>
+          <p>{z.note}</p>
+        </div>
+        <div class="card-grid">
+          {places
+            .filter((p) => p.zone === z.key)
+            .map((p) => (
+              <a href={`/places/${p.slug}`} class="card">
+                <span class="meta">{z.label}</span>
+                <span class="name">{p.name}</span>
+                <span class="tagline">{p.tagline}</span>
+              </a>
+            ))}
+        </div>
+      </section>
+    ))
+  }
+</Layout>
+
+<style>
+  .zone-group {
+    margin-bottom: 3.2rem;
+  }
+
+  .group-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.1rem;
+    max-width: var(--max-wide);
+  }
+
+  .group-head p {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+</style>

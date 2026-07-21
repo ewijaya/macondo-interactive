@@ -1,0 +1,317 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { characters, relations } from '../lib/lookups';
+
+const graphData = {
+  nodes: characters.map((c) => ({
+    id: c.slug,
+    name: c.name,
+    bloodline: c.bloodline,
+    tagline: c.tagline,
+  })),
+  links: relations.map((r) => ({
+    source: r.source,
+    target: r.target,
+    type: r.type,
+    description: r.description,
+    transgressive: !!r.transgressive,
+  })),
+};
+
+const REL_TYPES = [
+  { key: 'parent', label: 'Parentage' },
+  { key: 'marriage', label: 'Marriage' },
+  { key: 'lovers', label: 'Lovers' },
+  { key: 'raised-by', label: 'Raised by' },
+  { key: 'rivalry', label: 'Rivalry' },
+  { key: 'enmity', label: 'Enmity' },
+  { key: 'friendship', label: 'Friendship' },
+  { key: 'mentor', label: 'Mentorship' },
+];
+---
+
+<Layout
+  title="The Web"
+  description="Every bond in One Hundred Years of Solitude as a living network — parentage, marriage, lovers, rivalry, and the loops that close the century."
+>
+  <header class="page-head">
+    <p class="eyebrow">Every bond at once</p>
+    <h1>The Web</h1>
+    <p class="lede">
+      {graphData.nodes.length} people, {graphData.links.length} bonds. Drag the knot apart,
+      filter by kind of bond, hover an edge to read what it was. The red edges are the ones
+      the family feared: the line folding back into itself.
+    </p>
+  </header>
+
+  <div class="web-controls" role="group" aria-label="Filter bonds by type">
+    {
+      REL_TYPES.map((t) => (
+        <label class="ctl">
+          <input type="checkbox" name="reltype" value={t.key} checked />
+          {t.label}
+        </label>
+      ))
+    }
+  </div>
+
+  <div class="web-stage">
+    <svg id="web-svg" aria-label="Relationship network graph"></svg>
+    <div id="web-tip" class="web-tip" hidden></div>
+  </div>
+
+  <script type="application/json" id="web-data" set:html={JSON.stringify(graphData)} />
+</Layout>
+
+<script>
+  import {
+    forceSimulation,
+    forceLink,
+    forceManyBody,
+    forceCenter,
+    forceCollide,
+    type SimulationNodeDatum,
+  } from 'd3-force';
+  import { select } from 'd3-selection';
+  import { drag } from 'd3-drag';
+  import { zoom } from 'd3-zoom';
+
+  interface WebNode extends SimulationNodeDatum {
+    id: string;
+    name: string;
+    bloodline: string;
+    tagline: string;
+  }
+
+  interface WebLink {
+    source: WebNode | string;
+    target: WebNode | string;
+    type: string;
+    description: string;
+    transgressive: boolean;
+  }
+
+  const data = JSON.parse(document.getElementById('web-data')!.textContent!) as {
+    nodes: WebNode[];
+    links: WebLink[];
+  };
+
+  const W = 1100;
+  const H = 780;
+
+  const svg = select<SVGSVGElement, unknown>('#web-svg')
+    .attr('viewBox', [0, 0, W, H].join(' '));
+
+  const root = svg.append('g');
+
+  svg.call(
+    zoom<SVGSVGElement, unknown>()
+      .scaleExtent([0.4, 3])
+      .on('zoom', (ev) => root.attr('transform', ev.transform)),
+  );
+
+  const sim = forceSimulation<WebNode>(data.nodes)
+    .force(
+      'link',
+      forceLink<WebNode, WebLink>(data.links as WebLink[])
+        .id((d) => d.id)
+        .distance((d) => (d.type === 'parent' ? 70 : 95))
+        .strength(0.5),
+    )
+    .force('charge', forceManyBody().strength(-320))
+    .force('center', forceCenter(W / 2, H / 2))
+    .force('collide', forceCollide(30));
+
+  const link = root
+    .append('g')
+    .selectAll('line')
+    .data(data.links as WebLink[])
+    .join('line')
+    .attr('class', (d) => `wl wl-${d.type}${d.transgressive ? ' wl-red' : ''}`);
+
+  const node = root
+    .append('g')
+    .selectAll('g')
+    .data(data.nodes)
+    .join('g')
+    .attr('class', (d) => `wn wn-${d.bloodline}`)
+    .style('cursor', 'pointer');
+
+  node.append('circle').attr('r', 9);
+
+  node
+    .append('text')
+    .text((d) => d.name)
+    .attr('dy', -13)
+    .attr('text-anchor', 'middle');
+
+  const tip = document.getElementById('web-tip')!;
+
+  function showTip(html: string, ev: MouseEvent) {
+    tip.innerHTML = html;
+    tip.hidden = false;
+    const stage = tip.parentElement!.getBoundingClientRect();
+    tip.style.left = `${Math.min(ev.clientX - stage.left + 14, stage.width - 260)}px`;
+    tip.style.top = `${ev.clientY - stage.top + 10}px`;
+  }
+
+  node
+    .on('mousemove', (ev: MouseEvent, d) => showTip(`<strong>${d.name}</strong>${d.tagline}`, ev))
+    .on('mouseleave', () => (tip.hidden = true))
+    .on('click', (_ev, d) => {
+      window.location.href = `/characters/${d.id}`;
+    });
+
+  link
+    .on('mousemove', (ev: MouseEvent, d) => {
+      const s = d.source as WebNode;
+      const t = d.target as WebNode;
+      showTip(`<strong>${s.name} — ${t.name}</strong>${d.description}`, ev);
+    })
+    .on('mouseleave', () => (tip.hidden = true));
+
+  node.call(
+    drag<SVGGElement, WebNode>()
+      .on('start', (ev, d) => {
+        if (!ev.active) sim.alphaTarget(0.25).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      })
+      .on('drag', (ev, d) => {
+        d.fx = ev.x;
+        d.fy = ev.y;
+      })
+      .on('end', (ev, d) => {
+        if (!ev.active) sim.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }),
+  );
+
+  sim.on('tick', () => {
+    link
+      .attr('x1', (d) => (d.source as WebNode).x!)
+      .attr('y1', (d) => (d.source as WebNode).y!)
+      .attr('x2', (d) => (d.target as WebNode).x!)
+      .attr('y2', (d) => (d.target as WebNode).y!);
+    node.attr('transform', (d) => `translate(${d.x} ${d.y})`);
+  });
+
+  // filters: hide links of unchecked types; dim nodes with no visible links
+  const boxes = [...document.querySelectorAll<HTMLInputElement>('input[name="reltype"]')];
+
+  function applyFilters() {
+    const active = new Set(boxes.filter((b) => b.checked).map((b) => b.value));
+    link.style('display', (d) => (active.has(d.type) ? null : 'none'));
+    const connected = new Set<string>();
+    for (const l of data.links) {
+      if (active.has(l.type)) {
+        connected.add((l.source as WebNode).id ?? (l.source as unknown as string));
+        connected.add((l.target as WebNode).id ?? (l.target as unknown as string));
+      }
+    }
+    node.style('opacity', (d) => (connected.has(d.id) ? 1 : 0.18));
+  }
+
+  for (const b of boxes) b.addEventListener('change', applyFilters);
+</script>
+
+<style is:global>
+  .web-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.1rem;
+    margin-bottom: 1rem;
+    max-width: var(--max-wide);
+  }
+
+  .ctl {
+    font-family: var(--f-label);
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
+  }
+
+  .ctl input {
+    accent-color: var(--butterfly);
+  }
+
+  .web-stage {
+    position: relative;
+    border: 1px solid var(--hairline);
+    background: var(--paper-warm);
+    max-width: var(--max-wide);
+  }
+
+  #web-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1100 / 780;
+  }
+
+  .wl {
+    stroke: var(--ink-faint);
+    stroke-width: 1.2;
+    stroke-opacity: 0.55;
+  }
+
+  .wl-lovers,
+  .wl-raised-by {
+    stroke-dasharray: 4 3;
+  }
+
+  .wl-rivalry,
+  .wl-enmity {
+    stroke: #8a6d3b;
+  }
+
+  .wl-red {
+    stroke: var(--c-jose-arcadio);
+    stroke-width: 2;
+    stroke-opacity: 0.9;
+  }
+
+  .wn circle {
+    stroke: var(--paper);
+    stroke-width: 1.5;
+  }
+
+  .wn-aureliano circle { fill: var(--c-aureliano); }
+  .wn-jose-arcadio circle { fill: var(--c-jose-arcadio); }
+  .wn-matriarch circle { fill: var(--c-matriarch); }
+  .wn-remedios circle { fill: var(--c-remedios); }
+  .wn-outsider circle { fill: var(--c-outsider); }
+
+  .wn text {
+    font-family: var(--f-label);
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--paper-warm);
+    stroke-width: 3;
+  }
+
+  .web-tip {
+    position: absolute;
+    max-width: 250px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--f-label);
+    font-size: 0.8rem;
+    line-height: 1.45;
+    padding: 0.55rem 0.7rem;
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .web-tip strong {
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+</style>

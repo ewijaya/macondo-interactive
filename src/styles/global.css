@@ -1,0 +1,449 @@
+/* ───────────────────────── Macondo Atlas — design tokens ─────────────────────────
+   Modern editorial: white paper, warm ink, categorical color that encodes the
+   book's own thesis — temperament travels with the name. */
+
+:root {
+  /* paper & ink */
+  --paper: #ffffff;
+  --paper-warm: #faf9f5;
+  --hairline: #e5e2da;
+  --ink: #1a1712;
+  --ink-soft: #5c574c;
+  --ink-faint: #8d8778;
+
+  /* the bloodlines — the atlas's one categorical system */
+  --c-aureliano: #33509e; /* withdrawn, lucid */
+  --c-jose-arcadio: #b3342b; /* impulsive, enterprising */
+  --c-matriarch: #9a6b00; /* the women who hold the house */
+  --c-remedios: #7a4fa3; /* innocence, in its several forms */
+  --c-outsider: #33745c; /* married in, wandered in, blew in */
+
+  /* the single accent: Mauricio Babilonia's butterflies */
+  --butterfly: #f2b705;
+  --butterfly-soft: #fdf3d0;
+
+  /* type */
+  --f-display: 'Fraunces Variable', Georgia, serif;
+  --f-body: 'Newsreader Variable', Georgia, serif;
+  --f-label: 'Archivo Variable', system-ui, sans-serif;
+
+  --max-prose: 42rem;
+  --max-wide: 72rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── type roles ── */
+
+h1,
+h2,
+h3 {
+  font-family: var(--f-display);
+  font-weight: 560;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-variation-settings: 'opsz' 100, 'SOFT' 40, 'WONK' 1;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-variation-settings: 'opsz' 60;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.eyebrow {
+  font-family: var(--f-label);
+  font-size: 0.72rem;
+  font-weight: 640;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.prose {
+  max-width: var(--max-prose);
+}
+
+.prose p + p {
+  margin-top: 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--butterfly) 70%, var(--ink) 30%);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: background-color 120ms ease;
+}
+
+a:hover {
+  background: var(--butterfly-soft);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--c-aureliano);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── bloodline coloring, used everywhere a character appears ── */
+
+.bl-aureliano { --bl: var(--c-aureliano); }
+.bl-jose-arcadio { --bl: var(--c-jose-arcadio); }
+.bl-matriarch { --bl: var(--c-matriarch); }
+.bl-remedios { --bl: var(--c-remedios); }
+.bl-outsider { --bl: var(--c-outsider); }
+
+.char-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  font-family: var(--f-label);
+  font-size: 0.85rem;
+  font-weight: 560;
+  text-decoration: none;
+  padding: 0.18em 0.55em 0.22em 0.45em;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.char-chip::before {
+  content: '';
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 999px;
+  background: var(--bl, var(--ink-faint));
+  align-self: center;
+  flex: none;
+}
+
+.char-chip:hover {
+  background: var(--butterfly-soft);
+  border-color: color-mix(in srgb, var(--bl, var(--ink)) 40%, var(--hairline) 60%);
+}
+
+/* ── layout scaffold ── */
+
+.shell {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.rail {
+  border-right: 1px solid var(--hairline);
+  padding: 2rem 1.6rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.rail-mark {
+  font-family: var(--f-display);
+  font-size: 1.35rem;
+  font-weight: 640;
+  text-decoration: none;
+  display: block;
+  line-height: 1.1;
+}
+
+.rail-mark:hover {
+  background: none;
+}
+
+.rail-mark small {
+  display: block;
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  font-weight: 560;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 0.5rem;
+}
+
+.rail nav {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.rail nav a {
+  font-family: var(--f-label);
+  font-size: 0.88rem;
+  font-weight: 520;
+  text-decoration: none;
+  padding: 0.42rem 0.6rem;
+  border-radius: 6px;
+  color: var(--ink-soft);
+}
+
+.rail nav a:hover {
+  color: var(--ink);
+}
+
+.rail nav a[aria-current='page'] {
+  color: var(--ink);
+  background: var(--paper-warm);
+  box-shadow: inset 3px 0 0 var(--butterfly);
+}
+
+main {
+  padding: clamp(1.5rem, 4vw, 4rem);
+  max-width: calc(var(--max-wide) + 8rem);
+}
+
+.page-head {
+  margin-bottom: 2.5rem;
+  max-width: var(--max-wide);
+}
+
+.page-head .eyebrow {
+  margin-bottom: 0.8rem;
+}
+
+.page-head p.lede {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: var(--max-prose);
+  text-wrap: pretty;
+}
+
+/* ── cards & grids ── */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+  max-width: var(--max-wide);
+}
+
+.card {
+  background: var(--paper);
+  padding: 1.3rem 1.4rem 1.5rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.card:hover {
+  background: var(--paper-warm);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--bl, transparent);
+}
+
+.card .name {
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.card .meta {
+  font-family: var(--f-label);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bl, var(--ink-faint));
+}
+
+.card .tagline {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ── dossier pages ── */
+
+.dossier {
+  display: grid;
+  grid-template-columns: minmax(0, var(--max-prose)) 17rem;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+  max-width: var(--max-wide);
+}
+
+.dossier aside {
+  border-top: 3px solid var(--bl, var(--ink));
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.aside-block .eyebrow {
+  margin-bottom: 0.55rem;
+}
+
+.aside-block ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.aside-block li a {
+  text-decoration: none;
+}
+
+.aside-block li a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--butterfly);
+  background: none;
+}
+
+.aside-block li .why {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  display: block;
+  line-height: 1.4;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ── pull quote ── */
+
+blockquote.pull {
+  border: none;
+  margin: 2.2rem 0;
+  font-family: var(--f-display);
+  font-size: 1.45rem;
+  font-weight: 480;
+  line-height: 1.35;
+  font-variation-settings: 'opsz' 40, 'SOFT' 60;
+  text-wrap: pretty;
+}
+
+blockquote.pull::before {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  background: var(--butterfly);
+  margin-bottom: 1.1rem;
+}
+
+blockquote.pull cite {
+  display: block;
+  margin-top: 0.9rem;
+  font-family: var(--f-label);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+/* ── fate line ── */
+
+.fate {
+  margin-top: 2rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--paper-warm);
+  border-left: 3px solid var(--bl, var(--ink));
+  font-size: 0.98rem;
+}
+
+.fate strong {
+  font-family: var(--f-label);
+  font-size: 0.7rem;
+  font-weight: 640;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--ink-faint);
+}
+
+/* ── responsive ── */
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--hairline);
+    padding: 1.2rem 1.4rem;
+  }
+
+  .rail nav {
+    margin-top: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+
+  .dossier {
+    grid-template-columns: 1fr;
+  }
+
+  .dossier aside {
+    position: static;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
