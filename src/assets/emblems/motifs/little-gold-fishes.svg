@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A little gold fish with fine scale-work, hung from a delicate chain">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <g stroke-width="0.75">
+    <circle cx="100" cy="24" r="2.6"/>
+    <circle cx="100" cy="32" r="2.6"/>
+    <circle cx="100" cy="40" r="2.6"/>
+    <circle cx="100" cy="48" r="2.6"/>
+    <circle cx="100" cy="56" r="2.6"/>
+    <circle cx="100" cy="64" r="2.6"/>
+  </g>
+  <circle cx="100" cy="72" r="3.2"/>
+  <path d="M 100 78 C 114 88, 119 104, 112 122 C 108 132, 104 136, 100 139 C 96 136, 92 132, 88 122 C 81 104, 86 88, 100 78 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M 100 78 C 114 88, 119 104, 112 122 C 108 132, 104 136, 100 139 C 96 136, 92 132, 88 122 C 81 104, 86 88, 100 78 Z" stroke-width="2"/>
+  <path d="M 100 139 C 92 147, 87 154, 83 161"/>
+  <path d="M 100 139 C 100 148, 100 156, 100 163"/>
+  <path d="M 100 139 C 108 147, 113 154, 117 161"/>
+  <path d="M 83 161 C 94 167, 106 167, 117 161"/>
+  <g stroke-width="0.75">
+    <path d="M 86 154 L 87 160"/>
+    <path d="M 94 158 L 94 164"/>
+    <path d="M 106 158 L 106 164"/>
+    <path d="M 113 154 L 113 160"/>
+  </g>
+  <path d="M 91 93 C 96 97, 104 97, 109 93" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <path d="M 89 102 C 94 106, 106 106, 111 102"/>
+    <path d="M 88 110 C 94 114, 106 114, 112 110"/>
+    <path d="M 89 118 C 94 122, 106 122, 111 118"/>
+    <path d="M 92 126 C 96 129, 104 129, 108 126"/>
+  </g>
+  <path d="M 88 100 C 84 104, 82 108, 82 112" stroke-width="1.5"/>
+  <path d="M 112 100 C 116 104, 118 108, 118 112" stroke-width="1.5"/>
+  <circle cx="96" cy="87" r="1.6" fill="currentColor" stroke="none"/>
+  <circle cx="104" cy="87" r="1.6" fill="currentColor" stroke="none"/>
+</svg>

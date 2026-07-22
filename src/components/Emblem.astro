@@ -1,0 +1,46 @@
+---
+// Inlines an emblem plate by kind + slug. Ink follows the page's `color`;
+// the single accent color defaults to butterfly gold and can be overridden
+// per-instance via the `accent` prop (sets --em-accent).
+interface Props {
+  kind: 'characters' | 'places' | 'motifs' | 'eras' | 'hero';
+  slug?: string;
+  accent?: string;
+  class?: string;
+}
+
+const { kind, slug, accent, class: cls } = Astro.props;
+
+const files = import.meta.glob('../assets/emblems/**/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const path =
+  kind === 'hero' ? '../assets/emblems/hero.svg' : `../assets/emblems/${kind}/${slug}.svg`;
+const svg = files[path];
+---
+
+{
+  svg && (
+    <span
+      class:list={['emblem', cls]}
+      style={accent ? `--em-accent:${accent}` : undefined}
+      set:html={svg}
+    />
+  )
+}
+
+<style is:global>
+  .emblem {
+    display: block;
+    color: var(--ink);
+  }
+
+  .emblem svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

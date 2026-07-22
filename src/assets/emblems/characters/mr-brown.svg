@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A screened bungalow behind an electrified wire fence">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <rect x="62" y="92" width="76" height="34" stroke-width="2"/>
+  <path d="M56 92 L74 74 L126 74 L144 92 Z" stroke-width="2"/>
+  <path d="M74 74 H126" stroke-width="0.75"/>
+  <path d="M68 100 h28 M68 104 h28 M68 108 h28 M68 112 h28 M68 116 h28 M72 100 v16 M78 100 v16 M84 100 v16 M90 100 v16" stroke-width="0.75"/>
+  <path d="M104 100 h28 M104 104 h28 M104 108 h28 M104 112 h28 M104 116 h28 M108 100 v16 M114 100 v16 M120 100 v16 M126 100 v16" stroke-width="0.75"/>
+  <path d="M66 96 h68" stroke-width="0.75"/>
+  <circle cx="100" cy="121" r="3" stroke-width="1"/>
+  <path d="M100 118 A3 3 0 0 1 103 121 M100 124 A3 3 0 0 1 97 121" stroke-width="0.75"/>
+  <line x1="54" y1="126" x2="148" y2="126" stroke-width="1"/>
+  <path d="M64 130 V152 M100 130 V152 M136 130 V152" stroke-width="1.5"/>
+  <path d="M52 134 H148 M52 141 H148 M52 148 H148" stroke-width="0.75"/>
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <circle cx="100" cy="134" r="2"/>
+    <circle cx="100" cy="141" r="2"/>
+    <circle cx="100" cy="148" r="2"/>
+  </g>
+  <circle cx="58" cy="130" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="144" cy="130" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

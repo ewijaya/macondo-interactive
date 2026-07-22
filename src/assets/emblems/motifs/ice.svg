@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A rough block of ice held by tongs, an inner star of fracture lines glowing at its heart">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <circle cx="86" cy="21" r="4"/>
+  <circle cx="114" cy="21" r="4"/>
+  <path d="M 88 25 C 96 31, 101 36, 100 42 C 88 58, 77 74, 74 92" stroke-width="2"/>
+  <path d="M 112 25 C 104 31, 99 36, 100 42 C 112 58, 125 74, 130 90" stroke-width="2"/>
+  <path d="M 74 92 L 81 97" stroke-width="2"/>
+  <path d="M 130 90 L 123 95" stroke-width="2"/>
+  <circle cx="100" cy="42" r="1.6" fill="currentColor" stroke="none"/>
+  <path d="M 66 96 L 84 82 L 124 80 L 138 96 L 132 138 L 74 140 Z" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <path d="M 84 82 L 90 100 L 74 140"/>
+    <path d="M 90 100 L 130 98"/>
+    <path d="M 124 80 L 120 96"/>
+  </g>
+  <g stroke="var(--em-accent, #f2b705)" stroke-width="1.5">
+    <path d="M 104 112 L 104 98"/>
+    <path d="M 104 112 L 104 126"/>
+    <path d="M 104 112 L 91 112"/>
+    <path d="M 104 112 L 117 112"/>
+    <path d="M 104 112 L 95 103"/>
+    <path d="M 104 112 L 113 121"/>
+    <path d="M 104 112 L 95 121"/>
+    <path d="M 104 112 L 113 103"/>
+  </g>
+  <g stroke-width="0.5">
+    <path d="M 70 92 L 76 87"/>
+    <path d="M 128 84 L 133 89"/>
+  </g>
+  <g stroke-width="0.75">
+    <path d="M 66 148 L 78 145"/>
+    <path d="M 82 150 L 96 147"/>
+    <path d="M 102 151 L 116 148"/>
+    <path d="M 122 150 L 134 146"/>
+  </g>
+</svg>

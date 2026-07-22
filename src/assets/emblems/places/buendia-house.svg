@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The long Buendía house with its begonia porch, the chestnut tree at the left gable, one wing newer than the other">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- ground -->
+  <line x1="16" y1="142" x2="224" y2="142"/>
+  <line x1="20" y1="149" x2="88" y2="149" stroke-width="0.75"/>
+  <line x1="150" y1="149" x2="218" y2="149" stroke-width="0.75"/>
+  <!-- chestnut tree, left gable -->
+  <path d="M40 142 C39 120 38 108 41 96 M48 142 C49 122 50 108 47 96" stroke-width="2"/>
+  <path d="M44 96 C24 96 16 82 24 70 C18 56 32 44 46 48 C52 34 74 36 78 50 C92 52 94 70 84 78 C90 92 72 100 60 94 C56 100 48 100 44 96 Z" stroke-width="2"/>
+  <path d="M36 78 C42 74 50 76 54 82 M58 60 C64 58 70 62 72 68" stroke-width="0.75"/>
+  <!-- old wing -->
+  <path d="M64 142 V98 L110 84 L156 98 V142" stroke-width="2"/>
+  <path d="M60 100 L110 84 L160 100" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="76" y1="95" x2="112" y2="83.5"/>
+    <line x1="84" y1="97" x2="122" y2="85"/>
+    <line x1="92" y1="99" x2="132" y2="88"/>
+    <line x1="100" y1="101" x2="142" y2="91"/>
+    <line x1="108" y1="103" x2="150" y2="95"/>
+  </g>
+  <!-- door and window of old wing -->
+  <path d="M82 142 V116 C82 110 96 110 96 116 V142" stroke-width="1.5"/>
+  <rect x="112" y="112" width="16" height="14" rx="1" stroke-width="1.5"/>
+  <line x1="120" y1="112" x2="120" y2="126" stroke-width="0.75"/>
+  <!-- newer wing with porch -->
+  <path d="M156 98 H214 V142" stroke-width="2"/>
+  <path d="M152 98 L160 88 H210 L218 98" stroke-width="1.5"/>
+  <line x1="160" y1="88" x2="160" y2="98" stroke-width="0.75"/>
+  <line x1="210" y1="88" x2="210" y2="98" stroke-width="0.75"/>
+  <!-- porch railing -->
+  <line x1="158" y1="124" x2="214" y2="124" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="164" y1="124" x2="164" y2="142"/>
+    <line x1="174" y1="124" x2="174" y2="142"/>
+    <line x1="184" y1="124" x2="184" y2="142"/>
+    <line x1="194" y1="124" x2="194" y2="142"/>
+    <line x1="204" y1="124" x2="204" y2="142"/>
+  </g>
+  <!-- begonia pots on the railing -->
+  <path d="M162 124 L163 118 H171 L172 124 M186 124 L187 118 H195 L196 124" stroke-width="1"/>
+  <!-- begonias: the accent -->
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <circle cx="164" cy="115" r="2.2"/>
+    <circle cx="168" cy="112.5" r="2.2"/>
+    <circle cx="171" cy="115.5" r="2.2"/>
+    <circle cx="189" cy="115" r="2.2"/>
+    <circle cx="192.5" cy="112.5" r="2.2"/>
+    <circle cx="195" cy="115.5" r="2.2"/>
+  </g>
+  <path d="M166 116 C165 113 167 111 169 111 M190 116 C190 113 192 111 194 111" stroke-width="0.75"/>
+</svg>

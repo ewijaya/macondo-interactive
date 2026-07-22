@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A fighting rooster perched on a boxcar wheel above a rail, tally marks scratched in the shadow">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <circle cx="100" cy="134" r="30" stroke-width="2"/>
+  <circle cx="100" cy="134" r="24" stroke-width="0.75"/>
+  <circle cx="100" cy="134" r="4" stroke-width="1"/>
+  <line x1="100" y1="110" x2="100" y2="130" stroke-width="0.75"/>
+  <line x1="100" y1="138" x2="100" y2="158" stroke-width="0.75"/>
+  <line x1="76" y1="134" x2="96" y2="134" stroke-width="0.75"/>
+  <line x1="104" y1="134" x2="124" y2="134" stroke-width="0.75"/>
+  <line x1="58" y1="166" x2="142" y2="166" stroke-width="1.5"/>
+  <line x1="64" y1="170" x2="136" y2="170" stroke-width="0.75"/>
+  <path d="M93 96 C93 90 92 86 90 82" stroke-width="1.5"/>
+  <path d="M104 96 C105 90 105 86 104 81" stroke-width="1.5"/>
+  <path d="M88 97 L98 96" stroke-width="1"/>
+  <path d="M100 97 L110 96" stroke-width="1"/>
+  <path d="M90 82 C78 74 74 62 80 52 C84 46 92 44 98 48" stroke-width="2"/>
+  <path d="M104 81 C114 76 120 68 119 58" stroke-width="2"/>
+  <path d="M80 52 C74 46 70 38 71 30" stroke-width="2"/>
+  <path d="M92 46 C86 42 82 36 81 29" stroke-width="2"/>
+  <path d="M71 30 L62 33 L71 36" stroke-width="1"/>
+  <circle cx="74" cy="30" r="1.2" fill="currentColor" stroke="none"/>
+  <path d="M73 37 C72 41 73 44 76 45" stroke-width="1"/>
+  <path d="M71 28 C71 22 74 20 76 23 C77 19 80 18 81 22 C83 18 86 19 85 24 C84 27 82 28 80 28 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M92 52 C100 54 106 60 108 68" stroke-width="1"/>
+  <path d="M90 58 C96 60 101 64 104 70" stroke-width="0.75"/>
+  <path d="M88 64 C93 66 97 69 100 73" stroke-width="0.75"/>
+  <path d="M119 58 C132 50 140 38 137 24" stroke-width="1.5"/>
+  <path d="M118 62 C134 58 146 48 148 34" stroke-width="1.5"/>
+  <path d="M117 66 C130 66 140 60 145 50" stroke-width="1"/>
+  <line x1="132" y1="152" x2="132" y2="160" stroke-width="0.75"/>
+  <line x1="136" y1="152" x2="136" y2="160" stroke-width="0.75"/>
+  <line x1="140" y1="152" x2="140" y2="160" stroke-width="0.75"/>
+  <line x1="144" y1="152" x2="144" y2="160" stroke-width="0.75"/>
+  <line x1="130" y1="160" x2="146" y2="152" stroke-width="0.75"/>
+</svg>

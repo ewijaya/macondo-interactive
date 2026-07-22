@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A single small lit candle at the center of a vast empty field">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M 100 74 C 104 79, 104 85, 100 88.5 C 96 85, 96 79, 100 74 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M 100 93.5 L 100 89.5" stroke-width="1"/>
+  <path d="M 95 97 L 95 122" stroke-width="1.5"/>
+  <path d="M 105 97 L 105 122" stroke-width="1.5"/>
+  <path d="M 95 97 C 95 94, 105 94, 105 97" stroke-width="1.5"/>
+  <path d="M 95 104 C 92.5 106, 92.5 111, 94.5 113.5" stroke-width="0.75"/>
+  <path d="M 87 122 C 87 127.5, 113 127.5, 113 122" stroke-width="1.5"/>
+  <path d="M 87 122 L 113 122" stroke-width="1.5"/>
+  <g stroke-width="0.5">
+    <path d="M 100 66 L 100 62"/>
+    <path d="M 89 71 L 86 68"/>
+    <path d="M 111 71 L 114 68"/>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Long diagonal rain over sagging rooftops, a fish swimming down the middle of the street">
+  <rect x="4" y="4" width="352" height="132" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="342" height="122" rx="1" stroke-width="0.5"/>
+  <path d="M 28 24 C 48 14, 82 14, 102 22 C 128 12, 168 12, 190 22" stroke-width="1"/>
+  <path d="M 210 26 C 232 16, 270 16, 292 24 C 310 18, 328 20, 338 26" stroke-width="1"/>
+  <path d="M 20 76 C 44 66, 68 70, 88 78" stroke-width="2"/>
+  <path d="M 24 78 L 24 108" stroke-width="1.5"/>
+  <path d="M 84 79 L 84 108" stroke-width="1.5"/>
+  <path d="M 52 68 L 52 60" stroke-width="1"/>
+  <path d="M 58 69 L 58 61" stroke-width="1"/>
+  <path d="M 50 60 L 60 61" stroke-width="1"/>
+  <path d="M 100 72 C 124 62, 148 68, 164 76" stroke-width="2"/>
+  <path d="M 104 74 L 104 108" stroke-width="1.5"/>
+  <path d="M 160 77 L 160 108" stroke-width="1.5"/>
+  <path d="M 196 78 C 220 70, 242 72, 258 80" stroke-width="2"/>
+  <path d="M 200 80 L 200 108" stroke-width="1.5"/>
+  <path d="M 254 81 L 254 108" stroke-width="1.5"/>
+  <path d="M 270 74 C 292 66, 314 70, 330 78" stroke-width="2"/>
+  <path d="M 274 76 L 274 108" stroke-width="1.5"/>
+  <path d="M 326 79 L 326 108" stroke-width="1.5"/>
+  <rect x="36" y="88" width="10" height="10" stroke-width="0.75"/>
+  <rect x="120" y="86" width="10" height="10" stroke-width="0.75"/>
+  <rect x="300" y="86" width="10" height="10" stroke-width="0.75"/>
+  <path d="M 14 108 L 346 108" stroke-width="1.5"/>
+  <path d="M 168 108 L 158 131" stroke-width="1"/>
+  <path d="M 192 108 L 202 131" stroke-width="1"/>
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <path d="M 168 120 C 173 115, 181 114, 186 118 C 188 119.5, 188 121, 186 122 C 181 125, 173 125, 168 120 Z"/>
+    <path d="M 168 120 L 162 115.5 L 163.5 120.5 L 162 124.5 Z"/>
+  </g>
+  <circle cx="182" cy="118.5" r="0.8" fill="currentColor" stroke="none"/>
+  <path d="M 158 127 C 162 125, 166 126, 169 128" stroke-width="0.75"/>
+  <path d="M 190 113 C 193 111, 196 112, 198 114" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <path d="M 30 32 L 26 50"/>
+    <path d="M 46 34 L 42 52"/>
+    <path d="M 62 30 L 58 48"/>
+    <path d="M 78 34 L 74 52"/>
+    <path d="M 94 32 L 90 50"/>
+    <path d="M 110 34 L 106 52"/>
+    <path d="M 126 30 L 122 48"/>
+    <path d="M 142 34 L 138 52"/>
+    <path d="M 158 32 L 154 50"/>
+    <path d="M 174 34 L 170 52"/>
+    <path d="M 190 32 L 186 50"/>
+    <path d="M 206 34 L 202 52"/>
+    <path d="M 222 30 L 218 48"/>
+    <path d="M 238 34 L 234 52"/>
+    <path d="M 254 32 L 250 50"/>
+    <path d="M 270 34 L 266 52"/>
+    <path d="M 286 32 L 282 50"/>
+    <path d="M 302 34 L 298 52"/>
+    <path d="M 318 30 L 314 48"/>
+    <path d="M 334 34 L 330 52"/>
+    <path d="M 172 88 L 168 104"/>
+    <path d="M 180 84 L 176 100"/>
+    <path d="M 188 88 L 184 104"/>
+  </g>
+  <g stroke-width="0.5">
+    <path d="M 40 114 C 46 112, 52 112, 58 114"/>
+    <path d="M 230 114 C 236 112, 242 112, 248 114"/>
+    <path d="M 300 116 C 306 114, 312 114, 318 116"/>
+  </g>
+</svg>

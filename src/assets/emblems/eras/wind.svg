@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Parchment pages caught in a great spiral of wind that tightens toward the right">
+  <rect x="4" y="4" width="352" height="132" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="342" height="122" rx="1" stroke-width="0.5"/>
+  <path d="M 16 36 C 90 28, 170 32, 226 46 C 268 57, 288 74, 282 94 C 277 110, 258 112, 252 100 C 247 90, 256 80, 266 84" stroke-width="1.5"/>
+  <path d="M 16 58 C 80 52, 150 54, 204 64 C 246 72, 262 84, 258 96 C 254 106, 240 104, 240 94" stroke-width="1"/>
+  <path d="M 16 80 C 70 76, 130 78, 178 86 C 214 92, 232 96, 240 100" stroke-width="1"/>
+  <path d="M 16 100 C 60 98, 110 100, 152 106" stroke-width="0.75"/>
+  <path d="M 40 22 C 110 16, 190 20, 246 34" stroke-width="0.75"/>
+  <path d="M 270 68 C 284 70, 292 82, 286 94" stroke-width="0.75"/>
+  <path d="M 272 84 C 278 82, 283 86, 280 92 C 278 96, 272 94, 273 89" stroke-width="0.75"/>
+  <g transform="translate(66 52) rotate(-14)" stroke-width="1.5">
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z"/>
+    <path d="M 8 -1.5 L 7 20.5" stroke-width="0.75"/>
+  </g>
+  <g transform="translate(122 84) rotate(18)" stroke-width="1.5">
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z"/>
+    <path d="M 8 -1.5 L 7 20.5" stroke-width="0.75"/>
+  </g>
+  <g transform="translate(178 44) rotate(-32)" stroke-width="1.5">
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z"/>
+    <path d="M 8 -1.5 L 7 20.5" stroke-width="0.75"/>
+  </g>
+  <g transform="translate(222 86) rotate(40)" stroke-width="1.5">
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z"/>
+    <path d="M 8 -1.5 L 7 20.5" stroke-width="0.75"/>
+  </g>
+  <g transform="translate(248 52) rotate(64)" stroke-width="1.5">
+    <path d="M 0 0 C 5 -2.5, 10 -2.5, 15 0 L 13.5 18 C 8.5 16, 4 16, -1.5 18 Z"/>
+    <path d="M 7 -1 L 6 17" stroke-width="0.75"/>
+  </g>
+  <g transform="translate(268 72) rotate(80) scale(0.8)">
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+    <path d="M 0 0 C 6 -3, 12 -3, 18 0 L 16 22 C 10 19, 4 19, -2 22 Z" stroke-width="1"/>
+  </g>
+  <g stroke-width="0.5">
+    <path d="M 96 40 C 100 38, 103 40, 102 43"/>
+    <path d="M 150 96 C 154 94, 157 96, 156 99"/>
+    <path d="M 208 30 C 212 28, 215 30, 214 33"/>
+  </g>
+</svg>

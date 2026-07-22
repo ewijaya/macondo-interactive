@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An opened music box with its spring sprung into a spiral">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="55" y1="150" x2="145" y2="150" stroke-width="1"/>
+  <ellipse cx="96" cy="146" rx="34" ry="3" stroke-width="0.75"/>
+  <rect x="66" y="112" width="52" height="26" rx="2" stroke-width="2"/>
+  <path d="M66 112 L80 100 L132 100 L118 112 Z"/>
+  <path d="M118 112 L132 100 L132 124 L118 138"/>
+  <path d="M80 100 L66 68 L118 68 L132 100" stroke-width="2"/>
+  <path d="M83 99 L71 72 L114 72 L126 99" stroke-width="0.75"/>
+  <ellipse cx="97" cy="106" rx="12" ry="3" stroke-width="0.75"/>
+  <circle cx="92" cy="105" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="97" cy="107" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="102" cy="105" r="0.7" fill="currentColor" stroke="none"/>
+  <path d="M70 120 h12 M70 126 h9" stroke-width="0.75"/>
+  <path d="M118 122 h8 v-6"/>
+  <circle cx="126" cy="114" r="2"/>
+  <path d="M108 104 C104 96 114 92 118 98 C122 104 112 110 109 102 C106 94 118 88 124 93 C130 98 122 106 116 103 C126 98 136 90 138 80 C140 72 134 68 142 60" stroke="var(--em-accent, #f2b705)"/>
+  <circle cx="64" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="130" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

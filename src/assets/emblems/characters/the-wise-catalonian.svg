@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A leaning stack of books tied with string, quill and inkpot on top">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="55" y1="150" x2="148" y2="150" stroke-width="1"/>
+  <ellipse cx="102" cy="152" rx="38" ry="2" stroke-width="0.75"/>
+  <path d="M66 150 L136 150 L136 140 L66 140 Z" stroke-width="2"/>
+  <path d="M130 143 h4 M70 146 h44" stroke-width="0.75"/>
+  <path d="M70 140 L138 140 L136 130 L72 130 Z" stroke-width="2"/>
+  <path d="M76 134 h40" stroke-width="0.75"/>
+  <path d="M68 130 L132 130 L134 120 L70 120 Z" stroke-width="2"/>
+  <path d="M128 123 h4" stroke-width="0.75"/>
+  <path d="M76 120 L136 120 L138 110 L78 110 Z" stroke-width="2"/>
+  <path d="M82 114 h44" stroke-width="0.75"/>
+  <path d="M74 110 L130 110 L132 101 L76 101 Z" stroke-width="2"/>
+  <path d="M82 101 L134 101 L136 92 L84 92 Z" stroke-width="2"/>
+  <path d="M88 96 h38" stroke-width="0.75"/>
+  <g stroke="var(--em-accent, #f2b705)">
+    <path d="M104 92 V150"/>
+    <path d="M101 90 C97 84 105 82 104 88 C107 83 113 86 108 90"/>
+  </g>
+  <path d="M88 92 L90 82 C90 79 100 79 100 82 L102 92" stroke-width="1.5"/>
+  <ellipse cx="95" cy="81" rx="5" ry="1.6" stroke-width="0.75"/>
+  <path d="M96 80 C103 66 113 56 125 50 C117 62 109 72 99 80" stroke-width="1.5"/>
+  <path d="M109 64 l4 1 M114 58 l4 1 M119 53 l3 1" stroke-width="0.75"/>
+  <circle cx="62" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="142" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

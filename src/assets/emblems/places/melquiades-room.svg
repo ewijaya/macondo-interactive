@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Melquíades' room: a work table with inkstand and stacked parchments under the light of a high window">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- room corner lines -->
+  <line x1="16" y1="152" x2="224" y2="152"/>
+  <path d="M62 152 V26 M62 40 H224" stroke-width="0.75"/>
+  <!-- high window -->
+  <rect x="34" y="30" width="20" height="26" rx="1" stroke-width="1.5"/>
+  <line x1="44" y1="30" x2="44" y2="56" stroke-width="0.75"/>
+  <line x1="34" y1="43" x2="54" y2="43" stroke-width="0.75"/>
+  <!-- light shaft: sparse straight rays -->
+  <g stroke-width="0.75">
+    <line x1="55" y1="38" x2="148" y2="112"/>
+    <line x1="55" y1="48" x2="138" y2="118"/>
+    <line x1="52" y1="56" x2="126" y2="122"/>
+  </g>
+  <!-- work table -->
+  <path d="M84 152 V118 H196 V152" stroke-width="2"/>
+  <path d="M84 118 L96 108 H208 L196 118" stroke-width="2"/>
+  <line x1="208" y1="108" x2="208" y2="144" stroke-width="1.5"/>
+  <line x1="190" y1="152" x2="190" y2="120" stroke-width="0.75"/>
+  <line x1="90" y1="152" x2="90" y2="120" stroke-width="0.75"/>
+  <!-- stacked parchments -->
+  <path d="M104 108 H140 L138 103 H106 Z M106 103 H136 L135 99 H108 Z M108 99 H134 L133 95.5 H110 Z" stroke-width="1"/>
+  <path d="M112 95.5 C112 92 130 92 130 95.5" stroke-width="0.75"/>
+  <!-- a rolled scroll -->
+  <path d="M150 108 H180 M150 108 C147 108 147 103 150 103 H180 C183 103 183 108 180 108 M180 103 C178.5 103 178.5 108 180 108" stroke-width="1"/>
+  <!-- inkstand: the accent -->
+  <g>
+    <path d="M158 95 H172 L170 84 H160 Z" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="1"/>
+    <path d="M165 84 V80" stroke-width="1"/>
+    <path d="M165 80 C176 66 182 60 190 56 C185 66 178 76 168 84" stroke-width="1"/>
+  </g>
+  <!-- floor shadow, stippled -->
+  <g fill="currentColor" stroke="none">
+    <circle cx="100" cy="158" r="0.7"/>
+    <circle cx="112" cy="160" r="0.7"/>
+    <circle cx="126" cy="158.5" r="0.7"/>
+    <circle cx="140" cy="160.5" r="0.7"/>
+    <circle cx="154" cy="158" r="0.7"/>
+    <circle cx="168" cy="160" r="0.7"/>
+    <circle cx="182" cy="158.5" r="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An open parchment of cipher lines with a quill laid across, books stacked beneath">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <rect x="64" y="136" width="72" height="10" rx="1" stroke-width="1.5"/>
+  <rect x="70" y="146" width="62" height="9" rx="1" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="70" y1="141" x2="76" y2="141"/>
+    <line x1="124" y1="141" x2="130" y2="141"/>
+    <line x1="76" y1="150.5" x2="82" y2="150.5"/>
+    <line x1="118" y1="150.5" x2="126" y2="150.5"/>
+  </g>
+  <path d="M 60 90 C 56 88 56 82 61 81 L 139 81 C 144 80 146 85 142 88 L 142 128 C 146 131 145 136 140 136 L 62 136 C 57 137 55 132 59 129 Z" stroke-width="2"/>
+  <path d="M 61 81 C 63 83 63 86 61 88 M 140 129 C 138 131 138 133 140 135" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <line x1="70" y1="93" x2="79" y2="93"/>
+    <line x1="83" y1="93" x2="88" y2="93"/>
+    <line x1="93" y1="93" x2="104" y2="93"/>
+    <line x1="109" y1="93" x2="116" y2="93"/>
+    <line x1="121" y1="93" x2="130" y2="93"/>
+    <line x1="70" y1="101" x2="76" y2="101"/>
+    <line x1="81" y1="101" x2="92" y2="101"/>
+    <line x1="97" y1="101" x2="103" y2="101"/>
+    <line x1="108" y1="101" x2="119" y2="101"/>
+    <line x1="124" y1="101" x2="130" y2="101"/>
+    <line x1="70" y1="109" x2="81" y2="109"/>
+    <line x1="86" y1="109" x2="94" y2="109"/>
+    <line x1="99" y1="109" x2="110" y2="109"/>
+    <line x1="115" y1="109" x2="121" y2="109"/>
+    <line x1="70" y1="117" x2="77" y2="117"/>
+    <line x1="82" y1="117" x2="93" y2="117"/>
+    <line x1="98" y1="117" x2="106" y2="117"/>
+    <line x1="111" y1="117" x2="122" y2="117"/>
+    <line x1="70" y1="125" x2="80" y2="125"/>
+    <line x1="85" y1="125" x2="91" y2="125"/>
+    <line x1="96" y1="125" x2="107" y2="125"/>
+  </g>
+  <path d="M 74 130 C 94 114 116 96 138 72" stroke-width="1.5"/>
+  <g stroke-width="0.5">
+    <path d="M 96 112 C 98 108 101 105 104 103"/>
+    <path d="M 104 106 C 106 102 109 99 112 97"/>
+    <path d="M 112 99 C 114 95 117 92 120 90"/>
+    <path d="M 120 92 C 122 88 125 85 128 83"/>
+    <path d="M 128 85 C 130 81 133 78 136 76"/>
+    <path d="M 88 118 C 90 114 93 111 96 109"/>
+  </g>
+  <path d="M 71 133 L 77 127 L 79 132 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+</svg>

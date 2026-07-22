@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Emblem from '../../components/Emblem.astro';
 import { motifs } from '../../lib/lookups';
 ---
 
@@ -20,9 +21,7 @@ import { motifs } from '../../lib/lookups';
     {
       motifs.map((m) => (
         <a href={`/motifs/${m.slug}`} class="card">
-          <span class="glyph" aria-hidden="true">
-            {m.glyph}
-          </span>
+          <Emblem kind="motifs" slug={m.slug} class="card-emblem" />
           <span class="name">{m.name}</span>
           <span class="tagline">{m.tagline}</span>
           <span class="meta">{m.occurrences.length} recurrences</span>
@@ -33,9 +32,9 @@ import { motifs } from '../../lib/lookups';
 </Layout>
 
 <style>
-  .glyph {
-    font-size: 1.6rem;
-    line-height: 1;
+  .card-emblem {
+    width: 5.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .card .meta {

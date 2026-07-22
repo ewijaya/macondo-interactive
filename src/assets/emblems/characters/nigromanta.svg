@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A cooking pot whose steam curls into a crescent moon, debts tallied beside">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="55" y1="150" x2="148" y2="150" stroke-width="1"/>
+  <ellipse cx="100" cy="149" rx="30" ry="2.5" stroke-width="0.75"/>
+  <path d="M74 112 C72 132 80 146 100 146 C120 146 128 132 126 112" stroke-width="2"/>
+  <ellipse cx="100" cy="112" rx="26" ry="6" stroke-width="2"/>
+  <ellipse cx="100" cy="112" rx="21" ry="4" stroke-width="0.75"/>
+  <path d="M74 116 C66 116 66 124 74 126 M126 116 C134 116 134 124 126 126"/>
+  <path d="M80 122 C82 130 86 137 92 141 M77 118 C78 128 82 137 88 142" stroke-width="0.75"/>
+  <path d="M138 100 v10 M142 100 v10 M146 100 v10 M150 100 v10 M136 110 l16 -8" stroke-width="0.75"/>
+  <path d="M139 122 v8 M143 122 v8 M147 122 v8" stroke-width="0.75"/>
+  <g stroke="var(--em-accent, #f2b705)">
+    <path d="M96 104 C92 96 100 92 98 84 C96 78 102 76 102 70"/>
+    <path d="M101 40 C88 43 83 60 95 68 C87 59 89 46 101 40 Z"/>
+  </g>
+  <circle cx="66" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="134" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

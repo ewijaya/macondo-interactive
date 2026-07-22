@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A parchment scroll unrolling, its lines written in cipher, with a key laid across it">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M58 56 C58 51 61 48 65 48 L135 48 C139 48 142 51 142 56 C142 61 139 64 135 64" stroke-width="2"/>
+  <ellipse cx="65" cy="56" rx="5" ry="8" stroke-width="1"/>
+  <path d="M62 64 C60 90 60 116 63 140" stroke-width="2"/>
+  <path d="M138 64 C140 90 140 116 137 140" stroke-width="2"/>
+  <path d="M58 146 C58 141 61 139 65 139 L135 139 C139 139 142 142 142 147 C142 152 139 155 135 155 L65 155 C61 155 58 152 58 146 Z" stroke-width="2"/>
+  <ellipse cx="65" cy="147" rx="5" ry="8" stroke-width="1"/>
+  <path d="M72 76 H96 M102 76 H118" stroke-width="0.75"/>
+  <path d="M72 85 H84 M90 85 H112 M118 85 H128" stroke-width="0.75"/>
+  <path d="M72 94 H104 M112 94 H126" stroke-width="0.75"/>
+  <path d="M72 103 H88 M96 103 H110" stroke-width="0.75"/>
+  <path d="M72 112 H100 M108 112 H124" stroke-width="0.75"/>
+  <circle cx="122" cy="103" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="94" cy="76" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="86" cy="112" r="0.7" fill="currentColor" stroke="none"/>
+  <g stroke="var(--em-accent, #f2b705)">
+    <circle cx="94" cy="122" r="6" stroke-width="1.5"/>
+    <line x1="99" y1="126" x2="122" y2="134" stroke-width="1.5"/>
+    <line x1="114" y1="131" x2="112" y2="137" stroke-width="1.5"/>
+    <line x1="120" y1="133" x2="118" y2="139" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The great chestnut tree with a rope loop around its trunk, a small stool beneath, and a ghost bird overhead">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- ground -->
+  <line x1="16" y1="150" x2="224" y2="150"/>
+  <path d="M96 156 C110 154 130 154 144 156" stroke-width="0.75"/>
+  <!-- trunk -->
+  <path d="M108 150 C110 120 106 100 100 84 M132 150 C130 122 134 102 140 86 M120 150 V128" stroke-width="2"/>
+  <path d="M114 118 C118 114 124 114 128 118" stroke-width="0.75"/>
+  <!-- canopy -->
+  <path d="M100 84 C70 88 52 74 62 58 C48 44 68 26 90 32 C96 16 130 14 140 30 C166 24 186 42 174 58 C190 72 168 90 140 86 C132 94 108 94 100 84 Z" stroke-width="2"/>
+  <path d="M84 60 C92 54 104 54 112 60 M126 44 C136 40 148 42 154 50 M140 66 C148 62 158 64 162 70" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <line x1="70" y1="52" x2="78" y2="58"/>
+    <line x1="76" y1="46" x2="85" y2="53"/>
+    <line x1="83" y1="41" x2="92" y2="48"/>
+  </g>
+  <!-- rope loop: accent stroke -->
+  <path d="M104 108 C112 113 128 113 136 108 C138 111 138 115 136 118 C126 123 114 123 104 118 C102 115 102 111 104 108 Z" stroke="var(--em-accent, #f2b705)" stroke-width="1.5"/>
+  <path d="M136 112 C148 116 154 124 156 134" stroke="var(--em-accent, #f2b705)" stroke-width="1"/>
+  <!-- small stool -->
+  <path d="M76 150 V138 H98 V150 M80 150 V140 M94 150 V140" stroke-width="1.5"/>
+  <!-- ghost bird overhead: dashed -->
+  <path d="M196 34 C200 30 206 30 208 34 C210 30 216 30 220 34" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- fallen leaves, stippled -->
+  <g fill="currentColor" stroke="none">
+    <circle cx="60" cy="155" r="0.7"/>
+    <circle cx="70" cy="158" r="0.7"/>
+    <circle cx="160" cy="156" r="0.7"/>
+    <circle cx="172" cy="154" r="0.7"/>
+    <circle cx="180" cy="158" r="0.7"/>
+  </g>
+</svg>

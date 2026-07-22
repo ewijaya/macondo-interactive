@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An alchemist's flask whose vapor curls into script beside an inkpot and parchment">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="52" y1="152" x2="152" y2="152" stroke-width="1"/>
+  <path d="M116 152 L116 120 C122 116 128 122 134 117 L150 117 L150 152"/>
+  <path d="M150 117 C146 113 141 114 140 118" stroke-width="0.75"/>
+  <path d="M122 126 h10 M124 131 h14 M122 136 h9 M124 141 h12" stroke-width="0.75"/>
+  <path d="M128 141 C128 137 148 137 148 141 L146 152 L130 152 Z"/>
+  <ellipse cx="138" cy="140.5" rx="9" ry="2.4" stroke-width="0.75"/>
+  <path d="M93 88 L93 106 C99 109 108 116 108 128 C108 141 97 150 85 150 C73 150 62 141 62 128 C62 116 71 109 77 106 L77 88" stroke-width="2"/>
+  <ellipse cx="85" cy="87" rx="9" ry="3" stroke-width="2"/>
+  <path d="M64 132 C72 137 98 137 106 132" stroke-width="0.75"/>
+  <path d="M67 138 L74 131 M70 143 L79 134 M75 147 L84 138 M81 149 L89 141" stroke-width="0.75"/>
+  <circle cx="92" cy="141" r="1.4" stroke-width="0.75"/>
+  <circle cx="97" cy="145" r="1.1" stroke-width="0.75"/>
+  <g stroke="var(--em-accent, #f2b705)">
+    <path d="M85 83 C80 74 92 71 95 63 C98 55 88 54 91 46 C93 41 99 42 101 37"/>
+    <path d="M90 76 C95 72 94 66 90 64" stroke-width="0.75"/>
+    <path d="M96 51 C100 49 103 51 103 55" stroke-width="0.75"/>
+  </g>
+  <circle cx="58" cy="151" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="112" cy="151" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

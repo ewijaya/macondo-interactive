@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A walking staff beside a hung scroll of sung news">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="55" y1="150" x2="148" y2="150" stroke-width="1"/>
+  <path d="M76 150 C74 120 74 92 76 64" stroke-width="2"/>
+  <circle cx="76" cy="59" r="4.5" stroke-width="2"/>
+  <path d="M80 66 C88 68 90 76 84 80" stroke-width="1"/>
+  <path d="M74 100 l4 3 M74 118 l4 3" stroke-width="0.75"/>
+  <circle cx="126" cy="47" r="1.5"/>
+  <path d="M126 49 V54" stroke-width="1"/>
+  <path d="M108 57 C108 52 144 52 144 57 C144 61 108 61 108 57 Z"/>
+  <path d="M110 59 L110 126 M142 59 L142 126" stroke-width="2"/>
+  <path d="M108 128 C108 123 144 123 144 128 C144 132 108 132 108 128 Z"/>
+  <path d="M116 72 c4 -2 8 2 12 0 c4 -2 8 2 10 0 M116 82 c4 2 8 -2 12 0 c4 2 8 -2 10 0 M116 92 c4 -2 8 2 12 0 c4 -2 8 2 10 0 M116 102 c4 2 8 -2 12 0 c4 2 8 -2 10 0 M116 112 c4 -2 8 2 12 0 c4 -2 8 2 10 0" stroke-width="0.75"/>
+  <path d="M122 50 C120 44 126 42 126 47 C126 42 132 44 130 50 L126 54 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <ellipse cx="80" cy="152" rx="16" ry="1.8" stroke-width="0.75"/>
+  <circle cx="102" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="148" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

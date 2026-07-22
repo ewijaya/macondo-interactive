@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A papal tiara reflected upside-down in a still pool">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M78 106 C76 78 84 52 100 42 C116 52 124 78 122 106" stroke-width="2"/>
+  <path d="M79 98 C90 104 110 104 121 98" stroke-width="1.5"/>
+  <path d="M82 96 L85 90 L88 96 M92 98 L95 92 L98 98 M102 98 L105 92 L108 98 M112 96 L115 90 L118 96" stroke-width="0.75"/>
+  <path d="M82 78 C91 84 109 84 118 78" stroke-width="1.5"/>
+  <path d="M85 76 L88 70 L91 76 M96 78 L99 72 L102 78 M107 76 L110 70 L113 76" stroke-width="0.75"/>
+  <path d="M87 60 C94 65 106 65 113 60" stroke-width="1.5"/>
+  <path d="M90 58 L93 53 L96 58 M102 59 L105 53 L108 58" stroke-width="0.75"/>
+  <circle cx="100" cy="38" r="3" stroke-width="1"/>
+  <line x1="100" y1="35" x2="100" y2="27" stroke-width="1"/>
+  <line x1="96" y1="31" x2="104" y2="31" stroke-width="1"/>
+  <path d="M100 84 L105 90 L100 96 L95 90 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M80 106 C78 112 78 117 80 121" stroke-width="1"/>
+  <path d="M120 106 C122 112 122 117 120 121" stroke-width="1"/>
+  <ellipse cx="100" cy="128" rx="52" ry="10" stroke-width="1.5"/>
+  <path d="M56 132 C70 136 86 138 100 138" stroke-width="0.5"/>
+  <path d="M144 132 C132 135 118 137 106 138" stroke-width="0.5"/>
+  <path d="M84 134 C83 148 88 160 100 166 C112 160 117 148 116 134" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M85 144 C93 140 107 140 115 144" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M89 156 C95 152 105 152 111 156" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

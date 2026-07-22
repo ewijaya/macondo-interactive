@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Emblem from '../../components/Emblem.astro';
 import { places } from '../../lib/lookups';
 
 const ZONES = [
@@ -34,6 +35,7 @@ const ZONES = [
             .filter((p) => p.zone === z.key)
             .map((p) => (
               <a href={`/places/${p.slug}`} class="card">
+                <Emblem kind="places" slug={p.slug} class="card-emblem" />
                 <span class="meta">{z.label}</span>
                 <span class="name">{p.name}</span>
                 <span class="tagline">{p.tagline}</span>
@@ -62,5 +64,11 @@ const ZONES = [
   .group-head p {
     color: var(--ink-soft);
     font-size: 0.98rem;
+  }
+
+  .card-emblem {
+    width: 100%;
+    max-width: 11rem;
+    margin-bottom: 0.5rem;
   }
 </style>

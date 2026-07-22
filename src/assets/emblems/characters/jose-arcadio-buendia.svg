@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A magnifying glass focusing sun rays toward a tiny adobe house, a loop of rope at its base">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <g stroke-width="0.75">
+    <line x1="40" y1="58" x2="82" y2="66"/>
+    <line x1="44" y1="46" x2="86" y2="58"/>
+    <line x1="52" y1="36" x2="92" y2="52"/>
+    <line x1="62" y1="30" x2="98" y2="48"/>
+  </g>
+  <circle cx="108" cy="72" r="21" stroke-width="2"/>
+  <circle cx="108" cy="72" r="17" stroke-width="0.5"/>
+  <path d="M 96 60 C 93 63 91.5 66 91 70" stroke-width="0.75"/>
+  <line x1="123" y1="89" x2="147" y2="113" stroke-width="2"/>
+  <line x1="145" y1="111" x2="156" y2="122" stroke-width="2"/>
+  <circle cx="158" cy="124" r="2.5" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="101" y1="92" x2="90" y2="126"/>
+    <line x1="108" y1="93" x2="91" y2="127"/>
+    <line x1="115" y1="92" x2="92" y2="128"/>
+  </g>
+  <circle cx="90.5" cy="128" r="2.8" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M 54 133 L 92 133" stroke-width="2"/>
+  <path d="M 58 133 L 58 152 L 88 152 L 88 133" stroke-width="1.5"/>
+  <path d="M 68 152 L 68 141 C 68 139.5 69.5 139 71 139 C 72.5 139 74 139.5 74 141 L 74 152" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <line x1="61" y1="138" x2="65" y2="138"/>
+    <line x1="61" y1="143" x2="65" y2="143"/>
+    <line x1="78" y1="140" x2="84" y2="140"/>
+    <line x1="79" y1="146" x2="85" y2="146"/>
+  </g>
+  <line x1="46" y1="152" x2="58" y2="152" stroke-width="1.5"/>
+  <line x1="88" y1="152" x2="112" y2="152" stroke-width="1.5"/>
+  <path d="M 106 158 C 106 154.7 111.4 152 118 152 C 124.6 152 130 154.7 130 158 C 130 161.3 124.6 164 118 164 C 111.4 164 106 161.3 106 158 Z" stroke-width="1.5"/>
+  <path d="M 111.5 158 C 111.5 156.3 114.4 155 118 155 C 121.6 155 124.5 156.3 124.5 158 C 124.5 159.7 121.6 161 118 161 C 114.4 161 111.5 159.7 111.5 158 Z" stroke-width="1"/>
+  <path d="M 130 158 C 136 157 141 154 144 150" stroke-width="1.5"/>
+</svg>

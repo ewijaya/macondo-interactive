@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The begonia porch: potted begonias on a railing, two rocking chairs angled together, a sewing basket">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- floor and porch post -->
+  <line x1="16" y1="148" x2="224" y2="148"/>
+  <path d="M30 148 V28 M30 34 H224" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="52" y1="153" x2="210" y2="153"/>
+    <line x1="70" y1="158" x2="192" y2="158"/>
+  </g>
+  <!-- railing along the back -->
+  <line x1="42" y1="96" x2="224" y2="96" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="54" y1="96" x2="54" y2="118"/>
+    <line x1="70" y1="96" x2="70" y2="118"/>
+    <line x1="86" y1="96" x2="86" y2="118"/>
+    <line x1="102" y1="96" x2="102" y2="118"/>
+    <line x1="186" y1="96" x2="186" y2="118"/>
+    <line x1="202" y1="96" x2="202" y2="118"/>
+    <line x1="218" y1="96" x2="218" y2="118"/>
+  </g>
+  <line x1="42" y1="118" x2="224" y2="118" stroke-width="1"/>
+  <!-- begonia pots on the railing -->
+  <path d="M56 96 L57.5 88 H70.5 L72 96 M154 96 L155.5 88 H168.5 L170 96 M204 96 L205.5 88 H218.5 L220 96" stroke-width="1"/>
+  <!-- begonias: the accent group -->
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <circle cx="59" cy="84" r="2.4"/>
+    <circle cx="64" cy="81" r="2.4"/>
+    <circle cx="69" cy="84.5" r="2.4"/>
+    <circle cx="157" cy="84" r="2.4"/>
+    <circle cx="162" cy="81" r="2.4"/>
+    <circle cx="167" cy="84.5" r="2.4"/>
+    <circle cx="207" cy="84" r="2.4"/>
+    <circle cx="212" cy="81" r="2.4"/>
+    <circle cx="217" cy="84.5" r="2.4"/>
+  </g>
+  <path d="M61 85 C61 81 65 79 68 81 M159 85 C159 81 163 79 166 81 M209 85 C209 81 213 79 216 81" stroke-width="0.75"/>
+  <!-- two rocking chairs, angled toward each other -->
+  <path d="M64 146 C60 146 58 142 60 138 L74 120 C76 117 80 118 80 122 L78 138 M60 138 L86 142 M86 142 C90 143 90 147 86 148 M66 122 L78 124" stroke-width="2"/>
+  <path d="M56 150 C66 156 82 156 90 150" stroke-width="1.5"/>
+  <path d="M176 146 C180 146 182 142 180 138 L166 120 C164 117 160 118 160 122 L162 138 M180 138 L154 142 M154 142 C150 143 150 147 154 148 M174 122 L162 124" stroke-width="2"/>
+  <path d="M184 150 C174 156 158 156 150 150" stroke-width="1.5"/>
+  <!-- sewing basket between the chairs -->
+  <path d="M108 148 L106 136 H134 L132 148 Z" stroke-width="1.5"/>
+  <path d="M106 136 C112 130 128 130 134 136" stroke-width="1"/>
+  <path d="M114 136 C114 128 120 126 124 130" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <line x1="110" y1="140" x2="130" y2="140"/>
+    <line x1="109" y1="144" x2="131" y2="144"/>
+  </g>
+</svg>

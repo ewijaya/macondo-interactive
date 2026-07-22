@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The whitewashed church: a small facade with its bell in the arch and a coin tilted at the door">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- ground -->
+  <line x1="16" y1="150" x2="224" y2="150"/>
+  <g stroke-width="0.75">
+    <line x1="36" y1="156" x2="96" y2="156"/>
+    <line x1="150" y1="156" x2="206" y2="156"/>
+  </g>
+  <!-- facade -->
+  <path d="M84 150 V72 L120 46 L156 72 V150" stroke-width="2"/>
+  <path d="M78 76 L120 44 L162 76" stroke-width="1.5"/>
+  <!-- bell arch -->
+  <path d="M108 78 C108 62 132 62 132 78 V88 H108 Z" stroke-width="1.5"/>
+  <!-- the bell: accent -->
+  <g>
+    <path d="M115 68 C115 63 125 63 125 68 C125 74 127 76 128 77 H112 C113 76 115 74 115 68 Z" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="1"/>
+    <circle cx="120" cy="79.5" r="1.2" fill="currentColor" stroke="none"/>
+    <line x1="120" y1="61" x2="120" y2="64" stroke-width="1"/>
+  </g>
+  <!-- cross at the peak -->
+  <path d="M120 44 V32 M114 37 H126" stroke-width="1.5"/>
+  <!-- door -->
+  <path d="M106 150 V116 C106 104 134 104 134 116 V150" stroke-width="2"/>
+  <line x1="120" y1="107" x2="120" y2="150" stroke-width="0.75"/>
+  <path d="M110 150 V118 C110 109 130 109 130 118 V150" stroke-width="0.75"/>
+  <!-- the coin tilted at the door -->
+  <ellipse cx="142" cy="147" rx="4.5" ry="2" transform="rotate(-62 142 147)" stroke-width="1"/>
+  <!-- side windows -->
+  <path d="M92 100 C92 94 100 94 100 100 V110 H92 Z M140 100 C140 94 148 94 148 100 V110 H140 Z" stroke-width="1"/>
+  <!-- wall hatching, one region -->
+  <g stroke-width="0.75">
+    <line x1="86" y1="128" x2="86" y2="148"/>
+    <line x1="90" y1="126" x2="90" y2="148"/>
+    <line x1="94" y1="126" x2="94" y2="148"/>
+  </g>
+  <!-- small flanking almond tree -->
+  <path d="M52 150 V128 M52 128 C44 128 42 120 47 115 C44 107 54 102 60 107 C68 104 71 114 65 119 C68 124 60 130 52 128 Z" stroke-width="1.5"/>
+  <path d="M190 150 V132 M190 132 C184 132 182 126 186 122 C184 116 191 112 196 116 C202 114 204 121 199 125 C202 129 196 134 190 132 Z" stroke-width="1"/>
+</svg>

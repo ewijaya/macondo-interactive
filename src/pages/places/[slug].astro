@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Emblem from '../../components/Emblem.astro';
 import { places, placeBySlug, characterBySlug, eventBySlug } from '../../lib/lookups';
 
 export function getStaticPaths() {
@@ -14,10 +15,13 @@ const ZONE_LABEL = { house: 'The Buendía house', town: 'Macondo', beyond: 'Beyo
 
 <Layout title={p.name} description={p.tagline}>
   <article>
-    <header class="page-head">
-      <p class="eyebrow">{ZONE_LABEL[p.zone]}</p>
-      <h1>{p.name}</h1>
-      <p class="lede">{p.tagline}</p>
+    <header class="page-head with-emblem">
+      <div>
+        <p class="eyebrow">{ZONE_LABEL[p.zone]}</p>
+        <h1>{p.name}</h1>
+        <p class="lede">{p.tagline}</p>
+      </div>
+      <Emblem kind="places" slug={p.slug} class="head-emblem" />
     </header>
 
     <div class="dossier">
@@ -81,6 +85,25 @@ const ZONE_LABEL = { house: 'The Buendía house', town: 'Macondo', beyond: 'Beyo
 </Layout>
 
 <style>
+  .with-emblem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--max-wide);
+  }
+
+  .head-emblem {
+    width: clamp(9rem, 18vw, 14rem);
+    flex: none;
+  }
+
+  @media (max-width: 640px) {
+    .with-emblem {
+      flex-direction: column-reverse;
+    }
+  }
+
   .dossier aside {
     border-top-color: var(--ink);
   }

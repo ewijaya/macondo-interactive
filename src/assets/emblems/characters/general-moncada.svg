@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Spectacles resting on two crossed, surrendered pistols">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="58" y1="142" x2="142" y2="142" stroke-width="2"/>
+  <path d="M66 146 l8 -3 M84 147 l8 -3 M104 147 l8 -3 M124 146 l8 -3" stroke-width="0.75"/>
+  <path d="M64 102 L118 128" stroke-width="2"/>
+  <path d="M64 102 L64 98"/>
+  <path d="M118 128 C124 130 127 136 125 142 L116 140 C114 135 114 131 118 128 Z" stroke-width="2"/>
+  <path d="M104 124 C102 130 108 133 111 129" stroke-width="1"/>
+  <path d="M118 133 l4 1" stroke-width="0.75"/>
+  <path d="M136 102 L82 128" stroke-width="2"/>
+  <path d="M136 102 L136 98"/>
+  <path d="M82 128 C76 130 73 136 75 142 L84 140 C86 135 86 131 82 128 Z" stroke-width="2"/>
+  <path d="M96 124 C98 130 92 133 89 129" stroke-width="1"/>
+  <path d="M82 133 l-4 1" stroke-width="0.75"/>
+  <circle cx="86" cy="94" r="11"/>
+  <circle cx="114" cy="94" r="11"/>
+  <path d="M97 92 C99 89 101 89 103 92"/>
+  <path d="M75 94 C70 100 72 108 80 110 M125 94 C130 100 128 108 120 110" stroke-width="1"/>
+  <path d="M108 88 A8 8 0 0 1 114 85" stroke="var(--em-accent, #f2b705)"/>
+  <circle cx="86" cy="94" r="8" stroke-width="0.5"/>
+  <circle cx="114" cy="94" r="8" stroke-width="0.5"/>
+</svg>

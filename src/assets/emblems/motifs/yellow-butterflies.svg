@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A large butterfly with finely hatched wings, two smaller butterflies rising behind it">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <path d="M 96 90 C 78 68, 58 58, 48 66 C 38 74, 44 92, 62 99 C 74 104, 88 100, 96 96 Z"/>
+    <path d="M 104 90 C 122 68, 142 58, 152 66 C 162 74, 156 92, 138 99 C 126 104, 112 100, 104 96 Z"/>
+    <path d="M 96 102 C 84 108, 72 122, 78 132 C 84 141, 97 132, 99 118 Z"/>
+    <path d="M 104 102 C 116 108, 128 122, 122 132 C 116 141, 103 132, 101 118 Z"/>
+  </g>
+  <path d="M 96 90 C 78 68, 58 58, 48 66 C 38 74, 44 92, 62 99 C 74 104, 88 100, 96 96 Z" stroke-width="2"/>
+  <path d="M 104 90 C 122 68, 142 58, 152 66 C 162 74, 156 92, 138 99 C 126 104, 112 100, 104 96 Z" stroke-width="2"/>
+  <path d="M 96 102 C 84 108, 72 122, 78 132 C 84 141, 97 132, 99 118 Z" stroke-width="2"/>
+  <path d="M 104 102 C 116 108, 128 122, 122 132 C 116 141, 103 132, 101 118 Z" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <path d="M 58 68 C 66 74, 76 82, 86 90"/>
+    <path d="M 52 76 C 60 82, 70 89, 80 95"/>
+    <path d="M 50 86 C 58 90, 66 94, 74 98"/>
+    <path d="M 142 68 C 134 74, 124 82, 114 90"/>
+    <path d="M 148 76 C 140 82, 130 89, 120 95"/>
+    <path d="M 150 86 C 142 90, 134 94, 126 98"/>
+  </g>
+  <circle cx="60" cy="76" r="1.4" fill="currentColor" stroke="none"/>
+  <circle cx="140" cy="76" r="1.4" fill="currentColor" stroke="none"/>
+  <ellipse cx="100" cy="99" rx="4.5" ry="13" stroke-width="2"/>
+  <circle cx="100" cy="82" r="4" stroke-width="2"/>
+  <path d="M 97 79 C 93 72, 89 68, 84 65 C 82.5 64, 81.5 65.5, 83 67"/>
+  <path d="M 103 79 C 107 72, 111 68, 116 65 C 117.5 64, 118.5 65.5, 117 67"/>
+  <g stroke-width="1">
+    <path d="M 52 144 C 47 137, 40 136, 41 142 C 40 148, 47 149, 52 144 C 57 137, 64 136, 63 142 C 64 148, 57 149, 52 144 Z"/>
+    <path d="M 51 141 L 53 147"/>
+    <path d="M 151 47 C 146 40, 139 39, 140 45 C 139 51, 146 52, 151 47 C 156 40, 163 39, 162 45 C 163 51, 156 52, 151 47 Z"/>
+    <path d="M 150 44 L 152 50"/>
+  </g>
+  <g stroke-width="0.5">
+    <path d="M 62 148 C 66 150, 70 151, 74 150"/>
+    <path d="M 140 56 C 137 59, 133 61, 129 61"/>
+  </g>
+</svg>

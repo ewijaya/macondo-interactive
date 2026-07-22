@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An oil lamp and a broom crossed at a doorway threshold">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="55" y1="150" x2="145" y2="150" stroke-width="2"/>
+  <path d="M62 150 V52 M138 150 V52 M62 52 H138"/>
+  <path d="M66 150 V56 M134 150 V56 M66 56 H134" stroke-width="0.75"/>
+  <path d="M62 84 h4 M62 116 h4 M134 84 h4 M134 116 h4" stroke-width="0.75"/>
+  <line x1="126" y1="62" x2="82" y2="136" stroke-width="2"/>
+  <path d="M78 134 l10 6 M77 137 l9 6" stroke-width="0.75"/>
+  <path d="M80 138 L70 150 M82 139 L75 150 M84 141 L80 150 M86 142 L85 150 M88 143 L90 150" stroke-width="0.75"/>
+  <ellipse cx="104" cy="148" rx="10" ry="2.5"/>
+  <path d="M100 146 L102 132 M108 146 L106 132"/>
+  <path d="M96 132 C94 121 114 121 112 132 C111 136 97 136 96 132 Z" stroke-width="2"/>
+  <path d="M112 126 C118 125 121 121 122 117"/>
+  <path d="M98 129 l4 -4 M97 132 l6 -6" stroke-width="0.75"/>
+  <path d="M122 116 C118 110 121 103 124 99 C126 103 128 110 124 116 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <circle cx="93" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="116" cy="148" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Macondo: a row of adobe houses by a river of polished stones, almond trees between, the sierra behind">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- sierra, background -->
+  <g stroke-width="0.75">
+    <path d="M16 74 L52 40 L84 66 L118 34 L152 62 L188 38 L224 68"/>
+    <path d="M44 48 L52 56 M110 42 L118 52 M180 46 L188 54"/>
+  </g>
+  <!-- the sun above the sierra: accent -->
+  <circle cx="196" cy="26" r="7" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <circle cx="196" cy="26" r="7" stroke-width="1"/>
+  <!-- houses row, midground -->
+  <path d="M30 112 V92 L44 84 L58 92 V112 Z" stroke-width="1.5"/>
+  <path d="M74 112 V94 L88 86 L102 94 V112 Z" stroke-width="1.5"/>
+  <path d="M118 112 V92 L132 84 L146 92 V112 Z" stroke-width="1.5"/>
+  <path d="M162 112 V94 L176 86 L190 94 V112 Z" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <path d="M40 112 V102 H48 V112 M84 112 V102 H92 V112 M128 112 V102 H136 V112 M172 112 V102 H180 V112"/>
+    <line x1="30" y1="96" x2="58" y2="96"/>
+    <line x1="118" y1="96" x2="146" y2="96"/>
+  </g>
+  <!-- almond trees between houses -->
+  <path d="M64 112 V98 M64 98 C58 98 56 92 60 88 C58 82 66 78 70 82 C76 80 78 88 74 92 C76 96 70 100 64 98 Z" stroke-width="1"/>
+  <path d="M108 112 V98 M108 98 C102 98 100 92 104 88 C102 82 110 78 114 82 C120 80 122 88 118 92 C120 96 114 100 108 98 Z" stroke-width="1"/>
+  <path d="M152 112 V98 M152 98 C146 98 144 92 148 88 C146 82 154 78 158 82 C164 80 166 88 162 92 C164 96 158 100 152 98 Z" stroke-width="1"/>
+  <!-- bank line -->
+  <path d="M16 118 C60 114 180 114 224 118" stroke-width="2"/>
+  <!-- river of polished stones, foreground -->
+  <ellipse cx="52" cy="140" rx="18" ry="9" stroke-width="2"/>
+  <ellipse cx="102" cy="146" rx="22" ry="10" stroke-width="2"/>
+  <ellipse cx="158" cy="139" rx="19" ry="9" stroke-width="2"/>
+  <ellipse cx="202" cy="148" rx="16" ry="8" stroke-width="2"/>
+  <ellipse cx="26" cy="152" rx="12" ry="6" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <path d="M40 136 C46 132 58 132 64 136"/>
+    <path d="M88 142 C96 138 110 138 118 142"/>
+    <path d="M146 135 C152 131 164 131 170 135"/>
+    <path d="M16 126 C40 122 60 124 78 128 M126 130 C138 126 152 128 168 130 M186 132 C198 128 212 130 224 132"/>
+  </g>
+</svg>

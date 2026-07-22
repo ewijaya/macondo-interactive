@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The Street of the Turks: awninged shopfronts with bolts of cloth hung out and a macaw on a perch">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- street -->
+  <line x1="16" y1="148" x2="224" y2="148"/>
+  <g stroke-width="0.75">
+    <line x1="40" y1="154" x2="120" y2="154"/>
+    <line x1="146" y1="157" x2="212" y2="157"/>
+  </g>
+  <!-- shopfront row -->
+  <path d="M24 148 V64 H216 V148" stroke-width="1.5"/>
+  <line x1="88" y1="64" x2="88" y2="148" stroke-width="1"/>
+  <line x1="152" y1="64" x2="152" y2="148" stroke-width="1"/>
+  <!-- awnings: scalloped -->
+  <path d="M20 80 L28 62 H84 L92 80 M20 80 C24 86 28 86 32 80 C36 86 40 86 44 80 C48 86 52 86 56 80 C60 86 64 86 68 80 C72 86 76 86 80 80 C84 86 88 86 92 80" stroke-width="2"/>
+  <path d="M148 80 L156 62 H212 L220 80 M148 80 C152 86 156 86 160 80 C164 86 168 86 172 80 C176 86 180 86 184 80 C188 86 192 86 196 80 C200 86 204 86 208 80 C212 86 216 86 220 80" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <line x1="36" y1="64" x2="34" y2="79"/>
+    <line x1="52" y1="64" x2="51" y2="79"/>
+    <line x1="68" y1="64" x2="68" y2="79"/>
+    <line x1="164" y1="64" x2="163" y2="79"/>
+    <line x1="180" y1="64" x2="180" y2="79"/>
+    <line x1="196" y1="64" x2="197" y2="79"/>
+  </g>
+  <!-- doorways -->
+  <path d="M36 148 V102 H72 V148" stroke-width="1.5"/>
+  <path d="M164 148 V102 H200 V148" stroke-width="1.5"/>
+  <!-- bolts of cloth hung out -->
+  <path d="M100 70 H140 M104 70 V118 C104 122 110 122 110 118 V70 M116 70 V128 C116 132 122 132 122 128 V70 M128 70 V114 C128 118 134 118 134 114 V70" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="105.5" y1="80" x2="108.5" y2="80"/>
+    <line x1="105.5" y1="92" x2="108.5" y2="92"/>
+    <line x1="117.5" y1="84" x2="120.5" y2="84"/>
+    <line x1="117.5" y1="98" x2="120.5" y2="98"/>
+    <line x1="129.5" y1="82" x2="132.5" y2="82"/>
+    <line x1="129.5" y1="96" x2="132.5" y2="96"/>
+  </g>
+  <!-- the macaw on a perch: accent -->
+  <line x1="44" y1="122" x2="64" y2="122" stroke-width="1.5"/>
+  <line x1="54" y1="122" x2="54" y2="148" stroke-width="1"/>
+  <g>
+    <path d="M52 121 C50 114 52 106 57 104 C62 103 64 108 62 112 C64 118 60 121 57 121 Z" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="1"/>
+    <path d="M58 121 C60 126 60 132 57 137" stroke="var(--em-accent, #f2b705)" stroke-width="1.5"/>
+    <circle cx="58.5" cy="107.5" r="0.7" fill="currentColor" stroke="none"/>
+    <path d="M61 109 C63 109 64 110.5 62.5 111.5" stroke-width="0.75"/>
+  </g>
+</svg>

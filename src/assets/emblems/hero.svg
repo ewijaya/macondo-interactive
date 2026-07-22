@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A chestnut tree whose roots coil into a spiral, a butterfly rising on one side and a little fish hanging on the other">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M 100 40 C 116 40 130 48 134 60 C 146 62 152 74 146 84 C 152 92 148 102 138 105 C 130 108 118 107 110 103 C 104 108 92 108 86 103 C 76 108 62 105 58 96 C 52 88 56 76 66 72 C 64 60 74 48 88 44 C 92 41 96 40 100 40 Z" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <path d="M 80 62 C 86 56 94 53 102 54"/>
+    <path d="M 112 60 C 120 60 128 64 132 70"/>
+    <path d="M 68 80 C 72 74 78 70 85 69"/>
+    <path d="M 120 84 C 128 82 136 84 140 88"/>
+    <path d="M 90 88 C 96 84 104 83 110 86"/>
+  </g>
+  <path d="M 94 105 C 94 112 93 118 92 122 M 106 105 C 106 112 107 118 108 122" stroke-width="2"/>
+  <g stroke-width="0.5">
+    <path d="M 97 108 C 97 113 96.5 118 96 121"/>
+    <path d="M 102 108 C 102 113 102.5 118 103 121"/>
+  </g>
+  <line x1="56" y1="122" x2="86" y2="122" stroke-width="1.5"/>
+  <line x1="114" y1="122" x2="144" y2="122" stroke-width="1.5"/>
+  <path d="M 86 122 C 90 128 95 132 100 136 M 114 122 C 110 128 105 132 100 136" stroke-width="1.5"/>
+  <line x1="100" y1="136" x2="100" y2="146" stroke-width="1.5"/>
+  <path d="M 100 146 C 108 148 111 156 105 161 C 100 165 92 162 92 156 C 92 151 97 148.5 101 151 C 104 152.8 104 156.5 101 158" stroke-width="1.5"/>
+  <path d="M 55 84 C 51 79 52 74 56 73 C 59 72.3 61 75 60 79 C 63 76 66.5 76.5 67.5 79.5 C 68.5 82.5 66 85.5 61.5 85.5 L 58 85.5 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M 58 72 L 56 68 M 60 72 L 61.5 68" stroke-width="0.5"/>
+  <g stroke-width="0.5">
+    <circle cx="141" cy="94" r="1.2"/>
+    <circle cx="141" cy="98" r="1.2"/>
+    <circle cx="141" cy="102" r="1.2"/>
+  </g>
+  <path d="M 132 110 C 136 106.5 142.5 105.5 147 108.5 C 149 110 150.5 111 152 112 C 150.5 113 149 114.5 146.5 115.5 C 142 117.5 136 116.5 132 113 C 131 112 131 111 132 110 Z" stroke-width="1.5"/>
+  <path d="M 152 112 C 155 110 157 108 159 106 C 158.2 110 158.2 114 159 118 C 157 116 155 114 152 112 Z" stroke-width="1.5"/>
+  <circle cx="136.5" cy="110.5" r="0.9" fill="currentColor" stroke="none"/>
+  <path d="M 141 108.5 C 142 110 142 112.5 141 114" stroke-width="0.5"/>
+</svg>

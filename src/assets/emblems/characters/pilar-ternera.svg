@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A fan of face-down cards patterned with suns and moons, one turned to show a heart">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <ellipse cx="100" cy="151" rx="44" ry="4.5" stroke-width="0.75"/>
+  <g transform="rotate(-32 98 146)">
+    <rect x="84" y="92" width="28" height="42" rx="3" stroke-width="2"/>
+    <rect x="88" y="96" width="20" height="34" rx="2" stroke-width="0.75"/>
+    <circle cx="98" cy="110" r="4" stroke-width="0.75"/>
+    <path d="M98 102 v-3 M98 118 v3 M90 110 h-3 M106 110 h3 M92.5 104.5 l-2 -2 M103.5 104.5 l2 -2 M92.5 115.5 l-2 2 M103.5 115.5 l2 2" stroke-width="0.75"/>
+  </g>
+  <g transform="rotate(-15 98 146)">
+    <rect x="84" y="90" width="28" height="42" rx="3" stroke-width="2"/>
+    <rect x="88" y="94" width="20" height="34" rx="2" stroke-width="0.75"/>
+    <path d="M100 104 a7 7 0 1 0 0 14 a5.6 5.6 0 1 1 0 -14" stroke-width="0.75"/>
+  </g>
+  <g transform="rotate(2 98 146)">
+    <rect x="84" y="89" width="28" height="42" rx="3" stroke-width="2"/>
+    <rect x="88" y="93" width="20" height="34" rx="2" stroke-width="0.75"/>
+    <circle cx="98" cy="107" r="4" stroke-width="0.75"/>
+    <path d="M98 99 v-3 M98 115 v3 M90 107 h-3 M106 107 h3" stroke-width="0.75"/>
+  </g>
+  <g transform="rotate(24 130 118)">
+    <rect x="116" y="96" width="28" height="42" rx="3" stroke-width="2"/>
+    <rect x="120" y="100" width="20" height="34" rx="2" stroke-width="0.75"/>
+    <path d="M130 124 C122 116 120 110 124 107 C127 105 130 108 130 111 C130 108 133 105 136 107 C140 110 138 116 130 124 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  </g>
+  <circle cx="62" cy="150" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="140" cy="150" r="0.7" fill="currentColor" stroke="none"/>
+</svg>

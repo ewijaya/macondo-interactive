@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A gauze-bandaged hand holding a threaded needle above a hem of shroud stitches">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M60 168 C68 138 78 116 90 100" stroke-width="2"/>
+  <path d="M84 172 C90 144 97 124 106 106" stroke-width="2"/>
+  <path d="M66 152 C72 149 78 150 84 154" stroke-width="0.75"/>
+  <path d="M70 140 C76 137 82 138 88 142" stroke-width="0.75"/>
+  <path d="M75 128 C81 125 87 126 92 130" stroke-width="0.75"/>
+  <path d="M80 116 C86 113 92 114 97 118" stroke-width="0.75"/>
+  <path d="M85 105 C91 102 96 103 101 107" stroke-width="0.75"/>
+  <path d="M90 100 C95 90 102 84 110 81" stroke-width="2"/>
+  <path d="M106 106 C110 98 113 91 115 84" stroke-width="2"/>
+  <path d="M110 81 C113 80 115 81 115 84" stroke-width="1.5"/>
+  <path d="M112 82 L138 54" stroke-width="1.5"/>
+  <circle cx="136" cy="56" r="1.6" stroke-width="0.75"/>
+  <path d="M137 57 C158 72 154 104 132 124 C118 137 100 147 82 151" stroke="var(--em-accent, #f2b705)" stroke-width="1.5"/>
+  <path d="M56 160 C72 165 88 167 104 166" stroke-width="1"/>
+  <path d="M104 166 C120 165 134 161 146 154" stroke-width="1"/>
+  <line x1="62" y1="157" x2="60" y2="165" stroke-width="0.75"/>
+  <line x1="74" y1="160" x2="72" y2="168" stroke-width="0.75"/>
+  <line x1="86" y1="162" x2="85" y2="170" stroke-width="0.75"/>
+  <line x1="98" y1="163" x2="97" y2="171" stroke-width="0.75"/>
+  <line x1="110" y1="162" x2="110" y2="170" stroke-width="0.75"/>
+  <line x1="122" y1="160" x2="123" y2="168" stroke-width="0.75"/>
+  <line x1="134" y1="157" x2="136" y2="164" stroke-width="0.75"/>
+</svg>

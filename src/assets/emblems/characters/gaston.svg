@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A biplane propeller upright beside a velocipede wheel">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <line x1="52" y1="150" x2="150" y2="150" stroke-width="1"/>
+  <path d="M74 100 C66 92 68 68 74 56 C80 68 82 92 74 100 Z" stroke-width="2"/>
+  <path d="M74 108 C66 116 68 140 74 150 C80 140 82 116 74 108 Z" stroke-width="2"/>
+  <path d="M74 62 C72 74 72 88 74 96 M74 112 C72 120 72 134 74 144" stroke-width="0.75"/>
+  <circle cx="74" cy="104" r="6" fill="var(--em-accent, #f2b705)" stroke="currentColor"/>
+  <circle cx="74" cy="99" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="74" cy="109" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="69" cy="104" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="79" cy="104" r="0.7" fill="currentColor" stroke="none"/>
+  <circle cx="130" cy="117" r="33" stroke-width="2"/>
+  <circle cx="130" cy="117" r="29.5" stroke-width="0.75"/>
+  <circle cx="130" cy="117" r="4"/>
+  <path d="M130 87.5 V146.5 M100.5 117 H159.5 M109 96 L151 138 M151 96 L109 138 M117 89.5 L143 144.5 M143 89.5 L117 144.5" stroke-width="0.75"/>
+  <path d="M130 84 L130 68 C130 63 135 61 139 64" stroke-width="1.5"/>
+  <path d="M134 61 C138 58 143 59 145 63"/>
+  <ellipse cx="102" cy="152" rx="34" ry="2" stroke-width="0.75"/>
+</svg>

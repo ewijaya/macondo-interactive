@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { places, characterBySlug } from '../lib/lookups';
+import Emblem from '../components/Emblem.astro';
+import { places } from '../lib/lookups';
 
 const mapped = places.filter((p) => p.map);
 const beyond = places.filter((p) => !p.map);
@@ -62,6 +63,7 @@ const beyond = places.filter((p) => !p.map);
       {
         beyond.map((p) => (
           <a href={`/places/${p.slug}`} class="card">
+            <Emblem kind="places" slug={p.slug} class="card-emblem" />
             <span class="meta">Beyond</span>
             <span class="name">{p.name}</span>
             <span class="tagline">{p.tagline}</span>
@@ -182,5 +184,11 @@ const beyond = places.filter((p) => !p.map);
     color: var(--ink-soft);
     margin: 0.6rem 0 1.2rem;
     max-width: var(--max-prose);
+  }
+
+  .card-emblem {
+    width: 100%;
+    max-width: 11rem;
+    margin-bottom: 0.5rem;
   }
 </style>

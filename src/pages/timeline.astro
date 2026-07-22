@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Emblem from '../components/Emblem.astro';
 import { eventsInOrder, characterBySlug, placeBySlug } from '../lib/lookups';
 import { ERA_LABELS, type TimelineEvent } from '../data/types';
 
@@ -38,6 +39,7 @@ const eras = (Object.keys(ERA_LABELS) as TimelineEvent['era'][]).map((era) => ({
       eras.map((era, i) => (
         <section class="era" id={`era-${era.era}`}>
           <header class="era-head">
+            <Emblem kind="eras" slug={era.era} class="era-emblem" />
             <span class="era-index">{i + 1} / 6</span>
             <h2>{era.label}</h2>
             <p>{era.note}</p>
@@ -95,6 +97,10 @@ const eras = (Object.keys(ERA_LABELS) as TimelineEvent['era'][]).map((era) => ({
     position: sticky;
     top: 2rem;
     align-self: start;
+  }
+
+  .era-emblem {
+    margin-bottom: 0.9rem;
   }
 
   .era-index {

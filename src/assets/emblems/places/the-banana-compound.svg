@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The banana company compound: bungalows behind a wire fence on white posts, a sprinkler's arc, a great banana leaf in the foreground">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- ground -->
+  <line x1="16" y1="144" x2="224" y2="144"/>
+  <!-- bungalows, background -->
+  <g stroke-width="0.75">
+    <path d="M56 106 V88 L74 78 L92 88 V106 Z"/>
+    <path d="M104 106 V88 L122 78 L140 88 V106 Z"/>
+    <path d="M152 106 V88 L170 78 L188 88 V106 Z"/>
+    <path d="M62 106 V96 H70 V106 M110 106 V96 H118 V106 M158 106 V96 H166 V106"/>
+    <line x1="78" y1="92" x2="86" y2="92"/>
+    <line x1="126" y1="92" x2="134" y2="92"/>
+    <line x1="174" y1="92" x2="182" y2="92"/>
+  </g>
+  <!-- sprinkler arc -->
+  <path d="M120 106 V112 M120 112 C104 100 96 84 96 68 M120 112 C136 100 144 84 144 68 M120 112 C112 96 110 82 112 66 M120 112 C128 96 130 82 128 66" stroke-width="0.75"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="96" cy="62" r="0.7"/>
+    <circle cx="112" cy="60" r="0.7"/>
+    <circle cx="128" cy="60" r="0.7"/>
+    <circle cx="144" cy="62" r="0.7"/>
+  </g>
+  <!-- wire fence on posts, midground -->
+  <g stroke-width="1.5">
+    <line x1="24" y1="144" x2="24" y2="114"/>
+    <line x1="68" y1="144" x2="68" y2="114"/>
+    <line x1="112" y1="144" x2="112" y2="114"/>
+    <line x1="156" y1="144" x2="156" y2="114"/>
+    <line x1="200" y1="144" x2="200" y2="114"/>
+  </g>
+  <line x1="18" y1="118" x2="222" y2="118" stroke-width="1"/>
+  <line x1="18" y1="128" x2="222" y2="128" stroke-width="1"/>
+  <line x1="18" y1="138" x2="222" y2="138" stroke-width="1"/>
+  <circle cx="24" cy="114" r="1.6" stroke-width="1"/>
+  <circle cx="68" cy="114" r="1.6" stroke-width="1"/>
+  <circle cx="112" cy="114" r="1.6" stroke-width="1"/>
+  <circle cx="156" cy="114" r="1.6" stroke-width="1"/>
+  <circle cx="200" cy="114" r="1.6" stroke-width="1"/>
+  <!-- great banana leaf, foreground -->
+  <path d="M170 168 C176 148 192 130 216 122 C220 134 216 152 202 162 C192 168 180 170 170 168 Z" stroke-width="2"/>
+  <!-- leaf midrib: accent -->
+  <path d="M172 166 C184 152 200 136 214 124" stroke="var(--em-accent, #f2b705)" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <line x1="180" y1="158" x2="188" y2="163"/>
+    <line x1="186" y1="150" x2="196" y2="156"/>
+    <line x1="192" y1="142" x2="203" y2="148"/>
+    <line x1="199" y1="134" x2="209" y2="139"/>
+  </g>
+</svg>

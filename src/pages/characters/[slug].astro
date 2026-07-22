@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Emblem from '../../components/Emblem.astro';
 import {
   characters,
   characterBySlug,
@@ -37,13 +38,16 @@ const placeLinks = [
 
 <Layout title={c.name} description={c.tagline}>
   <article class={`bl-${c.bloodline}`}>
-    <header class="page-head">
-      <p class="eyebrow" style="color: var(--bl)">
-        {BLOODLINE_LABELS[c.bloodline]}{c.generation ? ` · Generation ${c.generation}` : ''}
-      </p>
-      <h1>{c.name}</h1>
-      {c.aka?.length ? <p class="aka">Also: {c.aka.join(' · ')}</p> : null}
-      <p class="lede">{c.tagline}</p>
+    <header class="page-head with-emblem">
+      <div>
+        <p class="eyebrow" style="color: var(--bl)">
+          {BLOODLINE_LABELS[c.bloodline]}{c.generation ? ` · Generation ${c.generation}` : ''}
+        </p>
+        <h1>{c.name}</h1>
+        {c.aka?.length ? <p class="aka">Also: {c.aka.join(' · ')}</p> : null}
+        <p class="lede">{c.tagline}</p>
+      </div>
+      <Emblem kind="characters" slug={c.slug} class="head-emblem" />
     </header>
 
     <div class="dossier">
@@ -153,6 +157,25 @@ const placeLinks = [
 </Layout>
 
 <style>
+  .with-emblem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--max-wide);
+  }
+
+  .head-emblem {
+    width: clamp(7rem, 14vw, 10.5rem);
+    flex: none;
+  }
+
+  @media (max-width: 640px) {
+    .with-emblem {
+      flex-direction: column-reverse;
+    }
+  }
+
   .aka {
     margin-top: 0.7rem;
     font-family: var(--f-label);

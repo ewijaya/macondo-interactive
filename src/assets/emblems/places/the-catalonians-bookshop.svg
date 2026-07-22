@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The wise Catalonian's bookshop: sagging shelves, string-tied bundles of books on the floor, a ladder">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- floor -->
+  <line x1="16" y1="152" x2="224" y2="152"/>
+  <!-- shelving wall -->
+  <path d="M30 152 V30 H186 V152" stroke-width="1.5"/>
+  <!-- sagging shelves -->
+  <path d="M30 62 C70 68 146 68 186 62" stroke-width="2"/>
+  <path d="M30 96 C70 103 146 103 186 96" stroke-width="2"/>
+  <path d="M30 128 C70 134 146 134 186 128" stroke-width="2"/>
+  <!-- books on shelves: upright and leaning spines -->
+  <g stroke-width="1">
+    <path d="M38 62 V40 H44 V62 M44 62 V44 H50 V62 M50 62 L58 42 L63 44 L56 62 M70 63 V42 H76 V63 M76 63 V46 H82 V64 M90 64 V44 H96 V64 M96 64 L104 46 L109 48 L102 65 M116 65 V44 H122 V65 M130 66 V48 H136 V66 M136 66 V44 H142 V66 M150 66 V48 H156 V66 M162 65 V44 H168 V65 M168 65 L174 48 L179 50 L173 64"/>
+    <path d="M38 96 V76 H44 V97 M52 97 V78 H58 V98 M58 98 L66 80 L71 82 L64 99 M78 99 V78 H84 V99 M92 100 V80 H98 V100 M106 100 V82 H112 V101 M112 101 V78 H118 V101 M126 101 V82 H132 V101 M140 101 V80 H146 V101 M154 100 V82 H160 V100 M168 99 V78 H174 V99"/>
+  </g>
+  <g stroke-width="0.75">
+    <line x1="40" y1="50" x2="42" y2="50"/>
+    <line x1="72" y1="52" x2="74" y2="52"/>
+    <line x1="118" y1="54" x2="120" y2="54"/>
+    <line x1="94" y1="88" x2="96" y2="88"/>
+    <line x1="142" y1="90" x2="144" y2="90"/>
+  </g>
+  <!-- string-tied bundles on the floor -->
+  <path d="M44 152 V136 H84 V152 M44 144 H84" stroke-width="1.5"/>
+  <path d="M100 152 V140 H134 V152" stroke-width="1.5"/>
+  <!-- the string: accent -->
+  <g stroke="var(--em-accent, #f2b705)">
+    <path d="M64 136 V152 M44 144 H84" stroke-width="1.5"/>
+    <path d="M64 144 C61 141 61 138 64 136 C67 138 67 141 64 144" stroke-width="1"/>
+    <path d="M117 140 V152" stroke-width="1.5"/>
+  </g>
+  <!-- the ladder -->
+  <path d="M198 152 L210 34 M216 152 L228 34" stroke-width="2"/>
+  <g stroke-width="1">
+    <line x1="200" y1="134" x2="218" y2="134"/>
+    <line x1="202" y1="116" x2="220" y2="116"/>
+    <line x1="204" y1="98" x2="222" y2="98"/>
+    <line x1="206" y1="80" x2="224" y2="80"/>
+    <line x1="208" y1="62" x2="226" y2="62"/>
+    <line x1="209" y1="46" x2="227" y2="46"/>
+  </g>
+</svg>

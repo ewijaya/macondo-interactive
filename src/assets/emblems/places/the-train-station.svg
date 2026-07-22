@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The train station: a canopied platform as the innocent yellow train arrives trailing smoke">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- rails -->
+  <line x1="16" y1="146" x2="224" y2="146" stroke-width="2"/>
+  <line x1="16" y1="152" x2="224" y2="152" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="24" y1="146" x2="22" y2="152"/>
+    <line x1="44" y1="146" x2="42" y2="152"/>
+    <line x1="64" y1="146" x2="62" y2="152"/>
+    <line x1="84" y1="146" x2="82" y2="152"/>
+    <line x1="104" y1="146" x2="102" y2="152"/>
+  </g>
+  <!-- platform + canopy -->
+  <path d="M124 138 H224 V146" stroke-width="1.5"/>
+  <path d="M136 138 V72 M204 138 V72" stroke-width="1.5"/>
+  <path d="M126 72 C150 62 190 62 214 72" stroke-width="2"/>
+  <path d="M132 78 C154 69 186 69 208 78" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <line x1="148" y1="138" x2="148" y2="74"/>
+    <line x1="192" y1="138" x2="192" y2="74"/>
+  </g>
+  <!-- station clock hung from canopy -->
+  <line x1="170" y1="70" x2="170" y2="84" stroke-width="1"/>
+  <circle cx="170" cy="92" r="8" stroke-width="1.5"/>
+  <path d="M170 92 V87 M170 92 L174 94" stroke-width="0.75"/>
+  <!-- the train arriving from the left -->
+  <path d="M28 146 V112 H84 V146" stroke-width="2"/>
+  <path d="M84 124 H104 C110 124 112 128 112 134 V146 H84" stroke-width="2"/>
+  <!-- boiler front: accent -->
+  <ellipse cx="108" cy="135" rx="4.5" ry="7" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="1"/>
+  <!-- cab window, stack, cowcatcher -->
+  <rect x="38" y="118" width="14" height="12" rx="1" stroke-width="1"/>
+  <path d="M64 112 V98 C64 94 74 94 74 98 V112" stroke-width="1.5"/>
+  <path d="M112 146 L122 152 M112 140 L120 146" stroke-width="1.5"/>
+  <circle cx="42" cy="146" r="6" stroke-width="1.5"/>
+  <circle cx="70" cy="146" r="6" stroke-width="1.5"/>
+  <circle cx="98" cy="146" r="5" stroke-width="1.5"/>
+  <!-- smoke curling back -->
+  <path d="M69 94 C64 84 70 78 64 70 C58 62 64 54 58 48" stroke-width="1"/>
+  <path d="M74 90 C72 82 78 78 74 70" stroke-width="0.75"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="52" cy="42" r="0.7"/>
+    <circle cx="46" cy="36" r="0.7"/>
+    <circle cx="42" cy="30" r="0.7"/>
+  </g>
+</svg>

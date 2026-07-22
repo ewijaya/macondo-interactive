@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Emblem from '../../components/Emblem.astro';
 import { characters } from '../../lib/lookups';
 import { BLOODLINE_LABELS, type Bloodline } from '../../data/types';
 
@@ -44,9 +45,12 @@ const BLURBS: Record<Bloodline, string> = {
         <div class="card-grid">
           {g.members.map((c) => (
             <a href={`/characters/${c.slug}`} class={`card bl-${c.bloodline}`}>
-              <span class="meta">
-                {c.generation ? `Generation ${c.generation}` : 'Macondo'}
-              </span>
+              <div class="card-top">
+                <span class="meta">
+                  {c.generation ? `Generation ${c.generation}` : 'Macondo'}
+                </span>
+                <Emblem kind="characters" slug={c.slug} class="card-emblem" />
+              </div>
               <span class="name">{c.name}</span>
               <span class="tagline">{c.tagline}</span>
             </a>
@@ -85,5 +89,22 @@ const BLURBS: Record<Bloodline, string> = {
   .group-head p {
     color: var(--ink-soft);
     font-size: 0.98rem;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .card-emblem {
+    width: 4.4rem;
+    flex: none;
+    opacity: 0.9;
+  }
+
+  .card:hover .card-emblem {
+    opacity: 1;
   }
 </style>

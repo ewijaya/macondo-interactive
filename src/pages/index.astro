@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Emblem from '../components/Emblem.astro';
 import FamilyTree from '../components/FamilyTree.astro';
 import { characters, places, events, relations, motifs } from '../lib/lookups';
 ---
@@ -8,15 +9,18 @@ import { characters, places, events, relations, motifs } from '../lib/lookups';
   title="The Buendía Family Tree"
   description="An interactive atlas of One Hundred Years of Solitude — seven generations of Buendías, the town of Macondo, and the web that binds them."
 >
-  <header class="page-head">
-    <p class="eyebrow">An atlas of Macondo</p>
-    <h1>Seven generations, two names, one solitude</h1>
-    <p class="lede">
-      Every Buendía man is a José Arcadio or an Aureliano, and the names carry their fates:
-      the Aurelianos withdrawn and lucid, the José Arcadios impulsive and marked for
-      tragedy. This atlas untangles the century — hover a name to light up its bloodline,
-      click through to any life.
-    </p>
+  <header class="page-head hero-head">
+    <div>
+      <p class="eyebrow">An atlas of Macondo</p>
+      <h1>Seven generations, two names, one solitude</h1>
+      <p class="lede">
+        Every Buendía man is a José Arcadio or an Aureliano, and the names carry their
+        fates: the Aurelianos withdrawn and lucid, the José Arcadios impulsive and marked
+        for tragedy. This atlas untangles the century — hover a name to light up its
+        bloodline, click through to any life.
+      </p>
+    </div>
+    <Emblem kind="hero" class="hero-emblem" />
   </header>
 
   <FamilyTree />
@@ -31,6 +35,25 @@ import { characters, places, events, relations, motifs } from '../lib/lookups';
 </Layout>
 
 <style>
+  .hero-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: var(--max-wide);
+  }
+
+  .hero-emblem {
+    width: clamp(9rem, 18vw, 14rem);
+    flex: none;
+  }
+
+  @media (max-width: 760px) {
+    .hero-emblem {
+      display: none;
+    }
+  }
+
   .counts {
     display: flex;
     flex-wrap: wrap;

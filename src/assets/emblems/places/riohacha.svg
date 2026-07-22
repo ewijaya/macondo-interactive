@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Riohacha: a colonial watchtower over the sea, the story of a pirate ship on the horizon">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- sea horizon -->
+  <line x1="16" y1="96" x2="224" y2="96" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <path d="M16 112 C36 109 56 109 76 112 M120 116 C144 113 168 113 190 116"/>
+    <path d="M30 130 C50 127 74 127 94 130 M140 134 C160 131 184 131 204 134"/>
+    <path d="M60 148 C84 145 112 145 136 148 M170 152 C186 150 204 150 218 152"/>
+  </g>
+  <!-- shore -->
+  <path d="M16 160 C60 154 120 156 160 162 C180 165 208 165 224 162" stroke-width="1.5"/>
+  <!-- the watchtower on its rock -->
+  <path d="M40 160 C44 150 48 146 52 144 L56 82 H88 L92 144 C96 146 100 150 104 160" stroke-width="2"/>
+  <path d="M52 82 H92 M56 74 H88 L86 82 M58 74 V66 H64 V74 M70 74 V66 H76 V74 M82 74 V66 H86 V74" stroke-width="1.5"/>
+  <!-- beacon: accent -->
+  <path d="M68 60 C68 55 76 55 76 60 C76 63 74 65 72 66 C70 65 68 63 68 60 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <g stroke-width="0.75">
+    <line x1="62" y1="58" x2="56" y2="55"/>
+    <line x1="82" y1="58" x2="88" y2="55"/>
+  </g>
+  <!-- tower door and window -->
+  <path d="M66 144 V128 C66 122 78 122 78 128 V144" stroke-width="1"/>
+  <rect x="68" y="98" width="8" height="10" rx="1" stroke-width="1"/>
+  <!-- stone hatching, one region -->
+  <g stroke-width="0.75">
+    <line x1="58" y1="90" x2="86" y2="90"/>
+    <line x1="57" y1="112" x2="70" y2="112"/>
+    <line x1="59" y1="134" x2="64" y2="134"/>
+    <line x1="80" y1="118" x2="87" y2="118"/>
+  </g>
+  <!-- pirate ship on the horizon: ghost convention -->
+  <g stroke-width="1" stroke-dasharray="3 3">
+    <path d="M156 96 L160 88 H188 L192 96 Z"/>
+    <path d="M166 88 V70 M180 88 V74"/>
+    <path d="M166 70 C172 72 176 76 176 82 L166 84 Z M180 74 C184 76 186 79 186 83 L180 84 Z"/>
+  </g>
+  <!-- gulls -->
+  <path d="M130 44 C133 41 137 41 139 44 M139 44 C141 41 145 41 148 44 M182 34 C184 32 187 32 189 34 M189 34 C191 32 194 32 196 34" stroke-width="1"/>
+</svg>

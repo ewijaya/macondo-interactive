@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Europe: a steamship prow passing beneath an old-world arcade of arches, pigeons overhead">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- arcade across the background -->
+  <path d="M16 40 H224" stroke-width="1.5"/>
+  <path d="M28 108 V64 C28 48 56 48 56 64 V108 M70 108 V64 C70 48 98 48 98 64 V108 M112 108 V64 C112 48 140 48 140 64 V108 M154 108 V64 C154 48 182 48 182 64 V108 M196 108 V64 C196 48 224 48 224 64 V108" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <path d="M33 108 V65 C33 53 51 53 51 65 V108"/>
+    <path d="M117 108 V65 C117 53 135 53 135 65 V108"/>
+    <path d="M201 108 V65 C201 53 219 53 219 65 V108"/>
+    <line x1="16" y1="46" x2="224" y2="46"/>
+  </g>
+  <!-- quay line -->
+  <line x1="16" y1="108" x2="224" y2="108" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="24" y1="114" x2="88" y2="114"/>
+    <line x1="150" y1="114" x2="216" y2="114"/>
+  </g>
+  <!-- water -->
+  <g stroke-width="0.75">
+    <path d="M20 150 C40 147 60 147 80 150 M130 154 C150 151 172 151 192 154 M60 164 C84 161 112 161 136 164"/>
+  </g>
+  <!-- steamship prow, foreground -->
+  <path d="M44 166 C46 144 54 126 70 118 L166 112 C172 124 174 142 170 160 C130 168 80 170 44 166 Z" stroke-width="2"/>
+  <path d="M54 140 L168 130 M60 128 L164 120" stroke-width="1"/>
+  <!-- anchor ports -->
+  <circle cx="76" cy="126" r="2.2" stroke-width="1"/>
+  <circle cx="76" cy="138" r="2.2" stroke-width="1"/>
+  <!-- funnel and mast -->
+  <path d="M108 114 L110 88 H128 L130 113" stroke-width="2"/>
+  <line x1="109" y1="94" x2="129" y2="94" stroke-width="0.75"/>
+  <path d="M150 112 V70" stroke-width="1.5"/>
+  <!-- the flag: accent -->
+  <path d="M150 70 L166 74 L150 79 Z" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M150 70 L166 74 L150 79" stroke-width="0.75"/>
+  <!-- funnel smoke -->
+  <path d="M118 84 C114 76 120 70 116 62" stroke-width="0.75"/>
+  <!-- pigeons -->
+  <path d="M64 28 C66 25 70 25 72 28 M72 28 C74 25 78 25 80 28 M180 24 C182 22 185 22 187 24 M187 24 C189 22 192 22 194 24 M120 32 C122 30 125 30 127 32" stroke-width="1"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Neerlandia: a great flowering ceiba over a small table with an inkstand and a single sheet, where the surrender was signed">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- ground -->
+  <line x1="16" y1="148" x2="224" y2="148"/>
+  <path d="M28 154 C48 152 70 152 88 154 M150 156 C170 154 194 154 210 156" stroke-width="0.75"/>
+  <!-- the great ceiba: buttressed trunk -->
+  <path d="M104 148 C106 128 104 112 100 98 M136 148 C134 128 136 112 140 98" stroke-width="2"/>
+  <path d="M104 148 C98 142 92 140 84 140 M136 148 C142 142 148 140 156 140 M112 148 C110 142 112 138 116 136 M128 148 C130 142 128 138 124 136" stroke-width="1.5"/>
+  <!-- canopy, wide -->
+  <path d="M100 98 C64 100 40 84 54 64 C40 46 66 28 92 36 C100 18 144 16 154 36 C182 28 204 48 188 66 C200 84 172 100 140 98 C130 106 110 106 100 98 Z" stroke-width="2"/>
+  <g stroke-width="0.75">
+    <path d="M72 68 C82 62 96 62 106 68 M124 46 C136 42 150 44 158 52 M148 74 C158 68 170 70 176 76"/>
+  </g>
+  <!-- ceiba flowers: accent group -->
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <circle cx="80" cy="50" r="2.2"/>
+    <circle cx="112" cy="34" r="2.2"/>
+    <circle cx="146" cy="30" r="2.2"/>
+    <circle cx="176" cy="48" r="2.2"/>
+    <circle cx="186" cy="74" r="2.2"/>
+    <circle cx="60" cy="76" r="2.2"/>
+    <circle cx="132" cy="58" r="2.2"/>
+  </g>
+  <path d="M80 53 C79 50 81 48 83 49 M146 33 C145 30 147 28 149 29 M60 79 C59 76 61 74 63 75" stroke-width="0.75"/>
+  <!-- one flower falling -->
+  <circle cx="166" cy="112" r="1.8" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <!-- the small table in the shade -->
+  <path d="M176 148 V128 H216 V148" stroke-width="2"/>
+  <path d="M180 148 V130 M212 148 V130" stroke-width="0.75"/>
+  <!-- the single sheet and inkstand -->
+  <path d="M184 128 L186 122 H202 L200 128 Z" stroke-width="1"/>
+  <line x1="188" y1="125" x2="198" y2="125" stroke-width="0.75"/>
+  <path d="M206 128 V123 H212 V128 M209 123 V120" stroke-width="1"/>
+  <path d="M209 120 C213 115 216 113 220 112" stroke-width="0.75"/>
+  <!-- stacked rifles beside, laid down -->
+  <path d="M30 148 L58 118 M38 148 L64 122 M34 132 L52 144" stroke-width="1.5"/>
+  <circle cx="59" cy="117" r="1.4" stroke-width="0.75"/>
+</svg>

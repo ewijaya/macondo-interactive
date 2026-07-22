@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An open birdcage with its door swung wide and two swallows banking away">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <path d="M 70 108 C 70 80 134 80 134 108" stroke-width="2"/>
+  <line x1="70" y1="108" x2="70" y2="142" stroke-width="2"/>
+  <line x1="134" y1="108" x2="134" y2="142" stroke-width="2"/>
+  <ellipse cx="102" cy="142" rx="34" ry="6" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <path d="M 82 89 L 82 140"/>
+    <path d="M 95 85.5 L 95 139"/>
+    <path d="M 109 85.5 L 109 139"/>
+    <path d="M 122 89 L 122 140"/>
+  </g>
+  <circle cx="102" cy="74" r="4" stroke-width="1.5"/>
+  <line x1="102" y1="78" x2="102" y2="84" stroke-width="1"/>
+  <g stroke="var(--em-accent, #f2b705)">
+    <polygon points="134,106 156,98 156,128 134,136" stroke-width="1.5"/>
+    <circle cx="135" cy="109" r="1" fill="var(--em-accent, #f2b705)" stroke="none"/>
+    <circle cx="135" cy="132" r="1" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  </g>
+  <g stroke-width="1.5">
+    <path d="M 58 62 C 52 57 45 56 38 59"/>
+    <path d="M 58 62 C 62 55 63 48 60 42"/>
+    <path d="M 58 62 L 66 68 M 58 62 L 64 71"/>
+    <path d="M 80 44 C 74 40 67 39 61 42"/>
+    <path d="M 80 44 C 83 38 84 31 81 26"/>
+    <path d="M 80 44 L 88 49 M 80 44 L 86 52"/>
+  </g>
+  <g stroke-width="0.5">
+    <path d="M 44 68 C 48 66 52 66 56 67"/>
+    <path d="M 66 50 C 70 48 74 48 78 49"/>
+  </g>
+  <g stroke-width="0.75">
+    <line x1="76" y1="152" x2="94" y2="153"/>
+    <line x1="106" y1="153" x2="128" y2="152"/>
+  </g>
+</svg>

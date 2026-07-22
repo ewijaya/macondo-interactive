@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The Spanish galleon aground in flowering jungle, orchids on its rigging">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- jungle floor -->
+  <path d="M16 150 C60 146 180 146 224 150" stroke-width="1.5"/>
+  <!-- undergrowth ferns -->
+  <path d="M28 150 C30 140 36 132 44 128 M32 150 C36 142 42 136 50 133 M196 150 C194 140 188 132 180 128 M200 150 C198 142 192 136 184 132" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <path d="M40 132 L36 128 M44 136 L39 133 M48 140 L43 138 M184 132 L188 128 M180 136 L185 133"/>
+  </g>
+  <!-- the hull, aground and listing -->
+  <path d="M52 138 C56 120 66 108 84 102 L176 92 C186 100 190 112 188 126 C170 136 120 144 88 144 C72 144 60 142 52 138 Z" stroke-width="2"/>
+  <path d="M60 128 L180 116 M68 116 L172 104" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <line x1="80" y1="108" x2="80" y2="140"/>
+    <line x1="108" y1="104" x2="108" y2="141"/>
+    <line x1="136" y1="100" x2="136" y2="139"/>
+    <line x1="162" y1="96" x2="162" y2="134"/>
+  </g>
+  <circle cx="94" cy="122" r="2.4" stroke-width="1"/>
+  <circle cx="122" cy="119" r="2.4" stroke-width="1"/>
+  <circle cx="150" cy="115" r="2.4" stroke-width="1"/>
+  <!-- masts, tilted -->
+  <path d="M96 102 L86 34 M150 96 L144 40" stroke-width="2"/>
+  <path d="M86 34 L120 44 M144 40 L170 50" stroke-width="1"/>
+  <path d="M78 56 L108 62 M138 58 L164 64" stroke-width="1"/>
+  <!-- rigging -->
+  <g stroke-width="0.75">
+    <path d="M86 34 C104 60 130 84 158 96"/>
+    <path d="M90 60 C102 76 120 90 140 98"/>
+    <path d="M144 40 C130 60 112 80 96 96"/>
+  </g>
+  <!-- orchids on the rigging: accent group -->
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <circle cx="104" cy="60" r="2"/>
+    <circle cx="108" cy="57.5" r="2"/>
+    <circle cx="106" cy="62.5" r="1.6"/>
+    <circle cx="128" cy="82" r="2"/>
+    <circle cx="132" cy="80" r="2"/>
+    <circle cx="130" cy="85" r="1.6"/>
+    <circle cx="152" cy="60" r="2"/>
+    <circle cx="155" cy="57" r="1.8"/>
+  </g>
+  <path d="M106 60 C104 57 106 55 109 56 M130 82 C128 79 130 77 133 78" stroke-width="0.75"/>
+  <!-- vines dropping from the hull -->
+  <path d="M70 134 C68 142 70 148 66 152 M172 122 C176 132 174 140 178 148" stroke-width="1"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An accordion stretched mid-song with banknotes fluttering out of it">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <polygon points="50,90 72,84 76,124 54,130" stroke-width="2"/>
+  <polygon points="128,106 150,100 154,140 132,146" stroke-width="2"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="59" cy="98" r="1.4"/>
+    <circle cx="64" cy="96.5" r="1.4"/>
+    <circle cx="60" cy="106" r="1.4"/>
+    <circle cx="65" cy="104.5" r="1.4"/>
+    <circle cx="61" cy="114" r="1.4"/>
+    <circle cx="66" cy="112.5" r="1.4"/>
+    <circle cx="138" cy="116" r="1.6"/>
+    <circle cx="144" cy="114.5" r="1.6"/>
+    <circle cx="139" cy="126" r="1.6"/>
+    <circle cx="145" cy="124.5" r="1.6"/>
+  </g>
+  <polyline points="76,88 84,94 92,90 100,96 108,92 116,98 124,94 128,100" stroke-width="1.5"/>
+  <polyline points="76,120 84,126 92,122 100,128 108,124 116,130 124,126 132,132" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <line x1="84" y1="94" x2="84" y2="126"/>
+    <line x1="92" y1="90" x2="92" y2="122"/>
+    <line x1="100" y1="96" x2="100" y2="128"/>
+    <line x1="108" y1="92" x2="108" y2="124"/>
+    <line x1="116" y1="98" x2="116" y2="130"/>
+    <line x1="124" y1="94" x2="124" y2="126"/>
+  </g>
+  <polygon points="112,60 126,54 130,64 116,70" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="1"/>
+  <polygon points="136,44 149,40 152,49 139,53" stroke-width="1"/>
+  <polygon points="146,66 158,61 161,70 149,75" stroke-width="1"/>
+  <g stroke-width="0.5">
+    <line x1="116" y1="62" x2="125" y2="58.5"/>
+    <line x1="140" y1="46" x2="148" y2="43.5"/>
+    <line x1="150" y1="68" x2="157" y2="65"/>
+  </g>
+  <g stroke-width="0.75">
+    <path d="M 104 74 C 106 70 106 66 104 62"/>
+    <path d="M 112 78 C 114 75 115 72 114 68"/>
+  </g>
+  <g stroke-width="0.75">
+    <line x1="52" y1="140" x2="70" y2="140"/>
+    <line x1="76" y1="142" x2="96" y2="142"/>
+    <line x1="120" y1="152" x2="150" y2="152"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A rag doll seated on a folded bridal veil">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <ellipse cx="100" cy="152" rx="42" ry="3.5" stroke-width="0.75"/>
+  <path d="M60 150 C60 142 76 137 100 137 C124 137 140 142 140 150" stroke-width="2"/>
+  <path d="M66 150 C66 145 80 142 100 142 C120 142 134 145 134 150" stroke-width="0.75"/>
+  <path d="M62 150 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q4 3.5 8 0 q3.5 3.5 7.5 0" stroke-width="0.75"/>
+  <path d="M74 140 C73 144 73 147 74 150 M126 140 C127 144 127 147 126 150" stroke-width="0.75"/>
+  <circle cx="100" cy="82" r="10" stroke-width="2"/>
+  <path d="M92 76 C94 71 98 70 100 73 M100 73 C102 69 107 71 108 76 M91 81 C88 78 89 74 92 72 M109 81 C112 78 111 74 108 72" stroke-width="0.75"/>
+  <path d="M97 92 V95 M103 92 V95"/>
+  <path d="M93 95 C90 104 87 112 85 121 L115 121 C113 112 110 104 107 95 Z" fill="var(--em-accent, #f2b705)" stroke="currentColor" stroke-width="2"/>
+  <path d="M93 99 C87 102 83 108 82 114"/>
+  <path d="M107 99 C113 102 117 108 118 114"/>
+  <circle cx="81" cy="116" r="2.6"/>
+  <circle cx="119" cy="116" r="2.6"/>
+  <path d="M94 121 L93 134 M106 121 L107 134" stroke-width="2"/>
+  <path d="M93 134 l-5 3 M107 134 l5 3" stroke-width="2"/>
+  <path d="M96 108 h8" stroke-width="0.75"/>
+</svg>

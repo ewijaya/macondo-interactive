@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The cemetery: an iron gate arch, small leaning crosses, one grand sepulcher, rain falling aslant">
+  <rect x="4" y="4" width="232" height="172" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="222" height="162" rx="1" stroke-width="0.5"/>
+  <!-- rain, one hatched region -->
+  <g stroke-width="0.75">
+    <line x1="40" y1="20" x2="34" y2="40"/>
+    <line x1="70" y1="18" x2="64" y2="38"/>
+    <line x1="100" y1="22" x2="94" y2="42"/>
+    <line x1="130" y1="17" x2="124" y2="37"/>
+    <line x1="160" y1="21" x2="154" y2="41"/>
+    <line x1="190" y1="18" x2="184" y2="38"/>
+    <line x1="214" y1="24" x2="208" y2="44"/>
+  </g>
+  <!-- ground -->
+  <line x1="16" y1="150" x2="224" y2="150"/>
+  <!-- iron gate arch -->
+  <path d="M40 150 V70 C40 46 96 46 96 70 V150" stroke-width="2"/>
+  <path d="M46 150 V72 C46 52 90 52 90 72 V150" stroke-width="1"/>
+  <g stroke-width="0.75">
+    <line x1="56" y1="150" x2="56" y2="88"/>
+    <line x1="64" y1="150" x2="64" y2="84"/>
+    <line x1="72" y1="150" x2="72" y2="84"/>
+    <line x1="80" y1="150" x2="80" y2="88"/>
+    <circle cx="68" cy="66" r="5"/>
+  </g>
+  <path d="M68 46 V38 M64 41 H72" stroke-width="1.5"/>
+  <!-- leaning crosses -->
+  <path d="M116 150 V122 M108 132 H124" stroke-width="1.5"/>
+  <path d="M140 150 L143 124 M133 133 L149 130" stroke-width="1.5"/>
+  <path d="M164 150 V130 M158 137 H170" stroke-width="1"/>
+  <!-- the flower at one cross: accent -->
+  <g>
+    <circle cx="118" cy="145" r="2.6" fill="var(--em-accent, #f2b705)" stroke="none"/>
+    <circle cx="118" cy="145" r="1" stroke-width="0.75"/>
+    <path d="M118 147.5 C117 149 117 150 118 150" stroke-width="0.75"/>
+  </g>
+  <!-- grand sepulcher -->
+  <path d="M182 150 V112 H218 V150" stroke-width="2"/>
+  <path d="M178 112 L200 98 L222 112" stroke-width="1.5"/>
+  <path d="M192 150 V128 H208 V150" stroke-width="1"/>
+  <path d="M200 98 V90 M196 93 H204" stroke-width="1.5"/>
+  <!-- puddles -->
+  <path d="M100 158 C108 156 118 156 126 158 M150 160 C156 158 164 158 170 160" stroke-width="0.75"/>
+</svg>

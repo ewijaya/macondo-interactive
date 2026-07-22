@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A small spiral like a pig's tail being carried off by a column of ants">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <g stroke-width="0.5">
+    <line x1="46" y1="156" x2="70" y2="140"/>
+    <line x1="76" y1="136" x2="98" y2="121"/>
+    <line x1="104" y1="117" x2="126" y2="102"/>
+    <line x1="132" y1="98" x2="154" y2="83"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <circle cx="50" cy="152" r="1.5"/>
+    <circle cx="53" cy="150.5" r="1.2"/>
+    <circle cx="56" cy="149" r="1.6"/>
+    <circle cx="66" cy="142" r="1.5"/>
+    <circle cx="69" cy="140.5" r="1.2"/>
+    <circle cx="72" cy="139" r="1.6"/>
+    <circle cx="82" cy="131" r="1.5"/>
+    <circle cx="85" cy="129.5" r="1.2"/>
+    <circle cx="88" cy="128" r="1.6"/>
+    <circle cx="94" cy="123" r="1.5"/>
+    <circle cx="97" cy="121.5" r="1.2"/>
+    <circle cx="100" cy="120" r="1.6"/>
+    <circle cx="106" cy="115" r="1.5"/>
+    <circle cx="109" cy="113.5" r="1.2"/>
+    <circle cx="112" cy="112" r="1.6"/>
+    <circle cx="120" cy="106" r="1.5"/>
+    <circle cx="123" cy="104.5" r="1.2"/>
+    <circle cx="126" cy="103" r="1.6"/>
+    <circle cx="136" cy="96" r="1.5"/>
+    <circle cx="139" cy="94.5" r="1.2"/>
+    <circle cx="142" cy="93" r="1.6"/>
+    <circle cx="150" cy="87" r="1.5"/>
+    <circle cx="153" cy="85.5" r="1.2"/>
+    <circle cx="156" cy="84" r="1.6"/>
+  </g>
+  <g stroke-width="0.5">
+    <line x1="52" y1="153.5" x2="50" y2="157"/>
+    <line x1="55" y1="152" x2="54" y2="155.5"/>
+    <line x1="68" y1="143.5" x2="66" y2="147"/>
+    <line x1="71" y1="142" x2="70" y2="145.5"/>
+    <line x1="84" y1="132.5" x2="82" y2="136"/>
+    <line x1="87" y1="131" x2="86" y2="134.5"/>
+    <line x1="96" y1="124.5" x2="94" y2="128"/>
+    <line x1="99" y1="123" x2="98" y2="126.5"/>
+    <line x1="108" y1="116.5" x2="106" y2="120"/>
+    <line x1="111" y1="115" x2="110" y2="118.5"/>
+    <line x1="122" y1="107.5" x2="120" y2="111"/>
+    <line x1="125" y1="106" x2="124" y2="109.5"/>
+    <line x1="138" y1="97.5" x2="136" y2="101"/>
+    <line x1="141" y1="96" x2="140" y2="99.5"/>
+    <line x1="152" y1="88.5" x2="150" y2="92"/>
+    <line x1="155" y1="87" x2="154" y2="90.5"/>
+    <line x1="158" y1="82" x2="160" y2="79"/>
+    <line x1="48" y1="154" x2="46" y2="157.5"/>
+  </g>
+  <g stroke-width="0.75">
+    <path d="M 78 134 C 76 130 78 126 82 125 C 85 124.5 87 127 86 130 Z"/>
+    <path d="M 130 100 C 128 96 130 92 134 91 C 137 90.5 139 93 138 96 Z"/>
+  </g>
+  <path d="M 95 112 C 95 103 109 101 111 109 C 112.5 115 106 119 101 116 C 97.5 114 98 108.5 102 107.5 C 105 106.8 107 109.5 105.5 112" stroke="var(--em-accent, #f2b705)" stroke-width="1.5"/>
+  <line x1="99" y1="118" x2="97" y2="115" stroke-width="0.5"/>
+  <line x1="107" y1="114.5" x2="109" y2="112" stroke-width="0.5"/>
+</svg>

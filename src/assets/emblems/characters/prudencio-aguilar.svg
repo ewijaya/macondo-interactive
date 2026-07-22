@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The ghost of a fighting rooster, drawn in broken line, with a wisp of esparto">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <g stroke-width="1" stroke-dasharray="3 3">
+    <line x1="60" y1="148" x2="140" y2="148"/>
+    <path d="M104 98 C108 92 108 86 114 80"/>
+    <circle cx="118" cy="76" r="6"/>
+    <path d="M113 70 L115 63 L118 68 L121 61 L124 67 L127 63 L128 70"/>
+    <path d="M124 78 L131 80 L124 82"/>
+    <path d="M119 82 C121 88 117 90 115 86"/>
+    <path d="M104 98 C114 104 112 120 100 126 C92 130 82 128 78 120 C74 112 76 104 84 100 C90 97 98 96 104 98 Z"/>
+    <path d="M88 106 C96 104 102 108 100 114 C96 118 90 116 88 112"/>
+    <path d="M78 112 C66 104 58 92 58 78 M80 108 C70 98 66 88 68 76 M82 116 C70 114 62 108 58 100"/>
+    <path d="M94 128 L92 142 M92 142 L87 146 M92 142 L96 146 M92 142 L92 147"/>
+    <path d="M102 126 L104 142 M104 142 L100 146 M104 142 L108 146"/>
+    <path d="M98 134 l4 -1"/>
+  </g>
+  <g stroke="var(--em-accent, #f2b705)">
+    <path d="M118 148 C119 140 117 134 113 130 M118 148 C121 141 124 137 128 135 M118 148 C118 139 120 132 124 126"/>
+  </g>
+</svg>

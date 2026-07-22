@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="An alchemist's alembic dripping into a small pan that holds a bright golden bead">
+  <circle cx="100" cy="100" r="94" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" stroke-width="0.5"/>
+  <circle cx="84" cy="96" r="27" stroke-width="2"/>
+  <path d="M 95 71 C 105 58, 124 60, 133 78 C 139 90, 140 106, 139 124" stroke-width="2"/>
+  <path d="M 90 78 C 99 68, 116 70, 125 85 C 130 94, 131.5 108, 131.5 122" stroke-width="1.5"/>
+  <path d="M 131.5 122 L 139 124" stroke-width="1.5"/>
+  <path d="M 62 102 C 74 108, 94 108, 106 101" stroke-width="0.75"/>
+  <g fill="currentColor" stroke="none">
+    <circle cx="76" cy="110" r="0.7"/>
+    <circle cx="86" cy="113" r="0.7"/>
+    <circle cx="94" cy="109" r="0.7"/>
+    <circle cx="70" cy="106" r="0.7"/>
+  </g>
+  <path d="M 135.5 132 C 137.5 135, 137.5 138, 135.5 140.5 C 133.5 138, 133.5 135, 135.5 132 Z" fill="currentColor" stroke="none"/>
+  <path d="M 118 148 L 152 148" stroke-width="1.5"/>
+  <path d="M 120 148 C 120 155, 150 155, 150 148" stroke-width="1.5"/>
+  <path d="M 132 154.5 L 130 161" stroke-width="1.5"/>
+  <path d="M 138 154.5 L 140 161" stroke-width="1.5"/>
+  <path d="M 125 161 L 145 161" stroke-width="1.5"/>
+  <circle cx="135" cy="145" r="4.5" fill="var(--em-accent, #f2b705)" stroke="none"/>
+  <path d="M 132.5 142.5 L 134 144" stroke-width="0.5"/>
+  <path d="M 70 118 L 62 146" stroke-width="1.5"/>
+  <path d="M 98 118 L 108 146" stroke-width="1.5"/>
+  <path d="M 56 146 L 114 146" stroke-width="1.5"/>
+  <g stroke-width="0.75">
+    <path d="M 66 84 C 70 80, 76 77, 82 76"/>
+    <path d="M 64 92 C 68 88, 73 85, 78 84"/>
+  </g>
+</svg>

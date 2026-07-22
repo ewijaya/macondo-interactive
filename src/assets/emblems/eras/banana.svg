@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A train crossing a trestle beside dipping telegraph wires, banana bunches hung in the foreground">
+  <rect x="4" y="4" width="352" height="132" rx="2" stroke-width="1"/>
+  <rect x="9" y="9" width="342" height="122" rx="1" stroke-width="0.5"/>
+  <path d="M 20 78 L 340 78" stroke-width="2"/>
+  <path d="M 20 75.5 L 340 75.5" stroke-width="0.75"/>
+  <g stroke-width="1">
+    <path d="M 55 78 L 55 118"/>
+    <path d="M 65 78 L 65 118"/>
+    <path d="M 51 118 L 69 118"/>
+    <path d="M 135 78 L 135 118"/>
+    <path d="M 145 78 L 145 118"/>
+    <path d="M 131 118 L 149 118"/>
+    <path d="M 215 78 L 215 118"/>
+    <path d="M 225 78 L 225 118"/>
+    <path d="M 211 118 L 229 118"/>
+    <path d="M 295 78 L 295 118"/>
+    <path d="M 305 78 L 305 118"/>
+    <path d="M 291 118 L 309 118"/>
+  </g>
+  <g stroke-width="0.75">
+    <path d="M 55 84 L 65 112"/>
+    <path d="M 65 84 L 55 112"/>
+    <path d="M 135 84 L 145 112"/>
+    <path d="M 145 84 L 135 112"/>
+    <path d="M 215 84 L 225 112"/>
+    <path d="M 225 84 L 215 112"/>
+    <path d="M 295 84 L 305 112"/>
+    <path d="M 305 84 L 295 112"/>
+  </g>
+  <path d="M 14 122 C 80 114, 280 118, 348 120" stroke-width="1"/>
+  <rect x="292" y="58" width="30" height="16" stroke-width="2"/>
+  <rect x="280" y="52" width="14" height="22" stroke-width="2"/>
+  <path d="M 314 58 L 314 50" stroke-width="1.5"/>
+  <path d="M 318 58 L 318 50" stroke-width="1.5"/>
+  <path d="M 312 50 L 320 50" stroke-width="1.5"/>
+  <circle cx="305" cy="55" r="3" stroke-width="1"/>
+  <path d="M 322 66 L 330 78 L 322 78" stroke-width="1.5"/>
+  <circle cx="298" cy="73.5" r="4.5" stroke-width="1.5"/>
+  <circle cx="312" cy="73.5" r="4.5" stroke-width="1.5"/>
+  <circle cx="286" cy="73.5" r="4" stroke-width="1.5"/>
+  <rect x="232" y="58" width="42" height="16" stroke-width="1.5"/>
+  <circle cx="241" cy="73.5" r="4" stroke-width="1.5"/>
+  <circle cx="265" cy="73.5" r="4" stroke-width="1.5"/>
+  <rect x="184" y="58" width="42" height="16" stroke-width="1.5"/>
+  <circle cx="193" cy="73.5" r="4" stroke-width="1.5"/>
+  <circle cx="217" cy="73.5" r="4" stroke-width="1.5"/>
+  <path d="M 274 66 L 280 66" stroke-width="0.75"/>
+  <path d="M 226 66 L 232 66" stroke-width="0.75"/>
+  <path d="M 316 46 C 312 38, 302 36, 296 40 C 288 44, 280 42, 274 38" stroke-width="1"/>
+  <path d="M 44 120 L 44 40" stroke-width="1.5"/>
+  <path d="M 35 46 L 53 46" stroke-width="1"/>
+  <circle cx="38" cy="44" r="0.8" fill="currentColor" stroke="none"/>
+  <circle cx="50" cy="44" r="0.8" fill="currentColor" stroke="none"/>
+  <path d="M 116 120 L 116 40" stroke-width="1.5"/>
+  <path d="M 107 46 L 125 46" stroke-width="1"/>
+  <circle cx="110" cy="44" r="0.8" fill="currentColor" stroke="none"/>
+  <circle cx="122" cy="44" r="0.8" fill="currentColor" stroke="none"/>
+  <path d="M 44 48 C 68 56, 92 56, 116 48" stroke-width="0.75"/>
+  <path d="M 116 48 C 150 58, 200 58, 240 52 C 270 48, 300 52, 340 50" stroke-width="0.75"/>
+  <path d="M 14 94 L 74 94" stroke-width="2"/>
+  <path d="M 32 94 L 32 98" stroke-width="1"/>
+  <path d="M 58 94 L 58 98" stroke-width="1"/>
+  <g fill="var(--em-accent, #f2b705)" stroke="none">
+    <path d="M 32 98 C 22 102, 18 112, 22 122 C 26 130, 38 130, 42 122 C 46 112, 42 102, 32 98 Z"/>
+    <path d="M 58 98 C 50 101, 47 109, 50 117 C 53 124, 63 124, 66 117 C 69 109, 66 101, 58 98 Z"/>
+  </g>
+  <g stroke-width="0.75">
+    <path d="M 24 106 C 28 104, 36 104, 40 106"/>
+    <path d="M 22 114 C 28 112, 38 112, 42 114"/>
+    <path d="M 25 121 C 30 119, 36 119, 40 121"/>
+    <path d="M 51 105 C 55 103, 61 103, 65 105"/>
+    <path d="M 50 112 C 55 110, 61 110, 66 112"/>
+    <path d="M 52 118 C 56 116, 60 116, 64 118"/>
+  </g>
+  <path d="M 8 132 C 30 116, 60 110, 92 116" stroke-width="1.5"/>
+  <path d="M 10 133 C 36 124, 64 118, 90 116" stroke-width="0.75"/>
+  <g stroke-width="0.75">
+    <path d="M 30 126 L 34 120"/>
+    <path d="M 44 123 L 48 117"/>
+    <path d="M 58 120 L 62 115"/>
+    <path d="M 72 118 L 75 114"/>
+  </g>
+</svg>
