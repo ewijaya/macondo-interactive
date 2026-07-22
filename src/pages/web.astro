@@ -59,6 +59,7 @@ const REL_TYPES = [
     <svg id="web-svg" aria-label="Relationship network graph"></svg>
     <div id="web-tip" class="web-tip" hidden></div>
   </div>
+  <p class="scroll-hint" aria-hidden="true">Swipe sideways to explore the web →</p>
 
   <script type="application/json" id="web-data" set:html={JSON.stringify(graphData)} />
 </Layout>
@@ -107,6 +108,9 @@ const REL_TYPES = [
   svg.call(
     zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.4, 3])
+      // Mouse/trackpad only: touch gestures stay with the browser so the
+      // stage can scroll horizontally on phones.
+      .filter((ev) => (!ev.ctrlKey || ev.type === 'wheel') && !ev.button && !ev.type.startsWith('touch'))
       .on('zoom', (ev) => root.attr('transform', ev.transform)),
   );
 
@@ -244,6 +248,8 @@ const REL_TYPES = [
     border: 1px solid var(--hairline);
     background: var(--paper-warm);
     max-width: var(--max-wide);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   #web-svg {
@@ -251,6 +257,25 @@ const REL_TYPES = [
     height: auto;
     display: block;
     aspect-ratio: 1100 / 780;
+    touch-action: pan-x pan-y;
+  }
+
+  .scroll-hint {
+    display: none;
+    font-family: var(--f-label);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 760px) {
+    #web-svg {
+      min-width: 740px;
+    }
+
+    .scroll-hint {
+      display: block;
+    }
   }
 
   .wl {

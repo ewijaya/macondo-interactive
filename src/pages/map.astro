@@ -21,6 +21,7 @@ const beyond = places.filter((p) => !p.map);
   </header>
 
   <figure class="map-figure">
+    <div class="map-scroll">
     <svg viewBox="0 0 100 100" role="img" aria-label="Stylized map of Macondo" id="macondo-map">
       <!-- the river of clear water, along the west -->
       <path
@@ -47,6 +48,8 @@ const beyond = places.filter((p) => !p.map);
         ))
       }
     </svg>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">Swipe sideways to explore the map →</p>
     <figcaption class="map-legend">
       <span class="lg"><i class="dot-h"></i> The Buendía house</span>
       <span class="lg"><i class="dot-t"></i> The town</span>
@@ -86,6 +89,29 @@ const beyond = places.filter((p) => !p.map);
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  .map-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-hint {
+    display: none;
+    font-family: var(--f-label);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    margin: 0.5rem 1.2rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .map-scroll svg {
+      min-width: 640px;
+    }
+
+    .scroll-hint {
+      display: block;
+    }
   }
 
   .river {

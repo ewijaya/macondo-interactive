@@ -129,6 +129,7 @@ const GEN_LABELS = [
 ---
 
 <figure class="tree-figure">
+  <div class="tree-scroll">
   <svg
     viewBox="0 0 1000 985"
     role="img"
@@ -193,6 +194,8 @@ const GEN_LABELS = [
       })
     }
   </svg>
+  </div>
+  <p class="scroll-hint" aria-hidden="true">Swipe sideways to explore the tree →</p>
   <figcaption class="tree-legend" aria-hidden="false">
     <span class="lg"><i class="sw" style="background:var(--c-aureliano)"></i> Aurelianos — withdrawn, lucid</span>
     <span class="lg"><i class="sw" style="background:var(--c-jose-arcadio)"></i> José Arcadios — impulsive</span>
@@ -215,6 +218,29 @@ const GEN_LABELS = [
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  .tree-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-hint {
+    display: none;
+    font-family: var(--f-label);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    margin-top: 0.6rem;
+  }
+
+  @media (max-width: 720px) {
+    .tree-scroll svg {
+      min-width: 760px;
+    }
+
+    .scroll-hint {
+      display: block;
+    }
   }
 
   .gen-num {
