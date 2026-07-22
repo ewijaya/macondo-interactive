@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import '@fontsource-variable/fraunces';
 import '@fontsource-variable/newsreader';
 import '@fontsource-variable/archivo';
@@ -48,6 +49,7 @@ const isCurrent = (href: string) =>
     <meta name="twitter:title" content={`${title} · Macondo Atlas`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL('/og.png', Astro.site)} />
+    <Analytics />
   </head>
   <body>
     <div class="shell">
