@@ -1,0 +1,329 @@
+---
+// The landing overture: Mauricio Babilonia's butterflies drifting across the
+// white field. Engraved line-work, a minority in gold; they scatter gently
+// from the cursor. Reduced-motion and no-JS visitors get a composed still.
+import Emblem from './Emblem.astro';
+
+// One butterfly, drawn once and reused: cloned into the live swarm by JS,
+// inlined into the still composition for no-JS / reduced-motion visitors.
+const BF = `
+  <g class="wing wing-l">
+    <path d="M -1 -1 C -7 -8 -12 -5 -10 0 C -9 3 -3.5 2.6 -1 0.9 Z"></path>
+    <path d="M -1 1 C -6 3.6 -7.5 8 -4 7.4 C -1.6 6.8 -0.8 3.4 -0.8 1.6 Z"></path>
+  </g>
+  <g class="wing wing-r">
+    <path d="M 1 -1 C 7 -8 12 -5 10 0 C 9 3 3.5 2.6 1 0.9 Z"></path>
+    <path d="M 1 1 C 6 3.6 7.5 8 4 7.4 C 1.6 6.8 0.8 3.4 0.8 1.6 Z"></path>
+  </g>
+  <ellipse cx="0" cy="0.6" rx="0.9" ry="3.2"></ellipse>
+  <path d="M -0.5 -2.8 C -1.6 -4.6 -2.8 -5.6 -4 -6"></path>
+  <path d="M 0.5 -2.8 C 1.6 -4.6 2.8 -5.6 4 -6"></path>
+`;
+
+const STILL = [
+  { x: 10, y: 16, s: 1.3, r: -18, gold: true },
+  { x: 76, y: 10, s: 0.9, r: 24, gold: false },
+  { x: 87, y: 36, s: 1.1, r: -8, gold: false },
+  { x: 68, y: 72, s: 1.4, r: 12, gold: true },
+  { x: 20, y: 76, s: 0.8, r: 30, gold: false },
+  { x: 44, y: 6, s: 0.7, r: -25, gold: false },
+  { x: 5, y: 50, s: 1.0, r: 8, gold: false },
+];
+---
+
+<section class="hero" id="butterfly-hero">
+  <div class="still" aria-hidden="true">
+    {
+      STILL.map((b) => (
+        <svg
+          class:list={['bf-still', { gold: b.gold }]}
+          viewBox="-14 -11 28 22"
+          style={`left:${b.x}%; top:${b.y}%; width:${(2.6 * b.s).toFixed(2)}rem; transform:rotate(${b.r}deg)`}
+          set:html={BF}
+        />
+      ))
+    }
+  </div>
+
+  <svg class="swarm" aria-hidden="true">
+    <g id="bf-proto" style="display:none" set:html={BF} />
+    <g class="live"></g>
+  </svg>
+
+  <div class="hero-copy">
+    <Emblem kind="hero" class="hero-mark" />
+    <p class="eyebrow">The Macondo Atlas · an interactive companion to the novel</p>
+    <h1>Seven generations, two names, one&nbsp;solitude</h1>
+    <p class="lede">
+      Every Buendía man is a José Arcadio or an Aureliano, and the names carry their fates.
+      This atlas untangles the century of <em>One Hundred Years of Solitude</em> — its
+      people, places, bonds, and signs.
+    </p>
+    <a class="cue" href="#tree">Enter the family tree ↓</a>
+  </div>
+</section>
+
+<style is:global>
+  #butterfly-hero {
+    position: relative;
+    min-height: min(88vh, 52rem);
+    display: flex;
+    align-items: center;
+    margin: 0 0 3rem;
+    overflow: hidden;
+  }
+
+  #butterfly-hero .swarm {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    color: var(--ink-soft);
+  }
+
+  #butterfly-hero .still {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    color: var(--ink-soft);
+  }
+
+  #butterfly-hero .bf-still {
+    position: absolute;
+    height: auto;
+    overflow: visible;
+  }
+
+  #butterfly-hero.alive .still {
+    display: none;
+  }
+
+  #butterfly-hero .wing path,
+  #butterfly-hero ellipse,
+  #butterfly-hero .swarm g > path,
+  #butterfly-hero .bf-still > path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 0.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  #butterfly-hero .gold .wing path {
+    fill: var(--butterfly);
+    fill-opacity: 0.9;
+    stroke: var(--ink);
+  }
+
+  #butterfly-hero .wing {
+    transform-box: fill-box;
+    animation: bf-flap var(--flap, 0.8s) ease-in-out infinite alternate;
+    animation-delay: var(--flapd, 0s);
+  }
+
+  #butterfly-hero .wing-l {
+    transform-origin: right center;
+  }
+
+  #butterfly-hero .wing-r {
+    transform-origin: left center;
+  }
+
+  @keyframes bf-flap {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0.3); }
+  }
+
+  #butterfly-hero .hero-copy {
+    position: relative;
+    max-width: 46rem;
+    padding: 4rem 0;
+  }
+
+  #butterfly-hero .hero-mark {
+    width: 5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  #butterfly-hero h1 {
+    font-size: clamp(2.6rem, 7.5vw, 5.4rem);
+    margin: 0.9rem 0 1.3rem;
+  }
+
+  #butterfly-hero .lede {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--ink-soft);
+    max-width: 36rem;
+    text-wrap: pretty;
+  }
+
+  #butterfly-hero .cue {
+    display: inline-block;
+    margin-top: 2.2rem;
+    font-family: var(--f-label);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.6rem 1.1rem;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+  }
+
+  #butterfly-hero .cue:hover {
+    background: var(--butterfly-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #butterfly-hero .wing {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const hero = document.getElementById('butterfly-hero');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (hero && !reduced) {
+    const svg = hero.querySelector<SVGSVGElement>('.swarm')!;
+    const proto = svg.querySelector<SVGGElement>('#bf-proto')!;
+    const live = svg.querySelector<SVGGElement>('.live')!;
+    const isNarrow = window.matchMedia('(max-width: 720px)').matches;
+    const COUNT = isNarrow ? 14 : 26;
+
+    interface Fly {
+      el: SVGGElement;
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      px: number; // scatter velocity, decays
+      py: number;
+      s: number;
+      a1: number; w1: number; p1: number;
+      a2: number; w2: number; p2: number;
+    }
+
+    let W = hero.clientWidth;
+    let H = hero.clientHeight;
+    const flies: Fly[] = [];
+    const rand = (lo: number, hi: number) => lo + Math.random() * (hi - lo);
+
+    for (let i = 0; i < COUNT; i++) {
+      const el = proto.cloneNode(true) as SVGGElement;
+      el.removeAttribute('id');
+      el.style.display = '';
+      const s = rand(0.55, 1.5);
+      if (Math.random() < 0.22) el.classList.add('gold');
+      el.style.setProperty('--flap', `${rand(0.45, 0.95).toFixed(2)}s`);
+      el.style.setProperty('--flapd', `${rand(0, 0.9).toFixed(2)}s`);
+      el.style.opacity = String(0.35 + (s / 1.5) * 0.6);
+      live.appendChild(el);
+      flies.push({
+        el,
+        x: rand(0, W),
+        y: rand(0, H),
+        vx: rand(-14, 14),
+        vy: rand(-10, 10),
+        px: 0,
+        py: 0,
+        s,
+        a1: rand(8, 26), w1: rand(0.2, 0.6), p1: rand(0, 6.28),
+        a2: rand(6, 20), w2: rand(0.2, 0.7), p2: rand(0, 6.28),
+      });
+    }
+    hero.classList.add('alive');
+
+    let mx = -9999;
+    let my = -9999;
+    hero.addEventListener('pointermove', (ev) => {
+      const r = hero.getBoundingClientRect();
+      mx = ev.clientX - r.left;
+      my = ev.clientY - r.top;
+    });
+    hero.addEventListener('pointerleave', () => {
+      mx = -9999;
+      my = -9999;
+    });
+    // a tap scatters the swarm from the touch point
+    hero.addEventListener('pointerdown', (ev) => {
+      const r = hero.getBoundingClientRect();
+      const tx = ev.clientX - r.left;
+      const ty = ev.clientY - r.top;
+      for (const f of flies) {
+        const dx = f.x - tx;
+        const dy = f.y - ty;
+        const d = Math.hypot(dx, dy) || 1;
+        if (d < 260) {
+          const k = 180 * (1 - d / 260);
+          f.px += (dx / d) * k;
+          f.py += (dy / d) * k;
+        }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      W = hero.clientWidth;
+      H = hero.clientHeight;
+    });
+
+    const REPEL = 130;
+    let running = false;
+    let last = performance.now();
+
+    function tick(now: number) {
+      if (!running) return;
+      const dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+      const t = now / 1000;
+      for (const f of flies) {
+        let vx = f.vx + f.a1 * Math.sin(t * f.w1 * 6.28 + f.p1);
+        let vy = f.vy + f.a2 * Math.sin(t * f.w2 * 6.28 + f.p2) - 3;
+        const dx = f.x - mx;
+        const dy = f.y - my;
+        const d = Math.hypot(dx, dy);
+        if (d < REPEL && d > 0.01) {
+          const k = 90 * (1 - d / REPEL);
+          f.px += (dx / d) * k * dt * 6;
+          f.py += (dy / d) * k * dt * 6;
+        }
+        f.px *= 1 - Math.min(1.8 * dt, 0.9);
+        f.py *= 1 - Math.min(1.8 * dt, 0.9);
+        vx += f.px;
+        vy += f.py;
+        f.x += vx * dt;
+        f.y += vy * dt;
+        const m = 40;
+        if (f.x < -m) f.x = W + m;
+        if (f.x > W + m) f.x = -m;
+        if (f.y < -m) f.y = H + m;
+        if (f.y > H + m) f.y = -m;
+        const tilt = Math.max(-24, Math.min(24, vx * 0.35));
+        f.el.setAttribute(
+          'transform',
+          `translate(${f.x.toFixed(1)} ${f.y.toFixed(1)}) rotate(${tilt.toFixed(1)}) scale(${f.s})`,
+        );
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function setRunning(on: boolean) {
+      if (on && !running) {
+        running = true;
+        last = performance.now();
+        requestAnimationFrame(tick);
+      } else if (!on) {
+        running = false;
+      }
+    }
+
+    // only animate while the hero is on screen and the tab is visible
+    new IntersectionObserver((entries) => setRunning(entries[0].isIntersecting)).observe(hero);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) setRunning(false);
+    });
+
+    setRunning(true);
+  }
+</script>
