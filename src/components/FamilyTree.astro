@@ -17,23 +17,23 @@ const NODES: TreeNode[] = [
   { slug: 'jose-arcadio-buendia', label: 'José Arcadio Buendía', x: 380, y: 70, kind: 'family' },
   { slug: 'ursula', label: 'Úrsula Iguarán', x: 620, y: 70, kind: 'family' },
   // G2 + partners
-  { slug: 'jose-arcadio', label: 'José Arcadio', x: 150, y: 210, kind: 'family' },
-  { slug: 'rebeca', label: 'Rebeca', x: 300, y: 210, kind: 'family' },
-  { slug: 'colonel-aureliano-buendia', label: 'Col. Aureliano Buendía', x: 500, y: 210, kind: 'family' },
-  { slug: 'remedios-moscote', label: 'Remedios Moscote', x: 672, y: 210, kind: 'partner' },
-  { slug: 'amaranta', label: 'Amaranta', x: 830, y: 210, kind: 'family' },
+  { slug: 'jose-arcadio', label: 'José Arcadio', x: 145, y: 210, kind: 'family' },
+  { slug: 'rebeca', label: 'Rebeca', x: 290, y: 210, kind: 'family' },
+  { slug: 'colonel-aureliano-buendia', label: 'Col. Aureliano Buendía', x: 488, y: 210, kind: 'family' },
+  { slug: 'remedios-moscote', label: 'Remedios Moscote', x: 688, y: 210, kind: 'partner' },
+  { slug: 'amaranta', label: 'Amaranta', x: 845, y: 210, kind: 'family' },
   { slug: 'pilar-ternera', label: 'Pilar Ternera', x: 318, y: 288, kind: 'partner' },
   // G3 + partners
-  { slug: 'santa-sofia-de-la-piedad', label: 'Santa Sofía de la Piedad', x: 108, y: 390, kind: 'partner' },
-  { slug: 'arcadio', label: 'Arcadio', x: 268, y: 390, kind: 'family' },
-  { slug: 'aureliano-jose', label: 'Aureliano José', x: 430, y: 390, kind: 'family' },
-  { slug: 'seventeen-aurelianos', label: 'The 17 Aurelianos', x: 600, y: 390, kind: 'family' },
+  { slug: 'santa-sofia-de-la-piedad', label: 'Santa Sofía de la Piedad', x: 145, y: 390, kind: 'partner' },
+  { slug: 'arcadio', label: 'Arcadio', x: 315, y: 390, kind: 'family' },
+  { slug: 'aureliano-jose', label: 'Aureliano José', x: 475, y: 390, kind: 'family' },
+  { slug: 'seventeen-aurelianos', label: 'The 17 Aurelianos', x: 645, y: 390, kind: 'family' },
   // G4 + partners
-  { slug: 'remedios-the-beauty', label: 'Remedios the Beauty', x: 120, y: 530, kind: 'family' },
-  { slug: 'jose-arcadio-segundo', label: 'José Arcadio Segundo', x: 300, y: 530, kind: 'family' },
-  { slug: 'aureliano-segundo', label: 'Aureliano Segundo', x: 470, y: 530, kind: 'family' },
-  { slug: 'fernanda-del-carpio', label: 'Fernanda del Carpio', x: 640, y: 530, kind: 'partner' },
-  { slug: 'petra-cotes', label: 'Petra Cotes', x: 505, y: 606, kind: 'partner' },
+  { slug: 'remedios-the-beauty', label: 'Remedios the Beauty', x: 135, y: 530, kind: 'family' },
+  { slug: 'jose-arcadio-segundo', label: 'José Arcadio Segundo', x: 336, y: 530, kind: 'family' },
+  { slug: 'aureliano-segundo', label: 'Aureliano Segundo', x: 525, y: 530, kind: 'family' },
+  { slug: 'fernanda-del-carpio', label: 'Fernanda del Carpio', x: 705, y: 530, kind: 'partner' },
+  { slug: 'petra-cotes', label: 'Petra Cotes', x: 420, y: 624, kind: 'partner' },
   // G5 + partners
   { slug: 'mauricio-babilonia', label: 'Mauricio Babilonia', x: 165, y: 680, kind: 'partner' },
   { slug: 'meme', label: 'Meme', x: 330, y: 680, kind: 'family' },
@@ -63,37 +63,37 @@ const EDGES: TreeEdge[] = [
   { a: 'jose-arcadio-buendia', b: 'ursula', kind: 'marriage' },
   { a: 'jose-arcadio', b: 'rebeca', kind: 'marriage', transgressive: true },
   { a: 'colonel-aureliano-buendia', b: 'remedios-moscote', kind: 'marriage' },
-  { a: 'jose-arcadio', b: 'pilar-ternera', kind: 'lovers', d: 'M 165 227 C 200 265, 250 285, 288 288' },
-  { a: 'colonel-aureliano-buendia', b: 'pilar-ternera', kind: 'lovers', d: 'M 485 227 C 440 268, 390 285, 350 288' },
+  { a: 'jose-arcadio', b: 'pilar-ternera', kind: 'lovers', d: 'M 160 227 C 200 262, 255 282, 290 287' },
+  { a: 'colonel-aureliano-buendia', b: 'pilar-ternera', kind: 'lovers', d: 'M 473 227 C 430 265, 385 282, 348 287' },
   { a: 'arcadio', b: 'santa-sofia-de-la-piedad', kind: 'marriage' },
   { a: 'aureliano-segundo', b: 'fernanda-del-carpio', kind: 'marriage' },
-  { a: 'aureliano-segundo', b: 'petra-cotes', kind: 'lovers', d: 'M 478 547 C 488 570, 495 585, 502 592' },
+  { a: 'aureliano-segundo', b: 'petra-cotes', kind: 'lovers', d: 'M 505 547 C 478 572, 452 598, 434 618' },
   { a: 'meme', b: 'mauricio-babilonia', kind: 'lovers' },
   { a: 'amaranta-ursula', b: 'gaston', kind: 'marriage' },
-  { a: 'amaranta', b: 'aureliano-jose', kind: 'lovers', transgressive: true, d: 'M 815 227 C 720 320, 560 375, 468 385' },
-  { a: 'amaranta-ursula', b: 'aureliano-babilonia', kind: 'lovers', transgressive: true, d: 'M 648 697 C 560 790, 420 815, 322 812' },
+  { a: 'amaranta', b: 'aureliano-jose', kind: 'lovers', transgressive: true, d: 'M 830 227 C 735 315, 600 372, 532 381' },
+  { a: 'amaranta-ursula', b: 'aureliano-babilonia', kind: 'lovers', transgressive: true, d: 'M 648 697 C 566 790, 440 818, 358 812' },
   // descent: G1 → G2
-  { a: 'jose-arcadio-buendia', b: 'jose-arcadio', kind: 'descent', d: 'M 500 70 V 140 H 150 V 193' },
-  { a: 'jose-arcadio-buendia', b: 'colonel-aureliano-buendia', kind: 'descent', d: 'M 500 140 V 193' },
-  { a: 'jose-arcadio-buendia', b: 'amaranta', kind: 'descent', d: 'M 500 140 H 830 V 193' },
-  { a: 'jose-arcadio-buendia', b: 'rebeca', kind: 'adopted', d: 'M 560 87 C 480 130, 380 160, 316 194' },
+  { a: 'jose-arcadio-buendia', b: 'jose-arcadio', kind: 'descent', d: 'M 500 70 V 140 H 145 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'colonel-aureliano-buendia', kind: 'descent', d: 'M 488 140 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'amaranta', kind: 'descent', d: 'M 500 140 H 845 V 193' },
+  { a: 'jose-arcadio-buendia', b: 'rebeca', kind: 'adopted', d: 'M 560 87 C 480 130, 380 162, 306 194' },
   // descent: G2 → G3
-  { a: 'jose-arcadio', b: 'arcadio', kind: 'descent', d: 'M 230 258 C 240 300, 255 340, 265 373' },
-  { a: 'colonel-aureliano-buendia', b: 'aureliano-jose', kind: 'descent', d: 'M 420 300 C 424 330, 428 350, 430 373' },
-  { a: 'colonel-aureliano-buendia', b: 'seventeen-aurelianos', kind: 'descent', d: 'M 520 227 C 560 280, 590 330, 600 373' },
+  { a: 'jose-arcadio', b: 'arcadio', kind: 'descent', d: 'M 235 262 C 262 300, 296 340, 313 373' },
+  { a: 'colonel-aureliano-buendia', b: 'aureliano-jose', kind: 'descent', d: 'M 420 268 C 440 305, 462 345, 473 373' },
+  { a: 'colonel-aureliano-buendia', b: 'seventeen-aurelianos', kind: 'descent', d: 'M 508 227 C 560 285, 615 335, 640 373' },
   // descent: G3 → G4
-  { a: 'arcadio', b: 'remedios-the-beauty', kind: 'descent', d: 'M 188 407 V 462 H 120 V 513' },
-  { a: 'arcadio', b: 'jose-arcadio-segundo', kind: 'descent', d: 'M 188 462 H 300 V 513' },
-  { a: 'arcadio', b: 'aureliano-segundo', kind: 'descent', d: 'M 188 462 H 470 V 513' },
+  { a: 'arcadio', b: 'remedios-the-beauty', kind: 'descent', d: 'M 230 407 V 462 H 135 V 513' },
+  { a: 'arcadio', b: 'jose-arcadio-segundo', kind: 'descent', d: 'M 336 462 V 513' },
+  { a: 'arcadio', b: 'aureliano-segundo', kind: 'descent', d: 'M 230 462 H 525 V 513' },
   // descent: G4 → G5
-  { a: 'aureliano-segundo', b: 'meme', kind: 'descent', d: 'M 555 547 V 612 H 330 V 663' },
-  { a: 'aureliano-segundo', b: 'jose-arcadio-the-seminarian', kind: 'descent', d: 'M 555 612 H 480 V 663' },
-  { a: 'aureliano-segundo', b: 'amaranta-ursula', kind: 'descent', d: 'M 555 612 H 655 V 663' },
+  { a: 'aureliano-segundo', b: 'meme', kind: 'descent', d: 'M 615 530 V 600 H 330 V 663' },
+  { a: 'aureliano-segundo', b: 'jose-arcadio-the-seminarian', kind: 'descent', d: 'M 480 600 V 663' },
+  { a: 'aureliano-segundo', b: 'amaranta-ursula', kind: 'descent', d: 'M 615 600 H 655 V 663' },
   // descent: G5 → G6
   { a: 'meme', b: 'aureliano-babilonia', kind: 'descent', d: 'M 248 697 C 252 730, 256 765, 259 793' },
   // descent: G6+G5 → G7
-  { a: 'aureliano-babilonia', b: 'the-last-aureliano', kind: 'descent', d: 'M 300 825 C 360 855, 410 880, 440 903' },
-  { a: 'amaranta-ursula', b: 'the-last-aureliano', kind: 'descent', d: 'M 660 697 C 620 790, 530 870, 482 906' },
+  { a: 'aureliano-babilonia', b: 'the-last-aureliano', kind: 'descent', d: 'M 300 827 C 360 857, 410 882, 440 903' },
+  { a: 'amaranta-ursula', b: 'the-last-aureliano', kind: 'descent', d: 'M 660 697 C 622 790, 530 870, 482 906' },
 ];
 
 const nodeBySlug = new Map(NODES.map((n) => [n.slug, n]));
@@ -105,7 +105,7 @@ function straight(a: TreeNode, b: TreeNode): string {
 }
 
 function pillW(n: TreeNode): number {
-  return Math.max(74, n.label.length * (n.kind === 'family' ? 8.1 : 7.2) + 26);
+  return Math.max(74, n.label.length * (n.kind === 'family' ? 8.4 : 7.6) + 26);
 }
 
 // Kinship sets for hover highlighting: node → itself + everyone connected
@@ -136,14 +136,14 @@ const GEN_LABELS = [
     aria-label="Interactive Buendía family tree across seven generations"
     id="family-tree"
   >
-    <!-- generation rules -->
+    <!-- generation labels sit above each row, clear of the pills -->
     {
       GEN_LABELS.map((g) => (
         <g class="gen">
-          <text x="14" y={g.y - 8} class="gen-num">
+          <text x="14" y={g.y - 40} class="gen-num">
             {g.n}
           </text>
-          <text x="14" y={g.y + 8} class="gen-note">
+          <text x="14" y={g.y - 25} class="gen-note">
             {g.note}
           </text>
         </g>
